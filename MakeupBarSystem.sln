@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeupBarSystem", "MakeupBarSystem.csproj", "{1DB30AD1-B0F8-433E-B2AA-A81E09D5C087}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DB30AD1-B0F8-433E-B2AA-A81E09D5C087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB30AD1-B0F8-433E-B2AA-A81E09D5C087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB30AD1-B0F8-433E-B2AA-A81E09D5C087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB30AD1-B0F8-433E-B2AA-A81E09D5C087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56FB71F7-F690-49FB-B6EA-39F5F8939FE8}
+	EndGlobalSection
+EndGlobal
