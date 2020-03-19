@@ -98,9 +98,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MakeupBar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\BotonServicio.png" />
   </ItemGroup>
   <ItemGroup>

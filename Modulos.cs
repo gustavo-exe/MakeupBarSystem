@@ -51,8 +51,9 @@ namespace MakeupBarSystem
             {
                 this.WindowState = FormWindowState.Normal;
 
-                state = 00;
+                state = 0;
             }
+            else
             if(state == 1)
             {
                 this.WindowState = FormWindowState.Normal;

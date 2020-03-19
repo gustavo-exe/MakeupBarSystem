@@ -113,9 +113,9 @@ namespace MakeupBarSystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MakeupBar {
+        internal static System.Drawing.Bitmap MakeupBarLogoWhite {
             get {
-                object obj = ResourceManager.GetObject("MakeupBar", resourceCulture);
+                object obj = ResourceManager.GetObject("MakeupBarLogoWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

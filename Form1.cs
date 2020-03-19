@@ -37,6 +37,9 @@ namespace MakeupBarSystem
             progresbar();
         }
 
-      
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
