@@ -83,5 +83,12 @@ namespace MakeupBarSystem
             Men_Empleado ventana = new Men_Empleado();
             ventana.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventas ventana = new Ventas();
+            ventana.Show();
+        }
     }
 }
