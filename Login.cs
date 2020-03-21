@@ -51,5 +51,10 @@ namespace MakeupBarSystem
         {
             this.Close();
         }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

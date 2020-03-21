@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Empleado\Act_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Act_Empleado.Designer.cs">
+      <DependentUpon>Act_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\Era_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Era_Empleado.Designer.cs">
+      <DependentUpon>Era_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\Ins_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Ins_Empleado.Designer.cs">
+      <DependentUpon>Ins_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\Viw_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Viw_Empleado.Designer.cs">
+      <DependentUpon>Viw_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +82,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleado\Men_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\Men_Empleado.Designer.cs">
+      <DependentUpon>Men_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +96,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Empleado\Act_Empleado.resx">
+      <DependentUpon>Act_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\Era_Empleado.resx">
+      <DependentUpon>Era_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\Ins_Empleado.resx">
+      <DependentUpon>Ins_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\Viw_Empleado.resx">
+      <DependentUpon>Viw_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\Men_Empleado.resx">
+      <DependentUpon>Men_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos.resx">
       <DependentUpon>Modulos.cs</DependentUpon>
@@ -118,5 +163,6 @@
   <ItemGroup>
     <None Include="Resources\LockWhite.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

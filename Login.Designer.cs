@@ -70,6 +70,7 @@
             this.txtContraseña.Tag = "";
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtContraseña_MouseClick);
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // panel1
             // 

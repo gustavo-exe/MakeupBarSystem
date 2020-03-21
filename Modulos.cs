@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeupBarSystem.MenuDelModulo;
 
 namespace MakeupBarSystem
 {
@@ -51,22 +52,36 @@ namespace MakeupBarSystem
             {
                 this.WindowState = FormWindowState.Normal;
 
-                state = 0;
+                state = 1;
             }
             else
             if(state == 1)
             {
-                this.WindowState = FormWindowState.Normal;
+                this.WindowState = FormWindowState.Maximized;
                 state = 0;
             }
 
+     
             
-            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            //Agregan MakeupBarSystem.MenuDelModulo;
+            this.Hide();
+            Men_Empleado ventana = new Men_Empleado();
+            ventana.Show();
         }
     }
 }

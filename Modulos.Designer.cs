@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modulos));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnModuloVentas = new System.Windows.Forms.Button();
-            this.btnServicios = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnServicios = new System.Windows.Forms.Button();
+            this.btnModuloVentas = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -90,6 +90,23 @@
             this.panel3.Size = new System.Drawing.Size(394, 78);
             this.panel3.TabIndex = 1;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(79, 78);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "←";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label1);
@@ -99,24 +116,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(394, 78);
             this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnServicios);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(3, 117);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(394, 162);
-            this.panel5.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnModuloVentas);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(403, 117);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(394, 162);
-            this.panel6.TabIndex = 4;
             // 
             // label1
             // 
@@ -140,22 +139,99 @@
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnModuloVentas
+            // panel5
             // 
-            this.btnModuloVentas.BackColor = System.Drawing.Color.Black;
-            this.btnModuloVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModuloVentas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModuloVentas.ForeColor = System.Drawing.Color.White;
-            this.btnModuloVentas.Image = global::MakeupBarSystem.Properties.Resources.BotonCliente;
-            this.btnModuloVentas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnModuloVentas.Location = new System.Drawing.Point(100, 37);
-            this.btnModuloVentas.Margin = new System.Windows.Forms.Padding(0);
-            this.btnModuloVentas.Name = "btnModuloVentas";
-            this.btnModuloVentas.Size = new System.Drawing.Size(195, 92);
-            this.btnModuloVentas.TabIndex = 9;
-            this.btnModuloVentas.Text = "C l i e n t e ";
-            this.btnModuloVentas.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnModuloVentas.UseVisualStyleBackColor = false;
+            this.panel5.Controls.Add(this.btnServicios);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(3, 117);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(394, 162);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnModuloVentas);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(403, 117);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(394, 162);
+            this.panel6.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(3, 285);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(394, 162);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.button2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(403, 285);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(394, 162);
+            this.panel7.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.button4);
+            this.panel8.Controls.Add(this.button1);
+            this.panel8.Controls.Add(this.btnClose);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(403, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(394, 24);
+            this.panel8.TabIndex = 7;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(320, -3);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(37, 24);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "□";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(283, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 18);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "—";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Black;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(357, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(37, 18);
+            this.btnClose.TabIndex = 10;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnServicios
             // 
@@ -174,14 +250,22 @@
             this.btnServicios.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnServicios.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // btnModuloVentas
             // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(3, 285);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(394, 162);
-            this.panel2.TabIndex = 5;
+            this.btnModuloVentas.BackColor = System.Drawing.Color.Black;
+            this.btnModuloVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModuloVentas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModuloVentas.ForeColor = System.Drawing.Color.White;
+            this.btnModuloVentas.Image = global::MakeupBarSystem.Properties.Resources.BotonCliente;
+            this.btnModuloVentas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnModuloVentas.Location = new System.Drawing.Point(100, 37);
+            this.btnModuloVentas.Margin = new System.Windows.Forms.Padding(0);
+            this.btnModuloVentas.Name = "btnModuloVentas";
+            this.btnModuloVentas.Size = new System.Drawing.Size(195, 92);
+            this.btnModuloVentas.TabIndex = 9;
+            this.btnModuloVentas.Text = "C l i e n t e ";
+            this.btnModuloVentas.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnModuloVentas.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -200,15 +284,6 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(403, 285);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(394, 162);
-            this.panel7.TabIndex = 6;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Black;
@@ -225,80 +300,7 @@
             this.button2.Text = "A d m i n i s t r a t i v o";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.button4);
-            this.panel8.Controls.Add(this.button1);
-            this.panel8.Controls.Add(this.btnClose);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(403, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(394, 24);
-            this.panel8.TabIndex = 7;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Black;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(357, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(37, 18);
-            this.btnClose.TabIndex = 10;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(283, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 18);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "—";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(320, -3);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(37, 24);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "□";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(79, 78);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "←";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Modulos
             // 
