@@ -12,6 +12,8 @@ namespace MakeupBarSystem
 {
     public partial class Ventas : Form
     {
+        private int state;
+
         public Ventas()
         {
             InitializeComponent();
@@ -22,6 +24,37 @@ namespace MakeupBarSystem
             this.Hide();
             Modulos ventana = new Modulos();
             ventana.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (state == 0)
+            {
+                this.WindowState = FormWindowState.Normal;
+
+                state = 1;
+            }
+            else
+            if (state == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                state = 0;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
