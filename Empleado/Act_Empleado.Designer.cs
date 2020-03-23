@@ -171,7 +171,7 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(155, 62);
+            this.label5.Location = new System.Drawing.Point(262, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 22);
             this.label5.TabIndex = 20;
@@ -183,7 +183,7 @@
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(268, 58);
+            this.txtId.Location = new System.Drawing.Point(375, 62);
             this.txtId.Margin = new System.Windows.Forms.Padding(0);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(167, 22);
@@ -193,7 +193,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(268, 83);
+            this.panel8.Location = new System.Drawing.Point(375, 87);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(163, 1);
             this.panel8.TabIndex = 18;
@@ -204,7 +204,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(155, 212);
+            this.label4.Location = new System.Drawing.Point(262, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 22);
             this.label4.TabIndex = 17;
@@ -216,7 +216,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(155, 163);
+            this.label3.Location = new System.Drawing.Point(262, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 22);
             this.label3.TabIndex = 16;
@@ -228,7 +228,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(155, 110);
+            this.label2.Location = new System.Drawing.Point(262, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 22);
             this.label2.TabIndex = 15;
@@ -237,7 +237,7 @@
             // panelColor3
             // 
             this.panelColor3.BackColor = System.Drawing.Color.White;
-            this.panelColor3.Location = new System.Drawing.Point(268, 237);
+            this.panelColor3.Location = new System.Drawing.Point(375, 241);
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(163, 1);
             this.panelColor3.TabIndex = 14;
@@ -248,7 +248,7 @@
             this.txtRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRol.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRol.ForeColor = System.Drawing.Color.White;
-            this.txtRol.Location = new System.Drawing.Point(268, 212);
+            this.txtRol.Location = new System.Drawing.Point(375, 216);
             this.txtRol.Margin = new System.Windows.Forms.Padding(0);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(167, 22);
@@ -261,7 +261,7 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(268, 106);
+            this.txtUsuario.Location = new System.Drawing.Point(375, 110);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
@@ -271,7 +271,7 @@
             // panelColor2
             // 
             this.panelColor2.BackColor = System.Drawing.Color.White;
-            this.panelColor2.Location = new System.Drawing.Point(268, 184);
+            this.panelColor2.Location = new System.Drawing.Point(375, 188);
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
             this.panelColor2.TabIndex = 11;
@@ -279,7 +279,7 @@
             // PanelColor1
             // 
             this.PanelColor1.BackColor = System.Drawing.Color.White;
-            this.PanelColor1.Location = new System.Drawing.Point(268, 131);
+            this.PanelColor1.Location = new System.Drawing.Point(375, 135);
             this.PanelColor1.Name = "PanelColor1";
             this.PanelColor1.Size = new System.Drawing.Size(163, 1);
             this.PanelColor1.TabIndex = 10;
@@ -290,7 +290,7 @@
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(268, 159);
+            this.txtContraseña.Location = new System.Drawing.Point(375, 163);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(167, 22);
@@ -372,9 +372,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(110, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 36);
+            this.label1.Size = new System.Drawing.Size(419, 36);
             this.label1.TabIndex = 12;
-            this.label1.Text = "A c t u a l i z a r  E m p l e a do";
+            this.label1.Text = "M o d i f i c a r E m p l e a do";
             // 
             // panel6
             // 

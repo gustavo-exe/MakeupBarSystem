@@ -34,7 +34,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,7 +63,7 @@
             this.panelColor2 = new System.Windows.Forms.Panel();
             this.PanelColor1 = new System.Windows.Forms.Panel();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ListaDeClientes = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
@@ -169,7 +168,6 @@
             // panel2
             // 
             this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
@@ -199,24 +197,12 @@
             this.panel2.Controls.Add(this.panelColor2);
             this.panel2.Controls.Add(this.PanelColor1);
             this.panel2.Controls.Add(this.txtContraseña);
-            this.panel2.Controls.Add(this.listBox1);
+            this.panel2.Controls.Add(this.ListaDeClientes);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(42, 69);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(632, 321);
             this.panel2.TabIndex = 1;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Black;
-            this.label12.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(106, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 22);
-            this.label12.TabIndex = 61;
-            this.label12.Text = "Cliente";
             // 
             // dateTimePicker1
             // 
@@ -535,17 +521,18 @@
             this.txtContraseña.TabIndex = 32;
             this.txtContraseña.Tag = "";
             // 
-            // listBox1
+            // ListaDeClientes
             // 
-            this.listBox1.BackColor = System.Drawing.Color.White;
-            this.listBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(58, 24);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(179, 290);
-            this.listBox1.TabIndex = 0;
+            this.ListaDeClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(182)))), ((int)(((byte)(226)))));
+            this.ListaDeClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListaDeClientes.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaDeClientes.FormattingEnabled = true;
+            this.ListaDeClientes.ItemHeight = 22;
+            this.ListaDeClientes.Location = new System.Drawing.Point(58, 24);
+            this.ListaDeClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListaDeClientes.Name = "ListaDeClientes";
+            this.ListaDeClientes.Size = new System.Drawing.Size(179, 286);
+            this.ListaDeClientes.TabIndex = 0;
             // 
             // panel3
             // 
@@ -712,7 +699,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ListaDeClientes;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Label label6;
@@ -730,7 +717,6 @@
         private System.Windows.Forms.Panel panelColor2;
         private System.Windows.Forms.Panel PanelColor1;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
