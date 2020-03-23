@@ -35,13 +35,7 @@ namespace MakeupBarSystem.MenuDelModulo
             ventana.Show();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Era_Empleado ventana = new Era_Empleado();
-            ventana.Show();
-        }
-
+        
         private void btnActulizar_Click(object sender, EventArgs e)
         {
             this.Hide();

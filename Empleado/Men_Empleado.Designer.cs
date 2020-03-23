@@ -47,7 +47,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -83,7 +83,6 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnActulizar);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(403, 285);
             this.panel6.Name = "panel6";
@@ -97,7 +96,7 @@
             this.btnActulizar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActulizar.ForeColor = System.Drawing.Color.White;
             this.btnActulizar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnActulizar.Location = new System.Drawing.Point(97, 46);
+            this.btnActulizar.Location = new System.Drawing.Point(141, 42);
             this.btnActulizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnActulizar.Name = "btnActulizar";
             this.btnActulizar.Size = new System.Drawing.Size(195, 92);
@@ -109,7 +108,8 @@
             // 
             // panel5
             // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Controls.Add(this.btnActulizar);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(3, 285);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(394, 162);
@@ -145,7 +145,7 @@
             // 
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(403, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(394, 78);
@@ -176,7 +176,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(403, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 24);
@@ -255,7 +255,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnInsertar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(3, 117);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(394, 162);
@@ -291,7 +291,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Men_Empleado";
             this.panel8.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -207,7 +207,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(446, 184);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(182, 20);
             this.dateTimePicker1.TabIndex = 60;
@@ -529,7 +529,7 @@
             this.ListaDeClientes.FormattingEnabled = true;
             this.ListaDeClientes.ItemHeight = 22;
             this.ListaDeClientes.Location = new System.Drawing.Point(58, 24);
-            this.ListaDeClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListaDeClientes.Margin = new System.Windows.Forms.Padding(2);
             this.ListaDeClientes.Name = "ListaDeClientes";
             this.ListaDeClientes.Size = new System.Drawing.Size(179, 286);
             this.ListaDeClientes.TabIndex = 0;
@@ -665,7 +665,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Act_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Act_Cliente";

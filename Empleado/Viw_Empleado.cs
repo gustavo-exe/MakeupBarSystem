@@ -33,13 +33,14 @@ namespace MakeupBarSystem.Empleado
             if (state == 0)
             {
                 this.WindowState = FormWindowState.Normal;
-
+                
                 state = 1;
             }
             else
             if (state == 1)
             {
                 this.WindowState = FormWindowState.Maximized;
+                dataGridView1.Dock = DockStyle.Fill;
                 state = 0;
             }
 

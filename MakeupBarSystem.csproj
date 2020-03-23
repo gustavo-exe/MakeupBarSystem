@@ -76,12 +76,6 @@
     <Compile Include="Empleado\Act_Empleado.Designer.cs">
       <DependentUpon>Act_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empleado\Era_Empleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Empleado\Era_Empleado.Designer.cs">
-      <DependentUpon>Era_Empleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Empleado\Ins_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,9 +134,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\Act_Empleado.resx">
       <DependentUpon>Act_Empleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Empleado\Era_Empleado.resx">
-      <DependentUpon>Era_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\Ins_Empleado.resx">
       <DependentUpon>Ins_Empleado.cs</DependentUpon>
