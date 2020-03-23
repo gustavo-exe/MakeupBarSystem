@@ -75,5 +75,10 @@ namespace MakeupBarSystem.Empleado
             Men_Empleado ventana = new Men_Empleado();
             ventana.Show();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

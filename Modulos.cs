@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MakeupBarSystem.MenuDelModulo;
+using MakeupBarSystem.Cliente;
 
 namespace MakeupBarSystem
 {
@@ -88,6 +89,14 @@ namespace MakeupBarSystem
         {
             this.Hide();
             Ventas ventana = new Ventas();
+            ventana.Show();
+        }
+
+             private void BtnCliente_Click(object sender, EventArgs e)
+        {
+             // Muestra el menú de clientes
+            this.Hide();
+            Men_Cliente ventana = new Men_Cliente();
             ventana.Show();
         }
     }
