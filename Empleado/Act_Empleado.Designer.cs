@@ -194,9 +194,9 @@
             // 
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(653, 33);
+            this.panel4.Location = new System.Drawing.Point(677, 33);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(144, 36);
+            this.panel4.Size = new System.Drawing.Size(120, 36);
             this.panel4.TabIndex = 12;
             // 
             // panel7
