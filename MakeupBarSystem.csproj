@@ -88,6 +88,24 @@
     <Compile Include="Empleado\Viw_Empleado.Designer.cs">
       <DependentUpon>Viw_Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura\Act_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura\Act_Factura.Designer.cs">
+      <DependentUpon>Act_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura\Men_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura\Men_Factura.Designer.cs">
+      <DependentUpon>Men_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura\Viw_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura\Viw_Factura.Designer.cs">
+      <DependentUpon>Viw_Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +138,30 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Venta\Act_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Act_Venta.Designer.cs">
+      <DependentUpon>Act_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\Ins_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Ins_Venta.Designer.cs">
+      <DependentUpon>Ins_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\Men_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Men_Venta.Designer.cs">
+      <DependentUpon>Men_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\Viw_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Viw_Venta.Designer.cs">
+      <DependentUpon>Viw_Venta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cliente\Act_Cliente.resx">
       <DependentUpon>Act_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +183,15 @@
     <EmbeddedResource Include="Empleado\Viw_Empleado.resx">
       <DependentUpon>Viw_Empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Act_Factura.resx">
+      <DependentUpon>Act_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Men_Factura.resx">
+      <DependentUpon>Men_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Viw_Factura.resx">
+      <DependentUpon>Viw_Factura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +210,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Act_Venta.resx">
+      <DependentUpon>Act_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Ins_Venta.resx">
+      <DependentUpon>Ins_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Men_Venta.resx">
+      <DependentUpon>Men_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Viw_Venta.resx">
+      <DependentUpon>Viw_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
