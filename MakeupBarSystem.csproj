@@ -64,6 +64,12 @@
     <Compile Include="Cliente\Men_Cliente.Designer.cs">
       <DependentUpon>Men_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\Ver_PerfilInstagram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Ver_PerfilInstagram.Designer.cs">
+      <DependentUpon>Ver_PerfilInstagram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\View_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,7 @@
     <Compile Include="Empleado\Viw_Empleado.Designer.cs">
       <DependentUpon>Viw_Empleado.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Envio\Act_Envio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +112,23 @@
     </Compile>
     <Compile Include="Envio\View_Envio.Designer.cs">
       <DependentUpon>View_Envio.cs</DependentUpon>
+    <Compile Include="Factura\Act_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura\Act_Factura.Designer.cs">
+      <DependentUpon>Act_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura\Men_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura\Men_Factura.Designer.cs">
+      <DependentUpon>Men_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura\Viw_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura\Viw_Factura.Designer.cs">
+      <DependentUpon>Viw_Factura.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -195,6 +219,30 @@
     <EmbeddedResource Include="Producto General\Act_ProductoGeneral.resx">
       <DependentUpon>Act_ProductoGeneral.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Venta\Act_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Act_Venta.Designer.cs">
+      <DependentUpon>Act_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\Ins_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Ins_Venta.Designer.cs">
+      <DependentUpon>Ins_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\Men_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Men_Venta.Designer.cs">
+      <DependentUpon>Men_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\Viw_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Viw_Venta.Designer.cs">
+      <DependentUpon>Viw_Venta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cliente\Act_Cliente.resx">
       <DependentUpon>Act_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\Men_Cliente.resx">
       <DependentUpon>Men_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Ver_PerfilInstagram.resx">
+      <DependentUpon>Ver_PerfilInstagram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\View_Cliente.resx">
       <DependentUpon>View_Cliente.cs</DependentUpon>
@@ -215,6 +266,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\Viw_Empleado.resx">
       <DependentUpon>Viw_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Act_Factura.resx">
+      <DependentUpon>Act_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Men_Factura.resx">
+      <DependentUpon>Men_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura\Viw_Factura.resx">
+      <DependentUpon>Viw_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -240,6 +300,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Act_Venta.resx">
+      <DependentUpon>Act_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Ins_Venta.resx">
+      <DependentUpon>Ins_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Men_Venta.resx">
+      <DependentUpon>Men_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Viw_Venta.resx">
+      <DependentUpon>Viw_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,5 +1,4 @@
-﻿using MakeupBarSystem.MenuDelModulo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MakeupBarSystem.Empleado
+namespace MakeupBarSystem.Cliente
 {
-    public partial class Act_Empleado : Form
+    public partial class Ver_PerfilInstagram : Form
     {
         private int state;
-
-        public Act_Empleado()
+        public Ver_PerfilInstagram()
         {
             InitializeComponent();
         }
@@ -23,16 +21,22 @@ namespace MakeupBarSystem.Empleado
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Men_Empleado ventana = new Men_Empleado();
+            Men_Cliente ventana = new Men_Cliente();
             ventana.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+     
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             if (state == 0)
             {
@@ -46,21 +50,6 @@ namespace MakeupBarSystem.Empleado
                 this.WindowState = FormWindowState.Maximized;
                 state = 0;
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

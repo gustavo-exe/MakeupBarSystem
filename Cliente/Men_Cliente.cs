@@ -55,8 +55,14 @@ namespace MakeupBarSystem.Cliente
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ver_PerfilInstagram ventana = new Ver_PerfilInstagram();
+            ventana.Show();
+        }
     }
 }

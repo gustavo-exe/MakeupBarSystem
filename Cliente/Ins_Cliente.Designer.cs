@@ -507,9 +507,16 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(51, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(356, 36);
+=======
+            this.label1.Location = new System.Drawing.Point(68, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(437, 45);
+>>>>>>> 2ee52054eab9584322608be7e33e19f804caac23
             this.label1.TabIndex = 12;
             this.label1.Text = "I n s e r t a r  C l i e n t e";
             // 
@@ -562,6 +569,7 @@
             this.button4.TabIndex = 18;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button1
             // 
@@ -577,6 +585,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClose
             // 
@@ -591,6 +600,7 @@
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // Ins_Cliente
             // 
