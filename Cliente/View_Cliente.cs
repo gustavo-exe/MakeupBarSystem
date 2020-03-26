@@ -28,9 +28,14 @@ namespace MakeupBarSystem.Cliente
             this.Hide();
             Men_Cliente ventana = new Men_Cliente();
             ventana.Show();
+        } 
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             if (state == 0)
             {
@@ -44,16 +49,12 @@ namespace MakeupBarSystem.Cliente
                 this.WindowState = FormWindowState.Maximized;
                 state = 0;
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

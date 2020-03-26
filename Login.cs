@@ -49,7 +49,7 @@ namespace MakeupBarSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)

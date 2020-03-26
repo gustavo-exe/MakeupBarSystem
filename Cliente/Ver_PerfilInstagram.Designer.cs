@@ -1,6 +1,6 @@
 ﻿namespace MakeupBarSystem.Cliente
 {
-    partial class View_Cliente
+    partial class Ver_PerfilInstagram
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1067, 554);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // panel1
             // 
@@ -114,7 +114,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnClose
             // 
@@ -188,9 +188,9 @@
             this.label1.Location = new System.Drawing.Point(147, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 45);
+            this.label1.Size = new System.Drawing.Size(459, 45);
             this.label1.TabIndex = 12;
-            this.label1.Text = "D a t o s   C l i e n t e";
+            this.label1.Text = "P e r f i l   I n s t a g r a m";
             // 
             // panel6
             // 
@@ -219,19 +219,18 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // View_Cliente
+            // Ver_PerfilInstagram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "View_Cliente";
-            this.Text = "View_Cliente";
-            this.Load += new System.EventHandler(this.View_Cliente_Load);
+            this.Name = "Ver_PerfilInstagram";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ver_PerfilInstagram";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

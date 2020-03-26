@@ -64,6 +64,12 @@
     <Compile Include="Cliente\Men_Cliente.Designer.cs">
       <DependentUpon>Men_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\Ver_PerfilInstagram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\Ver_PerfilInstagram.Designer.cs">
+      <DependentUpon>Ver_PerfilInstagram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\View_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\Men_Cliente.resx">
       <DependentUpon>Men_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\Ver_PerfilInstagram.resx">
+      <DependentUpon>Ver_PerfilInstagram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\View_Cliente.resx">
       <DependentUpon>View_Cliente.cs</DependentUpon>
