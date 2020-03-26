@@ -94,24 +94,6 @@
     <Compile Include="Empleado\Viw_Empleado.Designer.cs">
       <DependentUpon>Viw_Empleado.cs</DependentUpon>
     </Compile>
-
-    <Compile Include="Envio\Act_Envio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Envio\Act_Envio.Designer.cs">
-      <DependentUpon>Act_Envio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Envio\Ins_Envio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Envio\Ins_Envio.Designer.cs">
-      <DependentUpon>Ins_Envio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Envio\View_Envio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Envio\View_Envio.Designer.cs">
-      <DependentUpon>View_Envio.cs</DependentUpon>
     <Compile Include="Factura\Act_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,30 +118,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Maquillaje\Act_Maquillaje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maquillaje\Act_Maquillaje.Designer.cs">
-      <DependentUpon>Act_Maquillaje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Maquillaje\Ins_Maquillaje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maquillaje\Ins_Maquillaje.Designer.cs">
-      <DependentUpon>Ins_Maquillaje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Maquillaje\View_Maquillaje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maquillaje\View_Maquillaje.Designer.cs">
-      <DependentUpon>View_Maquillaje.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Producto General\Ins_ProductoGeneral.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Producto General\Ins_ProductoGeneral.Designer.cs">
-      <DependentUpon>Ins_ProductoGeneral.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,23 +130,11 @@
     <Compile Include="Empleado\Men_Empleado.Designer.cs">
       <DependentUpon>Men_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Producto General\Act_ProductoGeneral.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Producto General\Act_ProductoGeneral.Designer.cs">
-      <DependentUpon>Act_ProductoGeneral.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos.Designer.cs">
       <DependentUpon>Modulos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Producto General\View_ProductoGeneral.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Producto General\View_ProductoGeneral.Designer.cs">
-      <DependentUpon>View_ProductoGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -198,27 +144,6 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Envio\Act_Envio.resx">
-      <DependentUpon>Act_Envio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Envio\Ins_Envio.resx">
-      <DependentUpon>Ins_Envio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Envio\View_Envio.resx">
-      <DependentUpon>View_Envio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maquillaje\Act_Maquillaje.resx">
-      <DependentUpon>Act_Maquillaje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maquillaje\Ins_Maquillaje.resx">
-      <DependentUpon>Ins_Maquillaje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maquillaje\View_Maquillaje.resx">
-      <DependentUpon>View_Maquillaje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Producto General\Act_ProductoGeneral.resx">
-      <DependentUpon>Act_ProductoGeneral.cs</DependentUpon>
-    </EmbeddedResource>
     <Compile Include="Venta\Act_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,9 +204,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Producto General\Ins_ProductoGeneral.resx">
-      <DependentUpon>Ins_ProductoGeneral.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos.resx">
       <DependentUpon>Modulos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Producto General\View_ProductoGeneral.resx">
-      <DependentUpon>View_ProductoGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
