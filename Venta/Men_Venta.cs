@@ -21,5 +21,10 @@ namespace MakeupBarSystem.Venta
         {
             Application.Exit();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
