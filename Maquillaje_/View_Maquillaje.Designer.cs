@@ -1,6 +1,6 @@
-﻿namespace MakeupBarSystem.Envio
+﻿namespace MakeupBarSystem.Maquillaje
 {
-    partial class View_Envio
+    partial class View_Maquillaje
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
-            this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
@@ -175,11 +175,11 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 5);
+            this.label1.Location = new System.Drawing.Point(12, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 36);
+            this.label1.Size = new System.Drawing.Size(391, 36);
             this.label1.TabIndex = 12;
-            this.label1.Text = "D a t o s   E n v i o";
+            this.label1.Text = "D a t o s   M a q u i l l a j e ";
             // 
             // panel6
             // 
@@ -206,7 +206,7 @@
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
             // 
-            // View_Envio
+            // View_Maquillaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,8 +214,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "View_Envio";
-            this.Text = "View_Envio";
+            this.Name = "View_Maquillaje";
+            this.Text = "View_Maquillaje";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
