@@ -99,5 +99,12 @@ namespace MakeupBarSystem
             Men_Cliente ventana = new Men_Cliente();
             ventana.Show();
         }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Servicio ventana = new Servicio();
+            ventana.Show();
+        }
     }
 }

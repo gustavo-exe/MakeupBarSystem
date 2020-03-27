@@ -47,7 +47,9 @@ namespace MakeupBarSystem.ServicioDeEntrega
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Servicio ventana = new Servicio();
+            ventana.Show();
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)

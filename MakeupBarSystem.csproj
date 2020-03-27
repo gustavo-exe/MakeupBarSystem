@@ -177,39 +177,57 @@
     <Compile Include="Proveedor\Act_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proveedor\Act_Proveedor.Designer.cs" />
+    <Compile Include="Proveedor\Act_Proveedor.designer.cs">
+      <DependentUpon>Act_Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proveedor\Ins_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proveedor\Ins_Proveedor.Designer.cs" />
+    <Compile Include="Proveedor\Ins_Proveedor.designer.cs">
+      <DependentUpon>Ins_Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proveedor\Men_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proveedor\Men_Proveedor.Designer.cs" />
+    <Compile Include="Proveedor\Men_Proveedor.designer.cs">
+      <DependentUpon>Men_Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proveedor\ViewProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proveedor\ViewProveedor.Designer.cs" />
+    <Compile Include="Proveedor\ViewProveedor.designer.cs">
+      <DependentUpon>ViewProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Servicio.Designer.cs" />
+    <Compile Include="Servicio.designer.cs">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServicioDeEntrega\Act_Entrega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServicioDeEntrega\Act_Entrega.Designer.cs" />
+    <Compile Include="ServicioDeEntrega\Act_Entrega.designer.cs">
+      <DependentUpon>Act_Entrega.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServicioDeEntrega\Ins_Entrega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServicioDeEntrega\Ins_Entrega.Designer.cs" />
+    <Compile Include="ServicioDeEntrega\Ins_Entrega.designer.cs">
+      <DependentUpon>Ins_Entrega.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServicioDeEntrega\Men_Entrega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServicioDeEntrega\Men_Entrega.Designer.cs" />
+    <Compile Include="ServicioDeEntrega\Men_Entrega.designer.cs">
+      <DependentUpon>Men_Entrega.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServicioDeEntrega\View_Entrega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServicioDeEntrega\View_Entrega.Designer.cs" />
+    <Compile Include="ServicioDeEntrega\View_Entrega.designer.cs">
+      <DependentUpon>View_Entrega.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,15 +316,33 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Proveedor\Act_Proveedor.resx" />
-    <EmbeddedResource Include="Proveedor\Ins_Proveedor.resx" />
-    <EmbeddedResource Include="Proveedor\Men_Proveedor.resx" />
-    <EmbeddedResource Include="Proveedor\ViewProveedor.resx" />
-    <EmbeddedResource Include="Servicio.resx" />
-    <EmbeddedResource Include="ServicioDeEntrega\Act_Entrega.resx" />
-    <EmbeddedResource Include="ServicioDeEntrega\Ins_Entrega.resx" />
-    <EmbeddedResource Include="ServicioDeEntrega\Men_Entrega.resx" />
-    <EmbeddedResource Include="ServicioDeEntrega\View_Entrega.resx" />
+    <EmbeddedResource Include="Proveedor\Act_Proveedor.resx">
+      <DependentUpon>Act_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\Ins_Proveedor.resx">
+      <DependentUpon>Ins_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\Men_Proveedor.resx">
+      <DependentUpon>Men_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\ViewProveedor.resx">
+      <DependentUpon>ViewProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicio.resx">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicioDeEntrega\Act_Entrega.resx">
+      <DependentUpon>Act_Entrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicioDeEntrega\Ins_Entrega.resx">
+      <DependentUpon>Ins_Entrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicioDeEntrega\Men_Entrega.resx">
+      <DependentUpon>Men_Entrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicioDeEntrega\View_Entrega.resx">
+      <DependentUpon>View_Entrega.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
