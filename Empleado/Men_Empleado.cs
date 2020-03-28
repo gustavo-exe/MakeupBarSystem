@@ -29,7 +29,7 @@ namespace MakeupBarSystem.MenuDelModulo
         }
 
         private void btnVer_Click(object sender, EventArgs e)
-        {
+        { 
             this.Hide();
             Viw_Empleado ventana = new Viw_Empleado();
             ventana.Show();
