@@ -109,6 +109,12 @@
     <Compile Include="Envio_\Ins_Envio.Designer.cs">
       <DependentUpon>Ins_Envio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Envio_\Men_Envio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Envio_\Men_Envio.Designer.cs">
+      <DependentUpon>Men_Envio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Envio_\View_Envio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,12 @@
     <Compile Include="Maquillaje_\Ins_Maquillaje.Designer.cs">
       <DependentUpon>Ins_Maquillaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maquillaje_\Men_Maquillaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maquillaje_\Men_Maquillaje.Designer.cs">
+      <DependentUpon>Men_Maquillaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maquillaje_\View_Maquillaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +198,12 @@
     </Compile>
     <Compile Include="Producto_General\Ins_ProductoGeneral.Designer.cs">
       <DependentUpon>Ins_ProductoGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto_General\Men_ProductoGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto_General\Men_ProductoGeneral.Designer.cs">
+      <DependentUpon>Men_ProductoGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto_General\View_ProductoGeneral.cs">
       <SubType>Form</SubType>
@@ -309,6 +327,9 @@
     <EmbeddedResource Include="Envio_\Ins_Envio.resx">
       <DependentUpon>Ins_Envio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Envio_\Men_Envio.resx">
+      <DependentUpon>Men_Envio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Envio_\View_Envio.resx">
       <DependentUpon>View_Envio.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +357,9 @@
     <EmbeddedResource Include="Maquillaje_\Ins_Maquillaje.resx">
       <DependentUpon>Ins_Maquillaje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maquillaje_\Men_Maquillaje.resx">
+      <DependentUpon>Men_Maquillaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maquillaje_\View_Maquillaje.resx">
       <DependentUpon>View_Maquillaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Producto_General\Ins_ProductoGeneral.resx">
       <DependentUpon>Ins_ProductoGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto_General\Men_ProductoGeneral.resx">
+      <DependentUpon>Men_ProductoGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto_General\View_ProductoGeneral.resx">
       <DependentUpon>View_ProductoGeneral.cs</DependentUpon>

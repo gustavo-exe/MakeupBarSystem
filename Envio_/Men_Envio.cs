@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MakeupBarSystem.Envio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,21 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MakeupBarSystem.Cliente
+
+namespace MakeupBarSystem.Envio_
 {
-    public partial class Men_Cliente : Form
+    public partial class Men_Envio : Form
     {
         private int state;
-        public Men_Cliente()
+        public Men_Envio()
         {
             InitializeComponent();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Act_Cliente ventana = new Act_Cliente();
-            ventana.Show();
+            Application.Exit();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -31,8 +31,13 @@ namespace MakeupBarSystem.Cliente
             Modulos ventana = new Modulos();
             ventana.Show();
         }
-        
-        private void button4_Click_1(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             if (state == 0)
             {
@@ -41,33 +46,33 @@ namespace MakeupBarSystem.Cliente
                 state = 1;
             }
             else
-           if (state == 1)
+            if (state == 1)
             {
                 this.WindowState = FormWindowState.Maximized;
                 state = 0;
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnInsertar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Ver_PerfilInstagram ventana = new Ver_PerfilInstagram();
+            Ins_Envio ventana = new Ins_Envio();
+            ventana.Show();
+
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            View_Envio ventana = new View_Envio();
             ventana.Show();
         }
 
         private void btnActulizar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Act_Envio ventana = new Act_Envio();
+            ventana.Show();
         }
     }
 }

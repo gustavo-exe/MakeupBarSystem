@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnServicios = new System.Windows.Forms.Button();
+            this.btnMaquillaje = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnModuloVentas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -143,27 +143,29 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnServicios);
+            this.panel5.Controls.Add(this.btnMaquillaje);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(3, 125);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(394, 103);
             this.panel5.TabIndex = 3;
             // 
-            // btnServicios
+            // btnMaquillaje
             // 
-            this.btnServicios.BackColor = System.Drawing.Color.Black;
-            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicios.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServicios.ForeColor = System.Drawing.Color.White;
-            this.btnServicios.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnServicios.Location = new System.Drawing.Point(100, 0);
-            this.btnServicios.Margin = new System.Windows.Forms.Padding(0);
-            this.btnServicios.Name = "btnServicios";
-            this.btnServicios.Size = new System.Drawing.Size(195, 92);
-            this.btnServicios.TabIndex = 12;
-            this.btnServicios.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnServicios.UseVisualStyleBackColor = false;
+            this.btnMaquillaje.BackColor = System.Drawing.Color.Black;
+            this.btnMaquillaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaquillaje.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaquillaje.ForeColor = System.Drawing.Color.White;
+            this.btnMaquillaje.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnMaquillaje.Location = new System.Drawing.Point(100, 0);
+            this.btnMaquillaje.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMaquillaje.Name = "btnMaquillaje";
+            this.btnMaquillaje.Size = new System.Drawing.Size(195, 92);
+            this.btnMaquillaje.TabIndex = 12;
+            this.btnMaquillaje.Text = "M a q u i l l a j e";
+            this.btnMaquillaje.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnMaquillaje.UseVisualStyleBackColor = false;
+            this.btnMaquillaje.Click += new System.EventHandler(this.btnMaquillaje_Click);
             // 
             // panel6
             // 
@@ -210,8 +212,10 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(195, 92);
             this.button3.TabIndex = 11;
+            this.button3.Text = "           P r o d u c t o           G e n e r a l";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel7
             // 
@@ -356,7 +360,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnServicios;
+        private System.Windows.Forms.Button btnMaquillaje;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnModuloVentas;
         private System.Windows.Forms.Panel panel2;

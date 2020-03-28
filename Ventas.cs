@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeupBarSystem.Maquillaje_;
+using MakeupBarSystem.Producto_General;
 
 namespace MakeupBarSystem
 {
@@ -55,6 +57,20 @@ namespace MakeupBarSystem
         private void btnInventario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Men_ProductoGeneral ventana = new Men_ProductoGeneral();
+            ventana.Show();
+        }
+
+        private void btnMaquillaje_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Men_Maquillaje ventana = new Men_Maquillaje();
+            ventana.Show();
         }
     }
 }

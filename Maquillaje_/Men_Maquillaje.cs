@@ -7,32 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeupBarSystem.Maquillaje;
 
-namespace MakeupBarSystem.Cliente
+namespace MakeupBarSystem.Maquillaje_
 {
-    public partial class Men_Cliente : Form
+    public partial class Men_Maquillaje : Form
     {
         private int state;
-        public Men_Cliente()
+        public Men_Maquillaje()
         {
             InitializeComponent();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnInsertar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Act_Cliente ventana = new Act_Cliente();
+            Ins_Maquillaje ventana = new Ins_Maquillaje();
             ventana.Show();
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Modulos ventana = new Modulos();
-            ventana.Show();
+            this.WindowState = FormWindowState.Minimized;
         }
-        
-        private void button4_Click_1(object sender, EventArgs e)
+
+        private void button4_Click(object sender, EventArgs e)
         {
             if (state == 0)
             {
@@ -41,16 +40,11 @@ namespace MakeupBarSystem.Cliente
                 state = 1;
             }
             else
-           if (state == 1)
+            if (state == 1)
             {
                 this.WindowState = FormWindowState.Maximized;
                 state = 0;
             }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -58,16 +52,18 @@ namespace MakeupBarSystem.Cliente
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnVer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Ver_PerfilInstagram ventana = new Ver_PerfilInstagram();
+            View_Maquillaje ventana = new View_Maquillaje();
             ventana.Show();
         }
 
         private void btnActulizar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Act_Maquillaje ventana = new Act_Maquillaje();
+            ventana.Show();
         }
     }
 }

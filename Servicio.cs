@@ -1,5 +1,6 @@
 ﻿using MakeupBarSystem.Proveedor;
 using MakeupBarSystem.ServicioDeEntrega;
+using MakeupBarSystem.Envio_;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,7 +71,9 @@ namespace MakeupBarSystem
 
         private void btnEnvio_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Men_Envio ventana = new Men_Envio();
+            ventana.Show();
         }
     }
 }

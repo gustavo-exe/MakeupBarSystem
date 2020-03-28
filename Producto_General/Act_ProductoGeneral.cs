@@ -12,9 +12,6 @@ namespace MakeupBarSystem
 {
     public partial class Act_ProductoGeneral : Form
     {
-        public Act_ProductoGeneral()
-        {
-            InitializeComponent();
-        }
+       
     }
 }
