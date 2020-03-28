@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MakeupBarSystem.Inventario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,7 +57,9 @@ namespace MakeupBarSystem
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Viw_Inventario ventana = new Viw_Inventario();
+            ventana.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

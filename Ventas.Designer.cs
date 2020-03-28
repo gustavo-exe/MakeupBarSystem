@@ -302,7 +302,7 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.btnInventario);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel9.Location = new System.Drawing.Point(3, 343);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(394, 104);
