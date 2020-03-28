@@ -1,5 +1,4 @@
-﻿using MakeupBarSystem.Inventario;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,21 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MakeupBarSystem
+namespace MakeupBarSystem.Inventario
 {
-    public partial class Ventas : Form
+    public partial class Viw_Inventario : Form
     {
         private int state;
 
-        public Ventas()
+        public Viw_Inventario()
         {
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Modulos ventana = new Modulos();
+            Ventas ventana = new Ventas();
             ventana.Show();
         }
 
@@ -43,21 +47,9 @@ namespace MakeupBarSystem
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Viw_Inventario ventana = new Viw_Inventario();
-            ventana.Show();
         }
     }
 }
