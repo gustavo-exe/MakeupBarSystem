@@ -82,6 +82,7 @@
     <Compile Include="Empleado\Act_Empleado.Designer.cs">
       <DependentUpon>Act_Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleado\Empleado.cs" />
     <Compile Include="Empleado\Ins_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
