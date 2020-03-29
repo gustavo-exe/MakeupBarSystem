@@ -20,9 +20,10 @@ namespace MakeupBarSystem.Producto_General
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Ins_ProductoGeneral ventana = new Ins_ProductoGeneral();
+           /* this.Hide();
+            Ins_ProductoGeneral ventana = new Ins_ProductoGeneral(); 
             ventana.Show();
+            */
         }
 
         private void btnVer_Click(object sender, EventArgs e)
@@ -36,6 +37,18 @@ namespace MakeupBarSystem.Producto_General
         {
             this.Hide();
             Act_ProductoGeneral ventana = new Act_ProductoGeneral();
+            ventana.Show();
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventas ventana = new Ventas();
             ventana.Show();
         }
     }

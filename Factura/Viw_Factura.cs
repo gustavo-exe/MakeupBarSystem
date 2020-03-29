@@ -21,5 +21,12 @@ namespace MakeupBarSystem.Factura
         {
             Application.Exit();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Men_Factura ventana = new Men_Factura();
+            ventana.Show();
+        }
     }
 }

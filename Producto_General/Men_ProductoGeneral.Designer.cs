@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -143,6 +143,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(394, 78);
             this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(41, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 36);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "G e n e r a l ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -259,6 +272,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(394, 78);
             this.panel8.TabIndex = 6;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // btnReturn
             // 
@@ -275,19 +289,7 @@
             this.btnReturn.TabIndex = 13;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(41, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 36);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "G e n e r a l ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // Men_ProductoGeneral
             // 

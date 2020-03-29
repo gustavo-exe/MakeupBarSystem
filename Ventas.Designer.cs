@@ -38,11 +38,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnMaquillaje = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnModuloVentas = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnFactura = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -169,27 +169,29 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnModuloVentas);
+            this.panel6.Controls.Add(this.btnVentas);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(403, 125);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(394, 103);
             this.panel6.TabIndex = 4;
             // 
-            // btnModuloVentas
+            // btnVentas
             // 
-            this.btnModuloVentas.BackColor = System.Drawing.Color.Black;
-            this.btnModuloVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModuloVentas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModuloVentas.ForeColor = System.Drawing.Color.White;
-            this.btnModuloVentas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnModuloVentas.Location = new System.Drawing.Point(100, 0);
-            this.btnModuloVentas.Margin = new System.Windows.Forms.Padding(0);
-            this.btnModuloVentas.Name = "btnModuloVentas";
-            this.btnModuloVentas.Size = new System.Drawing.Size(195, 92);
-            this.btnModuloVentas.TabIndex = 9;
-            this.btnModuloVentas.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnModuloVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.BackColor = System.Drawing.Color.Black;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.ForeColor = System.Drawing.Color.White;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnVentas.Location = new System.Drawing.Point(100, 0);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(0);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(195, 92);
+            this.btnVentas.TabIndex = 9;
+            this.btnVentas.Text = "V e n t a";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // panel2
             // 
@@ -219,27 +221,29 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.btnFactura);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(403, 234);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(394, 103);
             this.panel7.TabIndex = 6;
             // 
-            // button2
+            // btnFactura
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(100, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 92);
-            this.button2.TabIndex = 10;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnFactura.BackColor = System.Drawing.Color.Black;
+            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFactura.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactura.ForeColor = System.Drawing.Color.White;
+            this.btnFactura.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnFactura.Location = new System.Drawing.Point(100, 11);
+            this.btnFactura.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Size = new System.Drawing.Size(195, 92);
+            this.btnFactura.TabIndex = 10;
+            this.btnFactura.Text = "F a c t u r a";
+            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnFactura.UseVisualStyleBackColor = false;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // panel8
             // 
@@ -362,11 +366,11 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnMaquillaje;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnModuloVentas;
+        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnFactura;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;

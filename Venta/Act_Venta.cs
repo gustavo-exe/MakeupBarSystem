@@ -26,5 +26,12 @@ namespace MakeupBarSystem.Venta
         {
             Application.Exit();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Men_Venta ventana = new Men_Venta();
+            ventana.Show();
+        }
     }
 }

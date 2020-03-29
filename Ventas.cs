@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MakeupBarSystem.Maquillaje_;
 using MakeupBarSystem.Producto_General;
+using MakeupBarSystem.Factura;
+using MakeupBarSystem.Venta;
 
 namespace MakeupBarSystem
 {
@@ -75,5 +77,22 @@ namespace MakeupBarSystem
             Men_Maquillaje ventana = new Men_Maquillaje();
             ventana.Show();
         }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Men_Factura ventana = new Men_Factura();
+            ventana.Show();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Men_Venta ventana = new Men_Venta();
+            ventana.Show();
+        }
+
     }
-}
+    }
+   
+

@@ -95,6 +95,7 @@
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // panel3
             // 
@@ -129,6 +130,7 @@
             this.btnActulizar.Text = "M o d i f i c a r";
             this.btnActulizar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnActulizar.UseVisualStyleBackColor = false;
+            this.btnActulizar.Click += new System.EventHandler(this.btnActulizar_Click);
             // 
             // panel6
             // 
@@ -137,6 +139,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(394, 162);
             this.panel6.TabIndex = 5;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // btnVer
             // 
@@ -153,6 +156,7 @@
             this.btnVer.Text = "V e r";
             this.btnVer.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnVer.UseVisualStyleBackColor = false;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // panel4
             // 

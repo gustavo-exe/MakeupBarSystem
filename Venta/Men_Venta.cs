@@ -24,6 +24,34 @@ namespace MakeupBarSystem.Venta
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Ventas ventana = new Ventas();
+            ventana.Show();
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ins_Venta ventana = new Ins_Venta();
+            ventana.Show();
+        }
+
+        private void btnActulizar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Act_Venta ventana = new Act_Venta();
+            ventana.Show();
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Viw_Venta ventana = new Viw_Venta();
+            ventana.Show();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
