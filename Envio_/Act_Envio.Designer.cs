@@ -112,6 +112,7 @@
             this.button4.TabIndex = 18;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -127,6 +128,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClose
             // 
@@ -141,6 +143,7 @@
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel2
             // 
@@ -425,6 +428,7 @@
             this.btnReturn.TabIndex = 12;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // Act_Envio
             // 

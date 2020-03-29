@@ -59,7 +59,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.826087F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.17391F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnReturn, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
@@ -99,13 +99,14 @@
             this.btnReturn.TabIndex = 12;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(687, 3);
+            this.panel1.Location = new System.Drawing.Point(686, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(106, 17);
             this.panel1.TabIndex = 13;
@@ -123,6 +124,7 @@
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // button4
             // 
@@ -138,6 +140,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -153,6 +156,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -168,7 +172,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(56, 69);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(625, 315);
+            this.panel2.Size = new System.Drawing.Size(624, 315);
             this.panel2.TabIndex = 14;
             // 
             // textBox7
@@ -306,7 +310,7 @@
             this.panel3.Controls.Add(this.btnInsertar);
             this.panel3.Location = new System.Drawing.Point(56, 390);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(625, 55);
+            this.panel3.Size = new System.Drawing.Size(624, 55);
             this.panel3.TabIndex = 15;
             // 
             // btnInsertar
