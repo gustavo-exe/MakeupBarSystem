@@ -36,7 +36,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaCumpleaños = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,26 +45,26 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTonodePolvo = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtTonodeBase = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTipodeCutie = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPerfilInstagram = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelColor3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             this.panelColor2 = new System.Windows.Forms.Panel();
             this.PanelColor1 = new System.Windows.Forms.Panel();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -149,10 +149,11 @@
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dateFechaCumpleaños);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
@@ -161,26 +162,26 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.txtTonodePolvo);
+            this.panel2.Controls.Add(this.txtCiudad);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel12);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.txtTonodeBase);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtTipodeCutie);
+            this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtPerfilInstagram);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelColor3);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.txtUsuario);
+            this.panel2.Controls.Add(this.txtCorreo);
+            this.panel2.Controls.Add(this.txtCliente);
             this.panel2.Controls.Add(this.panelColor2);
             this.panel2.Controls.Add(this.PanelColor1);
-            this.panel2.Controls.Add(this.txtContraseña);
+            this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(68, 93);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -189,12 +190,13 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // dateTimePicker1
+            // dateFechaCumpleaños
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(601, 47);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
-            this.dateTimePicker1.TabIndex = 37;
+            this.dateFechaCumpleaños.Location = new System.Drawing.Point(601, 47);
+            this.dateFechaCumpleaños.Name = "dateFechaCumpleaños";
+            this.dateFechaCumpleaños.Size = new System.Drawing.Size(247, 22);
+            this.dateFechaCumpleaños.TabIndex = 37;
+            this.dateFechaCumpleaños.ValueChanged += new System.EventHandler(this.dateFechaCumpleaños_ValueChanged);
             // 
             // label11
             // 
@@ -267,7 +269,7 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(4, 262);
+            this.label6.Location = new System.Drawing.Point(-5, 262);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 27);
@@ -296,31 +298,31 @@
             this.panel10.Size = new System.Drawing.Size(217, 1);
             this.panel10.TabIndex = 29;
             // 
-            // textBox5
+            // txtTonodePolvo
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Black;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(602, 199);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(223, 28);
-            this.textBox5.TabIndex = 28;
-            this.textBox5.Tag = "";
+            this.txtTonodePolvo.BackColor = System.Drawing.Color.Black;
+            this.txtTonodePolvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTonodePolvo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTonodePolvo.ForeColor = System.Drawing.Color.White;
+            this.txtTonodePolvo.Location = new System.Drawing.Point(602, 199);
+            this.txtTonodePolvo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTonodePolvo.Name = "txtTonodePolvo";
+            this.txtTonodePolvo.Size = new System.Drawing.Size(223, 28);
+            this.txtTonodePolvo.TabIndex = 28;
+            this.txtTonodePolvo.Tag = "";
             // 
-            // textBox6
+            // txtCiudad
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Black;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(602, 88);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(223, 28);
-            this.textBox6.TabIndex = 27;
-            this.textBox6.Tag = "";
+            this.txtCiudad.BackColor = System.Drawing.Color.Black;
+            this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCiudad.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.ForeColor = System.Drawing.Color.White;
+            this.txtCiudad.Location = new System.Drawing.Point(602, 88);
+            this.txtCiudad.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(223, 28);
+            this.txtCiudad.TabIndex = 27;
+            this.txtCiudad.Tag = "";
             // 
             // panel11
             // 
@@ -340,18 +342,18 @@
             this.panel12.Size = new System.Drawing.Size(217, 1);
             this.panel12.TabIndex = 25;
             // 
-            // textBox7
+            // txtTonodeBase
             // 
-            this.textBox7.BackColor = System.Drawing.Color.Black;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.White;
-            this.textBox7.Location = new System.Drawing.Point(602, 148);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(223, 28);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.Tag = "";
+            this.txtTonodeBase.BackColor = System.Drawing.Color.Black;
+            this.txtTonodeBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTonodeBase.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTonodeBase.ForeColor = System.Drawing.Color.White;
+            this.txtTonodeBase.Location = new System.Drawing.Point(602, 148);
+            this.txtTonodeBase.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTonodeBase.Name = "txtTonodeBase";
+            this.txtTonodeBase.Size = new System.Drawing.Size(223, 28);
+            this.txtTonodeBase.TabIndex = 24;
+            this.txtTonodeBase.Tag = "";
             // 
             // panel5
             // 
@@ -362,31 +364,31 @@
             this.panel5.Size = new System.Drawing.Size(217, 1);
             this.panel5.TabIndex = 23;
             // 
-            // textBox2
+            // txtTipodeCutie
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(602, 257);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 28);
-            this.textBox2.TabIndex = 22;
-            this.textBox2.Tag = "";
+            this.txtTipodeCutie.BackColor = System.Drawing.Color.Black;
+            this.txtTipodeCutie.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTipodeCutie.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipodeCutie.ForeColor = System.Drawing.Color.White;
+            this.txtTipodeCutie.Location = new System.Drawing.Point(602, 257);
+            this.txtTipodeCutie.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTipodeCutie.Name = "txtTipodeCutie";
+            this.txtTipodeCutie.Size = new System.Drawing.Size(223, 28);
+            this.txtTipodeCutie.TabIndex = 22;
+            this.txtTipodeCutie.Tag = "";
             // 
-            // textBox3
+            // txtTelefono
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Black;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(187, 198);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(223, 28);
-            this.textBox3.TabIndex = 21;
-            this.textBox3.Tag = "";
+            this.txtTelefono.BackColor = System.Drawing.Color.Black;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.White;
+            this.txtTelefono.Location = new System.Drawing.Point(187, 198);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(223, 28);
+            this.txtTelefono.TabIndex = 21;
+            this.txtTelefono.Tag = "";
             // 
             // panel8
             // 
@@ -406,18 +408,18 @@
             this.panel9.Size = new System.Drawing.Size(217, 1);
             this.panel9.TabIndex = 19;
             // 
-            // textBox4
+            // txtPerfilInstagram
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Black;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(187, 256);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(223, 28);
-            this.textBox4.TabIndex = 18;
-            this.textBox4.Tag = "";
+            this.txtPerfilInstagram.BackColor = System.Drawing.Color.Black;
+            this.txtPerfilInstagram.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPerfilInstagram.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerfilInstagram.ForeColor = System.Drawing.Color.White;
+            this.txtPerfilInstagram.Location = new System.Drawing.Point(187, 256);
+            this.txtPerfilInstagram.Margin = new System.Windows.Forms.Padding(0);
+            this.txtPerfilInstagram.Name = "txtPerfilInstagram";
+            this.txtPerfilInstagram.Size = new System.Drawing.Size(223, 28);
+            this.txtPerfilInstagram.TabIndex = 18;
+            this.txtPerfilInstagram.Tag = "";
             // 
             // label4
             // 
@@ -467,31 +469,31 @@
             this.panelColor3.Size = new System.Drawing.Size(217, 1);
             this.panelColor3.TabIndex = 14;
             // 
-            // textBox1
+            // txtCorreo
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(187, 146);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 28);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.Tag = "";
+            this.txtCorreo.BackColor = System.Drawing.Color.Black;
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.White;
+            this.txtCorreo.Location = new System.Drawing.Point(187, 146);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(223, 28);
+            this.txtCorreo.TabIndex = 13;
+            this.txtCorreo.Tag = "";
             // 
-            // txtUsuario
+            // txtCliente
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.Black;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(186, 35);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(223, 28);
-            this.txtUsuario.TabIndex = 12;
-            this.txtUsuario.Tag = "";
+            this.txtCliente.BackColor = System.Drawing.Color.Black;
+            this.txtCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.ForeColor = System.Drawing.Color.White;
+            this.txtCliente.Location = new System.Drawing.Point(186, 35);
+            this.txtCliente.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(223, 28);
+            this.txtCliente.TabIndex = 12;
+            this.txtCliente.Tag = "";
             // 
             // panelColor2
             // 
@@ -511,18 +513,18 @@
             this.PanelColor1.Size = new System.Drawing.Size(217, 1);
             this.PanelColor1.TabIndex = 10;
             // 
-            // txtContraseña
+            // txtNombre
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.Black;
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(187, 88);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(223, 28);
-            this.txtContraseña.TabIndex = 9;
-            this.txtContraseña.Tag = "";
+            this.txtNombre.BackColor = System.Drawing.Color.Black;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.White;
+            this.txtNombre.Location = new System.Drawing.Point(187, 88);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(223, 28);
+            this.txtNombre.TabIndex = 9;
+            this.txtNombre.Tag = "";
             // 
             // label1
             // 
@@ -655,7 +657,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateFechaCumpleaños;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -664,26 +666,26 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTonodePolvo;
+        private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtTonodeBase;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTipodeCutie;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPerfilInstagram;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelColor3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Panel panelColor2;
         private System.Windows.Forms.Panel PanelColor1;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

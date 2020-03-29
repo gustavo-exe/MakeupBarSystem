@@ -65,9 +65,18 @@ namespace MakeupBarSystem.Cliente
             ventana.Show();
         }
 
-        private void btnActulizar_Click(object sender, EventArgs e)
+        private void btnVer_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            View_Cliente ventana = new View_Cliente();
+            ventana.Show();
+        }
 
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ins_Cliente ventana = new Ins_Cliente();
+            ventana.Show();
         }
     }
 }

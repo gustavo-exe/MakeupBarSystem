@@ -12,6 +12,7 @@ namespace MakeupBarSystem
 {
     public partial class Login : Form
     {
+        Conexion conexion = new Conexion();
         public Login()
         {
             InitializeComponent();
@@ -40,10 +41,38 @@ namespace MakeupBarSystem
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             btnIniciar.ForeColor = Color.White;
+            
+            try
+            {
+                // Objeto de tipo usuario que almacena el valor del usuario
+                // si éste existe en la base de datos
+                //Empleado empleado = empleado.BuscarUsuario(txtUserName.Text);
+                // Verificar que la contraseña ingresada es igual a la almacenada
+                // en la base de datos
+                /* if (empleado.Password == pwbPassword.Password)
+                 {
+                     MessageBox.Show("Bienvenido al sistema de Reservaciones");
 
-            this.Hide();
-            Modulos ventana = new Modulos();
-            ventana.Show();
+                     // Crear un objeto de tipo Modulos para mostrar el menú
+                     this.Hide();
+                     Modulos ventana = new Modulos();
+                     ventana.Show();
+                 }
+                 else
+                 {
+                     MessageBox.Show("Base de datos no conectado.");
+                 }*/
+                conexion.conectar();
+               
+                this.Hide();
+                Modulos ventana = new Modulos();
+                ventana.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
 
         }
 
