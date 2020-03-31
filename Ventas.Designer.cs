@@ -82,7 +82,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 479);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel3
@@ -91,7 +91,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 33);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(394, 86);
+            this.panel3.Size = new System.Drawing.Size(394, 92);
             this.panel3.TabIndex = 1;
             // 
             // button5
@@ -105,7 +105,7 @@
             this.button5.Location = new System.Drawing.Point(0, 0);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(79, 86);
+            this.button5.Size = new System.Drawing.Size(79, 92);
             this.button5.TabIndex = 11;
             this.button5.Text = "←";
             this.button5.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(403, 33);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(394, 86);
+            this.panel4.Size = new System.Drawing.Size(394, 92);
             this.panel4.TabIndex = 2;
             // 
             // label1
@@ -145,9 +145,9 @@
             // 
             this.panel5.Controls.Add(this.btnMaquillaje);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(3, 125);
+            this.panel5.Location = new System.Drawing.Point(3, 131);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(394, 103);
+            this.panel5.Size = new System.Drawing.Size(394, 110);
             this.panel5.TabIndex = 3;
             // 
             // btnMaquillaje
@@ -171,9 +171,9 @@
             // 
             this.panel6.Controls.Add(this.btnVentas);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(403, 125);
+            this.panel6.Location = new System.Drawing.Point(403, 131);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(394, 103);
+            this.panel6.Size = new System.Drawing.Size(394, 110);
             this.panel6.TabIndex = 4;
             // 
             // btnVentas
@@ -197,9 +197,9 @@
             // 
             this.panel2.Controls.Add(this.button3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(3, 234);
+            this.panel2.Location = new System.Drawing.Point(3, 247);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(394, 103);
+            this.panel2.Size = new System.Drawing.Size(394, 110);
             this.panel2.TabIndex = 5;
             // 
             // button3
@@ -223,9 +223,9 @@
             // 
             this.panel7.Controls.Add(this.btnFactura);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(403, 234);
+            this.panel7.Location = new System.Drawing.Point(403, 247);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(394, 103);
+            this.panel7.Size = new System.Drawing.Size(394, 110);
             this.panel7.TabIndex = 6;
             // 
             // btnFactura
@@ -307,9 +307,9 @@
             // 
             this.panel9.Controls.Add(this.btnInventario);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(3, 343);
+            this.panel9.Location = new System.Drawing.Point(3, 363);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(394, 104);
+            this.panel9.Size = new System.Drawing.Size(394, 113);
             this.panel9.TabIndex = 8;
             // 
             // btnInventario
@@ -334,7 +334,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 479);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
