@@ -39,6 +39,21 @@ namespace MakeupBarSystem.Producto_General
             Descripcion = d;
             conexion = new Conexion();
         }
+
+        public Boolean Guardar()
+        {
+            if (conexion.IUD(string.Format("INSERT INTO ProductoGeneral (idCodigoDeBarra,NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion) " +
+                "                           VALUES ('{0}','{1}', '{2}', '{3}', '{4}','5')",
+                                            idCodigoDeBarra, NombreProducto, Marca,PrecioUnitario, Cantidad,Descripcion)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+                return false;
+            }
+        }
         public string IdCodigoDeBarra
         {
             get
