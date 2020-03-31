@@ -81,7 +81,7 @@ namespace MakeupBarSystem
         private void btnFactura_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Men_Factura ventana = new Men_Factura();
+            Viw_Factura ventana = new Viw_Factura();
             ventana.Show();
         }
 

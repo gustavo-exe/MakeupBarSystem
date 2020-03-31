@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MakeupBarSystem.Factura;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +54,12 @@ namespace MakeupBarSystem.Venta
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Viw_Factura ventana = new Viw_Factura();
         }
     }
 }
