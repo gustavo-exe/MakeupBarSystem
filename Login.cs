@@ -15,6 +15,7 @@ namespace MakeupBarSystem
         public Login()
         {
             InitializeComponent();
+            //conexion = new Conexion();
         }
 
         private void txtContraseña_MouseClick(object sender, MouseEventArgs e)

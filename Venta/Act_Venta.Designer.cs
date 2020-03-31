@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Act_Venta));
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -437,7 +438,7 @@
             this.ListaDeVentas.FormattingEnabled = true;
             this.ListaDeVentas.ItemHeight = 22;
             this.ListaDeVentas.Location = new System.Drawing.Point(55, 23);
-            this.ListaDeVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListaDeVentas.Margin = new System.Windows.Forms.Padding(2);
             this.ListaDeVentas.Name = "ListaDeVentas";
             this.ListaDeVentas.Size = new System.Drawing.Size(179, 220);
             this.ListaDeVentas.TabIndex = 34;
@@ -553,9 +554,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Act_Venta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Act_Venta";
             this.Load += new System.EventHandler(this.Act_Venta_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

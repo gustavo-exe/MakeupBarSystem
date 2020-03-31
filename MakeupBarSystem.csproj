@@ -118,18 +118,6 @@
     <Compile Include="Envio_\View_Envio.Designer.cs">
       <DependentUpon>View_Envio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factura\Act_Factura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Factura\Act_Factura.Designer.cs">
-      <DependentUpon>Act_Factura.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Factura\Men_Factura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Factura\Men_Factura.Designer.cs">
-      <DependentUpon>Men_Factura.cs</DependentUpon>
-    </Compile>
     <Compile Include="Factura\Viw_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,12 +323,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Envio_\View_Envio.resx">
       <DependentUpon>View_Envio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Factura\Act_Factura.resx">
-      <DependentUpon>Act_Factura.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Factura\Men_Factura.resx">
-      <DependentUpon>Men_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Factura\Viw_Factura.resx">
       <DependentUpon>Viw_Factura.cs</DependentUpon>
