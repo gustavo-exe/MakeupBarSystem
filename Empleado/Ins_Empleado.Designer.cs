@@ -42,7 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelColor3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRol = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panelColor2 = new System.Windows.Forms.Panel();
             this.PanelColor1 = new System.Windows.Forms.Panel();
@@ -52,6 +52,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -150,14 +153,18 @@
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtId);
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelColor3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtRol);
             this.panel2.Controls.Add(this.txtUsuario);
             this.panel2.Controls.Add(this.panelColor2);
             this.panel2.Controls.Add(this.PanelColor1);
@@ -213,19 +220,19 @@
             this.panelColor3.Size = new System.Drawing.Size(163, 1);
             this.panelColor3.TabIndex = 14;
             // 
-            // textBox1
+            // txtRol
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(258, 186);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.Tag = "";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtRol.BackColor = System.Drawing.Color.Black;
+            this.txtRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRol.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.ForeColor = System.Drawing.Color.White;
+            this.txtRol.Location = new System.Drawing.Point(258, 186);
+            this.txtRol.Margin = new System.Windows.Forms.Padding(0);
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(167, 22);
+            this.txtRol.TabIndex = 13;
+            this.txtRol.Tag = "";
+            this.txtRol.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtUsuario
             // 
@@ -353,6 +360,39 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(145, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 22);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Identidad";
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.Black;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(258, 31);
+            this.txtId.Margin = new System.Windows.Forms.Padding(0);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(167, 22);
+            this.txtId.TabIndex = 19;
+            this.txtId.Tag = "";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(258, 56);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(163, 1);
+            this.panel8.TabIndex = 18;
+            // 
             // Ins_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,7 +433,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelColor3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRol;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Panel panelColor2;
         private System.Windows.Forms.Panel PanelColor1;
@@ -403,5 +443,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Panel panel8;
     }
 }

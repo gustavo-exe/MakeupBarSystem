@@ -20,6 +20,13 @@ namespace MakeupBarSystem
 
         public Conexion()
         {
+            //Elias
+            //bd = "makeupbar";
+            //servidor = "127.0.0.1";
+            //usuario = "MakeupBarElias";
+            //pass = "Y o l o Y o l o 1";
+
+            // W I L M E R 
             bd = "makeuppruebas";
             servidor = "127.0.0.1";
             usuario = "wilmer";
