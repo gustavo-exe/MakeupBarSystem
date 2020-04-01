@@ -71,7 +71,7 @@ namespace MakeupBarSystem.Cliente
             txtCorreo.Text = cliente.CorreoCliente;
             txtTelefono.Text = cliente.TelefonoCliente;
             txtPerfilInstagram.Text = cliente.PerfilInstagram;
-            dateFechaCumpleaños.Value = cliente.CumpleañosCliente;
+            dateFechaCumpleaños.Value = cliente.CumpleaniosCliente;
             txtCiudad.Text = cliente.CiudadCliente;
             txtTonodeBase.Text = cliente.TonoDeBaseCliente;
             txtTonodePolvo.Text = cliente.TonodePolvoCliente;
@@ -89,7 +89,7 @@ namespace MakeupBarSystem.Cliente
                 cliente.CorreoCliente = txtCorreo.Text;
                 cliente.TelefonoCliente = txtTelefono.Text;
                 cliente.PerfilInstagram = txtPerfilInstagram.Text;
-                cliente.CumpleañosCliente = dateFechaCumpleaños.Value.Date;
+                cliente.CumpleaniosCliente = dateFechaCumpleaños.Value;
                 cliente.CiudadCliente = txtCiudad.Text;
                 cliente.TonoDeBaseCliente = txtTonodeBase.Text;
                 cliente.TonodePolvoCliente = txtTonodePolvo.Text;
