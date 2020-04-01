@@ -85,5 +85,22 @@ namespace MakeupBarSystem.Empleado
         {
 
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            Empleado empleado = new Empleado();
+            empleado.IdEmpleado = Convert.ToString( txtId.Text);
+            empleado.Usuario = Convert.ToString(txtUsuario.Text);
+            empleado.Password = Convert.ToString(txtContraseña.Text);
+            empleado.Rol = Convert.ToString(txtRol.Text);
+            if (empleado.Insertar())
+            {
+                MessageBox.Show("Empleado insertado");
+            }
+            else
+            {
+                MessageBox.Show("Error al guardar >:v");
+            }
+        }
     }
 }

@@ -12,9 +12,13 @@ namespace MakeupBarSystem.Venta
 {
     public partial class Ins_Venta : Form
     {
+        private int state;
+        private claseVenta venta;
+   
         public Ins_Venta()
         {
             InitializeComponent();
+            venta = new claseVenta();
         }
 
       
@@ -88,6 +92,41 @@ namespace MakeupBarSystem.Venta
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (state == 0)
+            {
+                this.WindowState = FormWindowState.Normal;
+
+                state = 1;
+            }
+            else
+         if (state == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                state = 0;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void Cargar_Datos()
+        {
+           
         }
     }
 }

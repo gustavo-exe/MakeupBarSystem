@@ -8,30 +8,34 @@ namespace MakeupBarSystem.Empleado
 {
     class Empleado
     {
-        private int idEmpleado;
+        private string idEmpleado;
         private string usuario;
         private string password;
         private string rol;
+        private Conexion conexion;
 
         public Empleado()
         {
-            idEmpleado = 0;
+            idEmpleado = "";
             usuario = "";
             password = "";
             rol = "";
+            conexion = new Conexion();
         }
 
-        public Empleado(int id, string user, string pass, string puesto)
+        public Empleado(string id, string user, string pass, string puesto)
         {
             id = idEmpleado;
             user = usuario;
             pass = password;
             puesto = rol;
+            conexion = new Conexion();
         }
 
-        public int IdEmpleado
+        public string IdEmpleado
         {
             get { return idEmpleado; }
+            set { idEmpleado = value; }
         }
 
         public string Usuario
@@ -52,7 +56,12 @@ namespace MakeupBarSystem.Empleado
             set { rol = value; }
         }
 
-
+        public Boolean Insertar()
+        {
+            Boolean r = false;
+            r = conexion.IUD(String.Format("INSERT INTO empleado (idEmpleado, Usuario, Contraseña, Rol) VALUE ('{0}','{1}','{2}','{3}');", idEmpleado, usuario, password, rol));
+            return r;
+        }
 
     }
 }

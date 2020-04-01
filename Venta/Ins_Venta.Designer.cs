@@ -45,28 +45,28 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtdescuento = new System.Windows.Forms.TextBox();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtprecio = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtidproducto = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtidfactura = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtidventa = new System.Windows.Forms.TextBox();
             this.PanelColor1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -126,6 +126,7 @@
             this.button2.TabIndex = 18;
             this.button2.Text = "□";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -141,6 +142,7 @@
             this.button3.TabIndex = 17;
             this.button3.Text = "—";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -155,6 +157,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel4
             // 
@@ -244,23 +247,23 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.btnLimpiar);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txtdescuento);
             this.groupBox2.Controls.Add(this.btnInsertar);
             this.groupBox2.Controls.Add(this.panel10);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txtcantidad);
             this.groupBox2.Controls.Add(this.panel11);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtprecio);
             this.groupBox2.Controls.Add(this.panel12);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtidproducto);
             this.groupBox2.Controls.Add(this.panel9);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtidfactura);
             this.groupBox2.Controls.Add(this.panel8);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtUsuario);
+            this.groupBox2.Controls.Add(this.txtidventa);
             this.groupBox2.Controls.Add(this.PanelColor1);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(14, 71);
@@ -315,19 +318,19 @@
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtdescuento
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Black;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(368, 131);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 19);
-            this.textBox4.TabIndex = 32;
-            this.textBox4.Tag = "";
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtdescuento.BackColor = System.Drawing.Color.Black;
+            this.txtdescuento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdescuento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescuento.ForeColor = System.Drawing.Color.White;
+            this.txtdescuento.Location = new System.Drawing.Point(368, 131);
+            this.txtdescuento.Margin = new System.Windows.Forms.Padding(0);
+            this.txtdescuento.Name = "txtdescuento";
+            this.txtdescuento.Size = new System.Drawing.Size(167, 19);
+            this.txtdescuento.TabIndex = 32;
+            this.txtdescuento.Tag = "";
+            this.txtdescuento.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // btnInsertar
             // 
@@ -367,19 +370,19 @@
             this.label8.Text = "Cantidad";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // textBox5
+            // txtcantidad
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Black;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(364, 92);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 19);
-            this.textBox5.TabIndex = 29;
-            this.textBox5.Tag = "";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtcantidad.BackColor = System.Drawing.Color.Black;
+            this.txtcantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcantidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcantidad.ForeColor = System.Drawing.Color.White;
+            this.txtcantidad.Location = new System.Drawing.Point(364, 92);
+            this.txtcantidad.Margin = new System.Windows.Forms.Padding(0);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(167, 19);
+            this.txtcantidad.TabIndex = 29;
+            this.txtcantidad.Tag = "";
+            this.txtcantidad.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // panel11
             // 
@@ -403,19 +406,19 @@
             this.label9.Text = "Precio";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // textBox6
+            // txtprecio
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Black;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(364, 48);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(167, 19);
-            this.textBox6.TabIndex = 26;
-            this.textBox6.Tag = "";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.txtprecio.BackColor = System.Drawing.Color.Black;
+            this.txtprecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtprecio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprecio.ForeColor = System.Drawing.Color.White;
+            this.txtprecio.Location = new System.Drawing.Point(364, 48);
+            this.txtprecio.Margin = new System.Windows.Forms.Padding(0);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(167, 19);
+            this.txtprecio.TabIndex = 26;
+            this.txtprecio.Tag = "";
+            this.txtprecio.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // panel12
             // 
@@ -438,18 +441,18 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Producto";
             // 
-            // textBox3
+            // txtidproducto
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Black;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(90, 131);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 19);
-            this.textBox3.TabIndex = 23;
-            this.textBox3.Tag = "";
+            this.txtidproducto.BackColor = System.Drawing.Color.Black;
+            this.txtidproducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtidproducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidproducto.ForeColor = System.Drawing.Color.White;
+            this.txtidproducto.Location = new System.Drawing.Point(90, 131);
+            this.txtidproducto.Margin = new System.Windows.Forms.Padding(0);
+            this.txtidproducto.Name = "txtidproducto";
+            this.txtidproducto.Size = new System.Drawing.Size(167, 19);
+            this.txtidproducto.TabIndex = 23;
+            this.txtidproducto.Tag = "";
             // 
             // panel9
             // 
@@ -472,19 +475,19 @@
             this.label5.Text = "Factura";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox2
+            // txtidfactura
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(86, 92);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 19);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.Tag = "";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtidfactura.BackColor = System.Drawing.Color.Black;
+            this.txtidfactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtidfactura.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidfactura.ForeColor = System.Drawing.Color.White;
+            this.txtidfactura.Location = new System.Drawing.Point(86, 92);
+            this.txtidfactura.Margin = new System.Windows.Forms.Padding(0);
+            this.txtidfactura.Name = "txtidfactura";
+            this.txtidfactura.Size = new System.Drawing.Size(167, 19);
+            this.txtidfactura.TabIndex = 20;
+            this.txtidfactura.Tag = "";
+            this.txtidfactura.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel8
             // 
@@ -507,18 +510,18 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Venta";
             // 
-            // txtUsuario
+            // txtidventa
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.Black;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(86, 48);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(167, 19);
-            this.txtUsuario.TabIndex = 17;
-            this.txtUsuario.Tag = "";
+            this.txtidventa.BackColor = System.Drawing.Color.Black;
+            this.txtidventa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtidventa.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidventa.ForeColor = System.Drawing.Color.White;
+            this.txtidventa.Location = new System.Drawing.Point(86, 48);
+            this.txtidventa.Margin = new System.Windows.Forms.Padding(0);
+            this.txtidventa.Name = "txtidventa";
+            this.txtidventa.Size = new System.Drawing.Size(167, 19);
+            this.txtidventa.TabIndex = 17;
+            this.txtidventa.Tag = "";
             // 
             // PanelColor1
             // 
@@ -532,7 +535,7 @@
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtEmpleado);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtCliente);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -552,6 +555,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Venta";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -563,12 +567,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Empleado";
             // 
-            // textBox1
+            // txtEmpleado
             // 
-            this.textBox1.Location = new System.Drawing.Point(321, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtEmpleado.Location = new System.Drawing.Point(321, 17);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.Size = new System.Drawing.Size(100, 20);
+            this.txtEmpleado.TabIndex = 2;
             // 
             // label2
             // 
@@ -633,26 +637,26 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmpleado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtidfactura;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtidventa;
         private System.Windows.Forms.Panel PanelColor1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtdescuento;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtcantidad;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtidproducto;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
