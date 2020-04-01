@@ -125,6 +125,7 @@
     <Compile Include="Envio_\Act_Envio.Designer.cs">
       <DependentUpon>Act_Envio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Envio_\ClaseEnvio.cs" />
     <Compile Include="Envio_\Ins_Envio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +180,7 @@
     <Compile Include="Maquillaje_\Act_Maquillaje.Designer.cs">
       <DependentUpon>Act_Maquillaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maquillaje_\claseMaquillaje.cs" />
     <Compile Include="Maquillaje_\Ins_Maquillaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +211,7 @@
     <Compile Include="Producto_General\Act_ProductoGeneral.Designer.cs">
       <DependentUpon>Act_ProductoGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="Producto_General\claseProductoGeneral.cs" />
     <Compile Include="Producto_General\Ins_ProductoGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
