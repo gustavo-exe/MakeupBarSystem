@@ -298,6 +298,7 @@
     <Compile Include="Venta\Act_Venta.Designer.cs">
       <DependentUpon>Act_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Venta\claseVenta.cs" />
     <Compile Include="Venta\Ins_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
