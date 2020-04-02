@@ -147,7 +147,6 @@ namespace MakeupBarSystem.Venta
             txtprecio.Text = "";
             txtcantidad.Text = "";
             txtdescuento.Text = "";
-
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
