@@ -71,7 +71,7 @@ namespace MakeupBarSystem.Cliente
         }
 
 
-        private void Cargar_Datos()
+        /*private void Cargar_Datos()
         {
             string sql = "";
             sql = string.Format("SELECT iddepartamento, codigoDepartamento, nombreDepartamento, habilitado FROM sigecli.departamentos where codigoDepartamento like '%{0}%' or nombreDepartamento like '%{0}%'", txtFiltro.Text);
@@ -81,6 +81,7 @@ namespace MakeupBarSystem.Cliente
             cliente.DataSource = t1;
             cliente.Refresh();
         }
-
+        */
+        
     }
 }

@@ -262,6 +262,7 @@
     <Compile Include="Proveedor\Act_Proveedor.designer.cs">
       <DependentUpon>Act_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proveedor\claseProveedor.cs" />
     <Compile Include="Proveedor\Ins_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -309,9 +309,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(145, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 22);
+            this.label2.Size = new System.Drawing.Size(116, 22);
             this.label2.TabIndex = 15;
-            this.label2.Text = "IdUsuario";
+            this.label2.Text = "IdProveedor";
             // 
             // panelColor3
             // 
