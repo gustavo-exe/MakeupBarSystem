@@ -353,6 +353,7 @@
             this.btnLimpiar.Text = "L i m p i a r ";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtdescuento
             // 

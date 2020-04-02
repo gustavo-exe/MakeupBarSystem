@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -169,7 +170,7 @@ namespace MakeupBarSystem.Venta
         public Boolean Venta()
         {
             /*Inserta datos en la tabla de venta */
-            if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado,Fecha) value('{0}','{1}','{2}')", idCliente, idEmpleado, fecha)))
+            if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado) value('{0}','{1}')", idCliente, idEmpleado)))
             {
                 return true;
             }
@@ -177,9 +178,11 @@ namespace MakeupBarSystem.Venta
             {
                 error = conexion.Error;
             }
+
+
             /*Inserta datos en la tabla de factura */
 
-            if (conexion.IUD(string.Format("insert into factura(FechaActual,IdEmpleado,idCliente) value('{0}','{1}','{2}')", idCliente, idEmpleado)))
+            if (conexion.IUD(string.Format("insert into factura(FechaActual,IdEmpleado,idCliente) value(NOW(),'{0}','{1}')",idCliente, idEmpleado)))
             {
                 return true;
             }
@@ -189,6 +192,41 @@ namespace MakeupBarSystem.Venta
                 return false;
             }
         }
+
+
+        public Boolean LlenarVenta(string IdCliente)
+        {
+            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
+
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.venta where idCliente='{0}'", IdCliente));
+            if (t1.Rows.Count > 0)
+            {
+
+                IdVenta = Convert.ToInt32(t1.Rows[0][0].ToString());
+
+             /*   {
+                IdVenta = Convert.ToInt32(conexion.IUD(string.Format("SELECT Max(idVenta) as venta FROM makeupbar.Venta")));
+                    */
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void LlenarFactura(string idcliente)
+        {
+            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
+            DataTable t1 = conexion.consulta(string.Format("SELECT IdFactura FROM makeupbar.factura where IdCliente='{0}'", idCliente));
+            if (t1.Rows.Count > 0)
+            {
+                IdFactura = Convert.ToInt32(t1.Rows[0][1].ToString());
+
+                
+            }
+          
+        }
+
         public Boolean Eliminar()
         {
             if (conexion.IUD(string.Format("DELETE FROM Venta WHERE idVenta='{0}'", idVenta)))

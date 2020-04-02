@@ -84,6 +84,37 @@ namespace MakeupBarSystem.Cliente
         }
 
 
+        public Boolean LlenarVenta(string idcliente)
+        {
+            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
+            DataTable t1 = conexion.consulta(string.Format("SELECT idVenta FROM makeupbar.Venta where IdCliente='{0}'", idcliente));
+            if (t1.Rows.Count > 0)
+            {
+                idCliente = t1.Rows[0][0].ToString();
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Boolean LlenarFactura(string idcliente)
+        {
+            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
+            DataTable t1 = conexion.consulta(string.Format("SELECT IdFactura FROM makeupbar.factura where IdCliente='{0}'", idcliente));
+            if (t1.Rows.Count > 0)
+            {
+                idCliente = t1.Rows[0][0].ToString();
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public Boolean BuscarID(string id)
         {
             //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
