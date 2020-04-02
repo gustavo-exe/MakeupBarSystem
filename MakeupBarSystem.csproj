@@ -168,6 +168,7 @@
     <Compile Include="Envio_\View_Envio.Designer.cs">
       <DependentUpon>View_Envio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura\claseFactura.cs" />
     <Compile Include="Factura\Viw_Factura.cs">
       <SubType>Form</SubType>
     </Compile>

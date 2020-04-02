@@ -69,6 +69,11 @@
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
+            this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -237,6 +242,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iddetalle,
+            this.idcliente,
+            this.idempleado,
+            this.idventa,
+            this.idfactura});
             this.dataGridView1.Location = new System.Drawing.Point(3, 363);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(615, 107);
@@ -347,6 +358,7 @@
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // panel10
             // 
@@ -591,6 +603,31 @@
             this.txtCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCliente.TabIndex = 0;
             // 
+            // iddetalle
+            // 
+            this.iddetalle.HeaderText = "Detalle";
+            this.iddetalle.Name = "iddetalle";
+            // 
+            // idcliente
+            // 
+            this.idcliente.HeaderText = "Cliente";
+            this.idcliente.Name = "idcliente";
+            // 
+            // idempleado
+            // 
+            this.idempleado.HeaderText = "Empleado";
+            this.idempleado.Name = "idempleado";
+            // 
+            // idventa
+            // 
+            this.idventa.HeaderText = "Venta";
+            this.idventa.Name = "idventa";
+            // 
+            // idfactura
+            // 
+            this.idfactura.HeaderText = "Factura";
+            this.idfactura.Name = "idfactura";
+            // 
             // Ins_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,5 +697,10 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idempleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idventa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idfactura;
     }
 }

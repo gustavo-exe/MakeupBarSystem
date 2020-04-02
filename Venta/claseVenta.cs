@@ -49,12 +49,20 @@ namespace MakeupBarSystem.Venta
             {
                 return idVenta;
             }
+            set
+            {
+                idVenta = value;
+            }
         }
         public int IdFactura
         {
             get
             {
                 return idFactura;
+            }
+            set
+            {
+                idFactura = value;
             }
         }
         public int IdCliente
@@ -101,7 +109,7 @@ namespace MakeupBarSystem.Venta
             }
             set
             {
-                IdProducto = value;
+                idProducto = value;
             }
         }
         public float Precio
@@ -138,21 +146,66 @@ namespace MakeupBarSystem.Venta
             }
         }
 
-        public void Venta()
+        public MySqlException Error
+        {
+            get { return error; }
+        }
+
+        public Boolean Insertar()
         {
             /*Inserta datos en la tabla de venta */
-            conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado,Fecha) value('{0}','{1}','{2}')", idCliente, idEmpleado, fecha));
-
+            if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado,Fecha) value('{0}','{1}','{2}')", idCliente, idEmpleado, fecha)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+            }
             /*Inserta datos en la tabla de factura */
-            conexion.IUD(string.Format("insert into factura(FechaActual,IdEmpleado,idCliente) value('{0}','{1}','{2}')", fecha, idCliente, idEmpleado));
 
-        }
-        public void Insertar()
-        {
+            if (conexion.IUD(string.Format("insert into factura(FechaActual,IdEmpleado,idCliente) value('{0}','{1}','{2}')", fecha, idCliente, idEmpleado)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+            }
             /*Inserta datos en la tabla de detalle de venta */
-            conexion.IUD(string.Format("insert into DetalleVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento) value('{0}','{1}','{2}','{3}','{4}','{5}')", idCliente, idEmpleado, idVenta, idFactura, idProducto, precio, cantidades, descuento));
-
-
+            if (conexion.IUD(string.Format("insert into DetalleDeVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento) value('{0}','{1}','{2}','{3}','{4}','{5}')", idCliente, idEmpleado, idVenta, idFactura, idProducto, precio, cantidades, descuento)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+                return false;
+            }
         }
+
+        public Boolean Eliminar()
+        {
+            if (conexion.IUD(string.Format("DELETE FROM Venta WHERE idVenta='{0}'", idVenta)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+            }
+
+            if (conexion.IUD(string.Format("DELETE FROM factura WHERE IdFactura='{0}'", idFactura)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+                return false;
+            }
+        }
+
     }
 }
+
