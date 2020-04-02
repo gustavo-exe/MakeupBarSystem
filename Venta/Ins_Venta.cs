@@ -96,8 +96,33 @@ namespace MakeupBarSystem.Venta
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (ValidarVenta() == true)
+            {
+                venta.IdCliente = Convert.ToInt32(txtCliente.Text);
+                venta.IdEmpleado = Convert.ToInt32(txtEmpleado.Text);
+                venta.Fecha = DateTime.Today;
+                txtidventa.Text = Convert.ToString(venta.IdVenta);
+                txtidfactura.Text = Convert.ToString(venta.IdFactura);
 
+
+
+
+                if (venta.Venta())
+                {
+                    MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo la edición");
+            }
         }
+
+   
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -153,8 +178,7 @@ namespace MakeupBarSystem.Venta
         {
             if (Validar() == true)
             {
-                venta.IdCliente = Convert.ToInt32(txtCliente.Text);
-                venta.IdEmpleado = Convert.ToInt32(txtEmpleado.Text);
+              
                 venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
                 venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
@@ -164,11 +188,11 @@ namespace MakeupBarSystem.Venta
 
                 if (venta.Insertar())
                 {
-                    MessageBox.Show("Registro guardado correctamente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -178,23 +202,34 @@ namespace MakeupBarSystem.Venta
             limpiar();
         }
 
-
-        private Boolean Validar()
+        private Boolean ValidarVenta()
         {
-            Boolean validar = true;
+            Boolean validarVenta = true;
             if (txtCliente.Text == "")
             {
                 MessageBox.Show("Ingrese un cliente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCliente.Focus();
-                validar = false;
+                validarVenta = false;
             }
             else if (txtEmpleado.Text == "")
             {
                 MessageBox.Show("Ingrese un empleado", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEmpleado.Focus();
-                validar = false;
+                validarVenta = false;
             }
-            else if (txtidventa.Text == "")
+            else
+                validarVenta = true;
+            return validarVenta;
+
+
+        }
+
+
+        private Boolean Validar()
+        {
+            Boolean validar = true;
+           
+            if (txtidventa.Text == "")
             {
                 MessageBox.Show("Ingrese el codigo de la venta", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtidventa.Focus();

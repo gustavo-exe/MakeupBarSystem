@@ -41,6 +41,11 @@
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -69,11 +74,6 @@
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -252,6 +252,31 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(615, 107);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // iddetalle
+            // 
+            this.iddetalle.HeaderText = "Detalle";
+            this.iddetalle.Name = "iddetalle";
+            // 
+            // idcliente
+            // 
+            this.idcliente.HeaderText = "Cliente";
+            this.idcliente.Name = "idcliente";
+            // 
+            // idempleado
+            // 
+            this.idempleado.HeaderText = "Empleado";
+            this.idempleado.Name = "idempleado";
+            // 
+            // idventa
+            // 
+            this.idventa.HeaderText = "Venta";
+            this.idventa.Name = "idventa";
+            // 
+            // idfactura
+            // 
+            this.idfactura.HeaderText = "Factura";
+            this.idfactura.Name = "idfactura";
             // 
             // groupBox2
             // 
@@ -602,31 +627,6 @@
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCliente.TabIndex = 0;
-            // 
-            // iddetalle
-            // 
-            this.iddetalle.HeaderText = "Detalle";
-            this.iddetalle.Name = "iddetalle";
-            // 
-            // idcliente
-            // 
-            this.idcliente.HeaderText = "Cliente";
-            this.idcliente.Name = "idcliente";
-            // 
-            // idempleado
-            // 
-            this.idempleado.HeaderText = "Empleado";
-            this.idempleado.Name = "idempleado";
-            // 
-            // idventa
-            // 
-            this.idventa.HeaderText = "Venta";
-            this.idventa.Name = "idventa";
-            // 
-            // idfactura
-            // 
-            this.idfactura.HeaderText = "Factura";
-            this.idfactura.Name = "idfactura";
             // 
             // Ins_Venta
             // 
