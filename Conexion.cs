@@ -26,9 +26,8 @@ namespace MakeupBarSystem
             //usuario = "MakeupBarElias";
             //pass = "Y o l o Y o l o 1";
 
-            
-            //W I L M E R 
-            bd = "makeupbar";
+            /* yovany
+             bd = "makeupbar";
             servidor = "127.0.0.1";
 <<<<<<< HEAD
             usuario = "wilmer";
@@ -37,7 +36,17 @@ namespace MakeupBarSystem
 =======
             usuario = "root";
             pass = "987654321";
+<<<<<<< HEAD
 >>>>>>> 96378c884ef18bbdca5bdb37a6bccecaadafea1a
+=======
+             */
+
+            //W I L M E R 
+            bd = "makeupbarpruebas";
+            servidor = "127.0.0.1";
+            usuario = "wilmer";
+            pass = "Rasengan 1";
+>>>>>>> a5f42d1d7e00c1ba51819171d64858f507bb2361
             conexion = new MySqlConnection();
         }
         public Conexion(string b, string se, string u, string p)
