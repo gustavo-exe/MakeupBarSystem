@@ -14,14 +14,14 @@ namespace MakeupBarSystem.Venta
     {
         private int state;
         private claseVenta venta;
-   
+
         public Ins_Venta()
         {
             InitializeComponent();
             venta = new claseVenta();
         }
 
-      
+
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
             this.Hide();
@@ -96,8 +96,60 @@ namespace MakeupBarSystem.Venta
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (ValidarVenta() == true)
+            {
+                venta.IdCliente = Convert.ToInt32(txtCliente.Text);
+                venta.IdEmpleado = Convert.ToInt32(txtEmpleado.Text);
+                venta.Fecha = DateTime.Today;
+
+
+                if (venta.Venta())
+                {
+
+                  
+                    MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                venta.LlenarVenta(txtCliente.Text);
+
+                txtidventa.Text = Convert.ToString(idventa);
+
+
+                venta.LlenarFactura(txtCliente.Text);
+
+                txtidfactura.Text = Convert.ToString(idfactura);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo la edición");
+            }
+
+          
+            
+        }
+
+        /*
+        private void llenado(object sender, EventArgs e)
+        {
+
+            if (venta.LlenarVenta(txtCliente.Text))
+            {
+                txtidventa.Text = Convert.ToString(idventa);
+            }
+
+            if (venta.LlenarFactura(txtCliente.Text))
+            {
+                txtidfactura.Text = Convert.ToString(idfactura);
+            }
 
         }
+        */
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -126,7 +178,137 @@ namespace MakeupBarSystem.Venta
         }
         private void Cargar_Datos()
         {
+            txtCliente.Text = Convert.ToString(venta.IdCliente);
+            txtEmpleado.Text = Convert.ToString(venta.IdEmpleado);
+            txtidventa.Text = Convert.ToString(venta.IdVenta);
+            txtidfactura.Text = Convert.ToString(venta.IdFactura);
+            txtidproducto.Text = Convert.ToString(venta.IdProducto);
+            txtprecio.Text = Convert.ToString(venta.Precio);
+            txtcantidad.Text = Convert.ToString(venta.Cantidades);
+            txtdescuento.Text = Convert.ToString(venta.Descuento);
+
+            SendKeys.Send("{Tab}");
+        }
+        private void limpiar()
+        {
+            txtCliente.Text = "";
+            txtEmpleado.Text = "";
+            txtidventa.Text = "";
+            txtidfactura.Text = "";
+            txtidproducto.Text = "";
+            txtprecio.Text = "";
+            txtcantidad.Text = "";
+            txtdescuento.Text = "";
+        }
+
+        private void limpiardetalle()
+        {
+            txtidproducto.Text = "";
+            txtprecio.Text = "";
+            txtcantidad.Text = "";
+            txtdescuento.Text = "";
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            if (Validar() == true)
+            {
+              
+                venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
+                venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
+                venta.Precio = Convert.ToInt32(txtprecio.Text);
+                venta.Cantidades = Convert.ToInt32(txtcantidad.Text);
+                venta.Descuento = Convert.ToInt32(txtdescuento.Text);
+
+                if (venta.Insertar())
+                {
+                    MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo la edición");
+            }
+            limpiardetalle();
+        }
+
+        private Boolean ValidarVenta()
+        {
+            Boolean validarVenta = true;
+            if (txtCliente.Text == "")
+            {
+                MessageBox.Show("Ingrese un cliente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCliente.Focus();
+                validarVenta = false;
+            }
+            else if (txtEmpleado.Text == "")
+            {
+                MessageBox.Show("Ingrese un empleado", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmpleado.Focus();
+                validarVenta = false;
+            }
+            else
+                validarVenta = true;
+            return validarVenta;
+
+
+        }
+
+
+        private Boolean Validar()
+        {
+            Boolean validar = true;
            
+            if (txtidventa.Text == "")
+            {
+                MessageBox.Show("Ingrese el codigo de la venta", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtidventa.Focus();
+                validar = false;
+            }
+            else if (txtidfactura.Text == "")
+            {
+                MessageBox.Show("Ingrese el codigo de la factura", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtidfactura.Focus();
+                validar = false;
+            }
+            else if (txtidproducto.Text == "")
+            {
+                MessageBox.Show("Ingrese el codigo del producto", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtidproducto.Focus();
+                validar = false;
+            }
+            else if (txtprecio.Text == "")
+            {
+                MessageBox.Show("Ingrese el precio del producto", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtprecio.Focus();
+                validar = false;
+            }
+            else if (txtcantidad.Text == "")
+            {
+                MessageBox.Show("Ingrese la cantidad", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtcantidad.Focus();
+                validar = false;
+            }
+            else if (txtdescuento.Text == "")
+            {
+                MessageBox.Show("Ingrese el descuento", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtdescuento.Focus();
+                validar = false;
+            }
+            else
+                validar = true;
+            return validar;
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }
