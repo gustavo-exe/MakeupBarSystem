@@ -21,6 +21,7 @@ namespace MakeupBarSystem.Venta
         private int cantidades;
         private int descuento;
         private MySqlException error;
+        private int VentaId;
 
         public claseVenta()
         {
@@ -172,6 +173,8 @@ namespace MakeupBarSystem.Venta
             /*Inserta datos en la tabla de venta */
             if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado) value('{0}','{1}')", idCliente, idEmpleado)))
             {
+                IdVenta = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(idVenta) from Venta")).Rows[0][0].ToString());
+                IdFactura = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(IdFactura) from factura")).Rows[0][0].ToString());
                 return true;
             }
             else
@@ -191,40 +194,6 @@ namespace MakeupBarSystem.Venta
                 error = conexion.Error;
                 return false;
             }
-        }
-
-
-        public Boolean LlenarVenta(string IdCliente)
-        {
-            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
-
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.venta where idCliente='{0}'", IdCliente));
-            if (t1.Rows.Count > 0)
-            {
-
-                IdVenta = Convert.ToInt32(t1.Rows[0][0].ToString());
-
-             /*   {
-                IdVenta = Convert.ToInt32(conexion.IUD(string.Format("SELECT Max(idVenta) as venta FROM makeupbar.Venta")));
-                    */
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public void LlenarFactura(string idcliente)
-        {
-            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
-            DataTable t1 = conexion.consulta(string.Format("SELECT IdFactura FROM makeupbar.factura where IdCliente='{0}'", idCliente));
-            if (t1.Rows.Count > 0)
-            {
-                IdFactura = Convert.ToInt32(t1.Rows[0][1].ToString());
-
-                
-            }
-          
         }
 
         public Boolean Eliminar()

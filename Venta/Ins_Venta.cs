@@ -103,25 +103,20 @@ namespace MakeupBarSystem.Venta
                 venta.Fecha = DateTime.Today;
 
 
+
                 if (venta.Venta())
                 {
+                    txtidventa.Text = Convert.ToString(venta.IdVenta);
+                    txtidfactura.Text = Convert.ToString(venta.IdFactura);
 
-                  
-                    MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro guardado correctamente ","venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                venta.LlenarVenta(txtCliente.Text);
 
-                txtidventa.Text = Convert.ToString(idventa);
-
-
-                venta.LlenarFactura(txtCliente.Text);
-
-                txtidfactura.Text = Convert.ToString(idfactura);
 
 
             }
@@ -134,22 +129,6 @@ namespace MakeupBarSystem.Venta
             
         }
 
-        /*
-        private void llenado(object sender, EventArgs e)
-        {
-
-            if (venta.LlenarVenta(txtCliente.Text))
-            {
-                txtidventa.Text = Convert.ToString(idventa);
-            }
-
-            if (venta.LlenarFactura(txtCliente.Text))
-            {
-                txtidfactura.Text = Convert.ToString(idfactura);
-            }
-
-        }
-        */
 
         private void button3_Click(object sender, EventArgs e)
         {

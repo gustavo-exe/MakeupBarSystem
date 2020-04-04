@@ -42,10 +42,10 @@ namespace MakeupBarSystem
              */
 
             //W I L M E R 
-            bd = "makeupbarpruebas";
+            bd = "makeupbar";
             servidor = "127.0.0.1";
-            usuario = "wilmer";
-            pass = "Rasengan 1";
+            usuario = "root";
+            pass = "987654321";
 
             conexion = new MySqlConnection();
         }
