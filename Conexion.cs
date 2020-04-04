@@ -46,7 +46,7 @@ namespace MakeupBarSystem
             servidor = "127.0.0.1";
             usuario = "wilmer";
             pass = "Rasengan 1";
->>>>>>> a5f42d1d7e00c1ba51819171d64858f507bb2361
+
             conexion = new MySqlConnection();
         }
         public Conexion(string b, string se, string u, string p)
