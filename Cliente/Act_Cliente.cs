@@ -13,9 +13,11 @@ namespace MakeupBarSystem.Cliente
     public partial class Act_Cliente : Form
     {
         private int state;
+        private claseCliente cliente;
         public Act_Cliente()
         {
             InitializeComponent();
+            cliente = new claseCliente();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,5 +62,26 @@ namespace MakeupBarSystem.Cliente
         {
             Application.Exit();
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            if (ListaClientes.SelectedValue == null)
+            MessageBox.Show("Debes seleccionar un alumno del listado.");
+
+        }
+
+
+        /*private void Cargar_Datos()
+        {
+            string sql = "";
+            sql = string.Format("SELECT iddepartamento, codigoDepartamento, nombreDepartamento, habilitado FROM sigecli.departamentos where codigoDepartamento like '%{0}%' or nombreDepartamento like '%{0}%'", txtFiltro.Text);
+            
+            DataTable t1 = cliente.SQL(sql);
+            cliente.DataSource = null;
+            cliente.DataSource = t1;
+            cliente.Refresh();
+        }
+        */
+        
     }
 }

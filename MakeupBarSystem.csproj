@@ -99,6 +99,30 @@
     <Compile Include="Cliente\View_Cliente.Designer.cs">
       <DependentUpon>View_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compra\Insertar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra\Insertar_Compra.Designer.cs">
+      <DependentUpon>Insertar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compra\Menu_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra\Menu_Compra.Designer.cs">
+      <DependentUpon>Menu_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compra\Modificar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra\Modificar_Compra.Designer.cs">
+      <DependentUpon>Modificar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compra\Ver_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra\Ver_Compra.Designer.cs">
+      <DependentUpon>Ver_Compra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="Empleado\Act_Empleado.cs">
       <SubType>Form</SubType>
@@ -144,6 +168,7 @@
     <Compile Include="Envio_\View_Envio.Designer.cs">
       <DependentUpon>View_Envio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura\claseFactura.cs" />
     <Compile Include="Factura\Viw_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +263,7 @@
     <Compile Include="Proveedor\Act_Proveedor.designer.cs">
       <DependentUpon>Act_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proveedor\claseProveedor.cs" />
     <Compile Include="Proveedor\Ins_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +357,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\View_Cliente.resx">
       <DependentUpon>View_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra\Insertar_Compra.resx">
+      <DependentUpon>Insertar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra\Menu_Compra.resx">
+      <DependentUpon>Menu_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra\Modificar_Compra.resx">
+      <DependentUpon>Modificar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra\Ver_Compra.resx">
+      <DependentUpon>Ver_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleado\Act_Empleado.resx">
       <DependentUpon>Act_Empleado.cs</DependentUpon>

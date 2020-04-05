@@ -41,6 +41,11 @@
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -237,10 +242,41 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iddetalle,
+            this.idcliente,
+            this.idempleado,
+            this.idventa,
+            this.idfactura});
             this.dataGridView1.Location = new System.Drawing.Point(3, 363);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(615, 107);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // iddetalle
+            // 
+            this.iddetalle.HeaderText = "Detalle";
+            this.iddetalle.Name = "iddetalle";
+            // 
+            // idcliente
+            // 
+            this.idcliente.HeaderText = "Cliente";
+            this.idcliente.Name = "idcliente";
+            // 
+            // idempleado
+            // 
+            this.idempleado.HeaderText = "Empleado";
+            this.idempleado.Name = "idempleado";
+            // 
+            // idventa
+            // 
+            this.idventa.HeaderText = "Venta";
+            this.idventa.Name = "idventa";
+            // 
+            // idfactura
+            // 
+            this.idfactura.HeaderText = "Factura";
+            this.idfactura.Name = "idfactura";
             // 
             // groupBox2
             // 
@@ -317,6 +353,7 @@
             this.btnLimpiar.Text = "L i m p i a r ";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtdescuento
             // 
@@ -347,6 +384,7 @@
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // panel10
             // 
@@ -660,5 +698,10 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idempleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idventa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idfactura;
     }
 }

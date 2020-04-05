@@ -61,5 +61,15 @@ namespace MakeupBarSystem.Venta
             this.Hide();
             Viw_Factura ventana = new Viw_Factura();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

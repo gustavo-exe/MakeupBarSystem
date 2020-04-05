@@ -41,6 +41,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -53,6 +57,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idfactura,
+            this.fecha,
+            this.idempleado,
+            this.idcliente});
             this.dataGridView1.Location = new System.Drawing.Point(108, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -210,6 +219,26 @@
             this.panel6.Size = new System.Drawing.Size(33, 46);
             this.panel6.TabIndex = 14;
             // 
+            // idfactura
+            // 
+            this.idfactura.HeaderText = "IdFactura";
+            this.idfactura.Name = "idfactura";
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            // 
+            // idempleado
+            // 
+            this.idempleado.HeaderText = "Empleado";
+            this.idempleado.Name = "idempleado";
+            // 
+            // idcliente
+            // 
+            this.idcliente.HeaderText = "Cliente";
+            this.idcliente.Name = "idcliente";
+            // 
             // Viw_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,5 +278,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idfactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idempleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
     }
 }
