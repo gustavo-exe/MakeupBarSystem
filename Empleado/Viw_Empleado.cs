@@ -13,11 +13,13 @@ namespace MakeupBarSystem.Empleado
 {
     public partial class Viw_Empleado : Form
     {
+        Conexion conexion;
         private int state;
 
         public Viw_Empleado()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -54,6 +56,13 @@ namespace MakeupBarSystem.Empleado
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Viw_Empleado_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM empleado;"));
+            dataGridView1.DataSource = Datos;
+            dataGridView1.Refresh();
         }
     }
 }

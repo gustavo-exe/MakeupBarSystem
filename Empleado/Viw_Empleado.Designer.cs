@@ -225,6 +225,7 @@
             this.Name = "Viw_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Viw_Empleado";
+            this.Load += new System.EventHandler(this.Viw_Empleado_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
