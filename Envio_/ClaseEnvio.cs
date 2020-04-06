@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,39 @@ namespace MakeupBarSystem.Envio_
             else
             {
                 error = conexion.Error;
+                return false;
+            }
+        }
+        public List<ClaseEnvio> MostrarEnvio()
+        {
+            List<ClaseEnvio> envio = new List<ClaseEnvio>();
+            try
+            {
+                return envio;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public Boolean BuscarID(string id)
+        {
+            //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.Envio where idEnvio='{0}'", id));
+            if (t1.Rows.Count > 0)
+            {
+                idEnvio = t1.Rows[0][0].ToString();
+                idCliente = t1.Rows[0][1].ToString();
+                Direccion = t1.Rows[0][2].ToString();
+                Telefono = t1.Rows[0][3].ToString();
+                idServicioEntrega = t1.Rows[0][4].ToString();
+                return true;
+            }
+            else
+            {
                 return false;
             }
         }
