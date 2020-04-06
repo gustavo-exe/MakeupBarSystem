@@ -38,6 +38,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.panelcolor4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,9 +55,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -159,7 +159,7 @@
             // 
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtId);
-            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panelcolor4);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -176,13 +176,48 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(179, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 22);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Identidad";
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.Black;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(292, 41);
+            this.txtId.Margin = new System.Windows.Forms.Padding(0);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(167, 22);
+            this.txtId.TabIndex = 19;
+            this.txtId.Tag = "";
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            // 
+            // panelcolor4
+            // 
+            this.panelcolor4.BackColor = System.Drawing.Color.White;
+            this.panelcolor4.Location = new System.Drawing.Point(292, 66);
+            this.panelcolor4.Name = "panelcolor4";
+            this.panelcolor4.Size = new System.Drawing.Size(163, 1);
+            this.panelcolor4.TabIndex = 18;
+            this.panelcolor4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(145, 186);
+            this.label4.Location = new System.Drawing.Point(179, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 22);
             this.label4.TabIndex = 17;
@@ -194,7 +229,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(145, 137);
+            this.label3.Location = new System.Drawing.Point(179, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 22);
             this.label3.TabIndex = 16;
@@ -206,7 +241,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(145, 84);
+            this.label2.Location = new System.Drawing.Point(179, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 22);
             this.label2.TabIndex = 15;
@@ -215,7 +250,7 @@
             // panelColor3
             // 
             this.panelColor3.BackColor = System.Drawing.Color.White;
-            this.panelColor3.Location = new System.Drawing.Point(258, 211);
+            this.panelColor3.Location = new System.Drawing.Point(292, 221);
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(163, 1);
             this.panelColor3.TabIndex = 14;
@@ -226,7 +261,7 @@
             this.txtRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRol.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRol.ForeColor = System.Drawing.Color.White;
-            this.txtRol.Location = new System.Drawing.Point(258, 186);
+            this.txtRol.Location = new System.Drawing.Point(292, 196);
             this.txtRol.Margin = new System.Windows.Forms.Padding(0);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(167, 22);
@@ -240,7 +275,7 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(258, 80);
+            this.txtUsuario.Location = new System.Drawing.Point(292, 90);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
@@ -251,7 +286,7 @@
             // panelColor2
             // 
             this.panelColor2.BackColor = System.Drawing.Color.White;
-            this.panelColor2.Location = new System.Drawing.Point(258, 158);
+            this.panelColor2.Location = new System.Drawing.Point(292, 168);
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
             this.panelColor2.TabIndex = 11;
@@ -259,7 +294,7 @@
             // PanelColor1
             // 
             this.PanelColor1.BackColor = System.Drawing.Color.White;
-            this.PanelColor1.Location = new System.Drawing.Point(258, 105);
+            this.PanelColor1.Location = new System.Drawing.Point(292, 115);
             this.PanelColor1.Name = "PanelColor1";
             this.PanelColor1.Size = new System.Drawing.Size(163, 1);
             this.PanelColor1.TabIndex = 10;
@@ -270,7 +305,7 @@
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(258, 133);
+            this.txtContraseña.Location = new System.Drawing.Point(292, 143);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(167, 22);
@@ -360,39 +395,6 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(145, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 22);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Identidad";
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.Black;
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(258, 31);
-            this.txtId.Margin = new System.Windows.Forms.Padding(0);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(167, 22);
-            this.txtId.TabIndex = 19;
-            this.txtId.Tag = "";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(258, 56);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(163, 1);
-            this.panel8.TabIndex = 18;
-            // 
             // Ins_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +447,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelcolor4;
     }
 }

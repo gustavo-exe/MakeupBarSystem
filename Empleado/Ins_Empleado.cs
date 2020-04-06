@@ -95,12 +95,27 @@ namespace MakeupBarSystem.Empleado
             empleado.Rol = Convert.ToString(txtRol.Text);
             if (empleado.Insertar())
             {
-                MessageBox.Show("Empleado insertado");
+                MessageBox.Show("Empleado insertado.");
+
+                txtId.Text = "";
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
+                txtRol.Text = "";
             }
             else
             {
                 MessageBox.Show("Error al guardar >:v");
             }
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            panelcolor4.BackColor = Color.FromArgb(217, 4, 142);
         }
     }
 }

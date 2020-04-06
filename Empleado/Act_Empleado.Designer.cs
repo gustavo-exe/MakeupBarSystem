@@ -35,28 +35,29 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ListaDeEmpleados = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelColor1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelColor3 = new System.Windows.Forms.Panel();
+            this.panelColor4 = new System.Windows.Forms.Panel();
             this.txtRol = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.panelColor3 = new System.Windows.Forms.Panel();
             this.panelColor2 = new System.Windows.Forms.Panel();
-            this.PanelColor1 = new System.Windows.Forms.Panel();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -149,30 +150,15 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.btnModificar);
+            this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Controls.Add(this.btnCancelar);
+            this.panel3.Controls.Add(this.btnGuardar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(42, 369);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(632, 78);
             this.panel3.TabIndex = 2;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Black;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(437, 38);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(195, 34);
-            this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "C a n c e l a r";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnModificar
             // 
@@ -181,22 +167,74 @@
             this.btnModificar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnModificar.Location = new System.Drawing.Point(232, 38);
+            this.btnModificar.Location = new System.Drawing.Point(338, 25);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(0);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(195, 34);
-            this.btnModificar.TabIndex = 14;
+            this.btnModificar.TabIndex = 17;
             this.btnModificar.Text = "M o d i f i c a r";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Black;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(129, 25);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(195, 34);
+            this.btnEliminar.TabIndex = 16;
+            this.btnEliminar.Text = "E l i m i n a r";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(338, 25);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(195, 34);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "C a n c e l a r";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Black;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(129, 25);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(195, 34);
+            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Text = "G u a r d a r";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(677, 33);
+            this.panel4.Location = new System.Drawing.Point(680, 33);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(120, 36);
+            this.panel4.Size = new System.Drawing.Size(117, 36);
             this.panel4.TabIndex = 12;
             // 
             // panel7
@@ -254,36 +292,20 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(19, 38);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 34);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "M o d i f i c a r";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.ListaDeEmpleados);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtId);
-            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panelColor1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.panelColor3);
+            this.panel2.Controls.Add(this.panelColor4);
             this.panel2.Controls.Add(this.txtRol);
             this.panel2.Controls.Add(this.txtUsuario);
+            this.panel2.Controls.Add(this.panelColor3);
             this.panel2.Controls.Add(this.panelColor2);
-            this.panel2.Controls.Add(this.PanelColor1);
             this.panel2.Controls.Add(this.txtContraseña);
             this.panel2.Location = new System.Drawing.Point(42, 75);
             this.panel2.Name = "panel2";
@@ -302,6 +324,8 @@
             this.ListaDeEmpleados.Name = "ListaDeEmpleados";
             this.ListaDeEmpleados.Size = new System.Drawing.Size(179, 242);
             this.ListaDeEmpleados.TabIndex = 34;
+            this.ListaDeEmpleados.Click += new System.EventHandler(this.ListaDeEmpleados_Click);
+            this.ListaDeEmpleados.SelectedIndexChanged += new System.EventHandler(this.ListaDeEmpleados_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -311,9 +335,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(297, 65);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 22);
+            this.label5.Size = new System.Drawing.Size(89, 22);
             this.label5.TabIndex = 33;
-            this.label5.Text = "Id";
+            this.label5.Text = "Identidad";
             // 
             // txtId
             // 
@@ -328,13 +352,13 @@
             this.txtId.TabIndex = 32;
             this.txtId.Tag = "";
             // 
-            // panel8
+            // panelColor1
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(410, 86);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(163, 1);
-            this.panel8.TabIndex = 31;
+            this.panelColor1.BackColor = System.Drawing.Color.White;
+            this.panelColor1.Location = new System.Drawing.Point(410, 86);
+            this.panelColor1.Name = "panelColor1";
+            this.panelColor1.Size = new System.Drawing.Size(163, 1);
+            this.panelColor1.TabIndex = 31;
             // 
             // label4
             // 
@@ -372,13 +396,13 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Usuario";
             // 
-            // panelColor3
+            // panelColor4
             // 
-            this.panelColor3.BackColor = System.Drawing.Color.White;
-            this.panelColor3.Location = new System.Drawing.Point(410, 240);
-            this.panelColor3.Name = "panelColor3";
-            this.panelColor3.Size = new System.Drawing.Size(163, 1);
-            this.panelColor3.TabIndex = 27;
+            this.panelColor4.BackColor = System.Drawing.Color.White;
+            this.panelColor4.Location = new System.Drawing.Point(410, 240);
+            this.panelColor4.Name = "panelColor4";
+            this.panelColor4.Size = new System.Drawing.Size(163, 1);
+            this.panelColor4.TabIndex = 27;
             // 
             // txtRol
             // 
@@ -406,21 +430,21 @@
             this.txtUsuario.TabIndex = 25;
             this.txtUsuario.Tag = "";
             // 
+            // panelColor3
+            // 
+            this.panelColor3.BackColor = System.Drawing.Color.White;
+            this.panelColor3.Location = new System.Drawing.Point(410, 187);
+            this.panelColor3.Name = "panelColor3";
+            this.panelColor3.Size = new System.Drawing.Size(163, 1);
+            this.panelColor3.TabIndex = 24;
+            // 
             // panelColor2
             // 
             this.panelColor2.BackColor = System.Drawing.Color.White;
-            this.panelColor2.Location = new System.Drawing.Point(410, 187);
+            this.panelColor2.Location = new System.Drawing.Point(410, 134);
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
-            this.panelColor2.TabIndex = 24;
-            // 
-            // PanelColor1
-            // 
-            this.PanelColor1.BackColor = System.Drawing.Color.White;
-            this.PanelColor1.Location = new System.Drawing.Point(410, 134);
-            this.PanelColor1.Name = "PanelColor1";
-            this.PanelColor1.Size = new System.Drawing.Size(163, 1);
-            this.PanelColor1.TabIndex = 23;
+            this.panelColor2.TabIndex = 23;
             // 
             // txtContraseña
             // 
@@ -447,6 +471,7 @@
             this.Name = "Act_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Act_Empleado";
+            this.Load += new System.EventHandler(this.Act_Empleado_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -469,27 +494,28 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListBox ListaDeEmpleados;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelColor1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelColor3;
+        private System.Windows.Forms.Panel panelColor4;
         private System.Windows.Forms.TextBox txtRol;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Panel panelColor3;
         private System.Windows.Forms.Panel panelColor2;
-        private System.Windows.Forms.Panel PanelColor1;
         private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
