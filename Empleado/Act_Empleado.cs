@@ -166,12 +166,12 @@ namespace MakeupBarSystem.Empleado
             if (click == 0 )
             {
                 //MessageBox.Show(Convert.ToString(Click));
-                MessageBox.Show("Debes seleccionar un item de la lista.2");
+                MessageBox.Show("Debes seleccionar un item de la lista.");
             }
                 
             else
             {
-                MessageBox.Show(Convert.ToString(ListaDeEmpleados.SelectedIndices.Count));
+                //MessageBox.Show(Convert.ToString(ListaDeEmpleados.SelectedIndices.Count));
                 try
                 {
                     empleado = ObetenerValoresDeLosText();
@@ -214,12 +214,12 @@ namespace MakeupBarSystem.Empleado
             //Para que el valor no cambie
             //txtId.ReadOnly = true;
 
-            MessageBox.Show(Convert.ToString(click));
+            //MessageBox.Show(Convert.ToString(click));
 
             if (click == 0)
             {
                 //MessageBox.Show(Convert.ToString(Click));
-                MessageBox.Show("Debes seleccionar un item de la lista.2");
+                MessageBox.Show("Debes seleccionar un item de la lista.");
             }
 
             else
@@ -257,6 +257,7 @@ namespace MakeupBarSystem.Empleado
             CambiarDeColorElPanele(panelColor3, false);
             CambiarDeColorElPanele(panelColor4, false);
         }
+
 
 
         /// <summary>

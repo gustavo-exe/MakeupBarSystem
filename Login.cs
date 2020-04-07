@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace MakeupBarSystem
 {
-    public partial class Login : Form
+    public partial class Login : Form 
     {
-        Conexion conexion = new Conexion();
+       IniciarSecion empleado = new IniciarSecion();
+       Conexion conexion = new Conexion();
         public Login()
         {
             InitializeComponent();
             conexion = new Conexion();
+           
         }
 
         private void txtContraseña_MouseClick(object sender, MouseEventArgs e)
@@ -45,6 +47,21 @@ namespace MakeupBarSystem
             
             try
             {
+                IniciarSecion login = empleado.BucarUsuario(txtUsuario.Text);
+
+                if(login.Password == txtContraseña.Text)
+                {
+                    MessageBox.Show("Bienvenido al sistema.");
+
+                    conexion.conectar();
+
+                    this.Hide();
+                    Modulos ventana = new Modulos();
+                    ventana.Show();
+
+                }
+                else { MessageBox.Show("DATOS INCORRECTOS"); }
+
                 // Objeto de tipo usuario que almacena el valor del usuario
                 // si éste existe en la base de datos
                 //Empleado empleado = empleado.BuscarUsuario(txtUserName.Text);
@@ -63,11 +80,9 @@ namespace MakeupBarSystem
                  {
                      MessageBox.Show("Base de datos no conectado.");
                  }*/
-                conexion.conectar();
-               
-                this.Hide();
-                Modulos ventana = new Modulos();
-                ventana.Show();
+                
+
+
             }
             catch (Exception ex)
             {

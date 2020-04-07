@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MakeupBarSystem.MenuDelModulo;
 using MakeupBarSystem.Cliente;
+using MakeupBarSystem.ServicioDeEntrega;
+using MakeupBarSystem.Proveedor;
 
 namespace MakeupBarSystem
 {
@@ -105,6 +107,61 @@ namespace MakeupBarSystem
             this.Hide();
             Servicio ventana = new Servicio();
             ventana.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login ventana = new Login();
+            ventana.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Instagram
+            //Cliente
+            //Empleado
+            //ServicioDeEntrega
+            //Proveedor
+
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                this.Hide();
+                Ver_PerfilInstagram ventana = new Ver_PerfilInstagram();
+                ventana.Show();
+            }
+            if (comboBox1.SelectedIndex == 1)
+            { 
+            this.Hide();
+            Men_Cliente venta = new Men_Cliente();
+            venta.Show();
+            }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                this.Hide();
+                Men_Empleado venta = new Men_Empleado();
+                venta.Show();
+            }
+            if (comboBox1.SelectedIndex == 3)
+            {
+                this.Hide();
+                Men_Entrega venta = new Men_Entrega();
+                venta.Show();
+            }
+            if (comboBox1.SelectedIndex == 4)
+            {
+                this.Hide();
+                Men_Proveedor venta = new Men_Proveedor();
+                venta.Show();
+            }
+            //if (comboBox1.SelectedIndex == 4)
+            //{
+            //    this.Hide();
+            //    View_Productos venta = new Men_Proveedor();
+            //    venta.Show();
+            //}
+
         }
     }
 }

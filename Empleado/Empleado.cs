@@ -99,6 +99,34 @@ namespace MakeupBarSystem.Empleado
         
         }
 
+        ///<summary>
+        ///L O G I N 
+        /// </summary>
+        /// 
+
+        public Empleado BucarUsuario(string NameUsuario)
+        {
+            Empleado empleado = new Empleado();
+
+
+            DataTable Tabla = conexion.consulta(string.Format("SELECT * FROM empleado WHERE Usuario='{0}';", NameUsuario));
+            //MessageBox.Show(Convert.ToString(id));
+            //empleado.usuario = "HHHH";
+            //MessageBox.Show(Convert.ToString(idEmpleado = Tabla.Rows[0][0].ToString()));
+            if (Tabla.Rows.Count > 0)
+            {
+
+                empleado.idEmpleado = Tabla.Rows[0][0].ToString();
+                empleado.usuario = Tabla.Rows[0][1].ToString();
+                empleado.password = Tabla.Rows[0][2].ToString();
+                empleado.rol = Tabla.Rows[0][3].ToString();
+                //MessageBox.Show("Si hay");
+
+            }
+            return empleado;
+
+        }
+
         /// <summary>
         /// 
         /// METODO CON UPDATE
