@@ -13,10 +13,13 @@ namespace MakeupBarSystem.Factura
 {
     public partial class Viw_Factura : Form
     {
+        Conexion conexion;
+        private int state;
 
         public Viw_Factura()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
 
@@ -41,6 +44,37 @@ namespace MakeupBarSystem.Factura
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (state == 0)
+            {
+                this.WindowState = FormWindowState.Normal;
+
+                state = 1;
+            }
+            else
+                     if (state == 1)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                dvgFactura.Dock = DockStyle.Fill;
+                state = 0;
+            }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Viw_Factura_Load(object sender, EventArgs e)
+        {
+            
+             DataTable Datos = conexion.consulta(String.Format("SELECT IdFactura as 'Numero De Factura', FechaActual as 'Fecha', IdEmpleado as 'Empleado',idCliente as 'Cliente' FROM makeupbar.factura"));
+             dvgFactura.DataSource = Datos;
+             dvgFactura.Refresh();
         }
     }
 }

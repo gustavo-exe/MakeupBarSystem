@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dvgFactura = new System.Windows.Forms.DataGridView();
-            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -57,37 +53,12 @@
             // dvgFactura
             // 
             this.dvgFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idfactura,
-            this.fecha,
-            this.idempleado,
-            this.idcliente});
             this.dvgFactura.Location = new System.Drawing.Point(108, 39);
             this.dvgFactura.Name = "dvgFactura";
             this.dvgFactura.RowHeadersWidth = 51;
             this.dvgFactura.Size = new System.Drawing.Size(453, 286);
             this.dvgFactura.TabIndex = 0;
             this.dvgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idfactura
-            // 
-            this.idfactura.HeaderText = "IdFactura";
-            this.idfactura.Name = "idfactura";
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            // 
-            // idempleado
-            // 
-            this.idempleado.HeaderText = "Empleado";
-            this.idempleado.Name = "idempleado";
-            // 
-            // idcliente
-            // 
-            this.idcliente.HeaderText = "Cliente";
-            this.idcliente.Name = "idcliente";
             // 
             // label1
             // 
@@ -123,6 +94,7 @@
             this.button4.TabIndex = 18;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -201,6 +173,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.5F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -252,6 +225,7 @@
             this.Name = "Viw_Factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Viw_Factura";
+            this.Load += new System.EventHandler(this.Viw_Factura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -280,9 +254,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idfactura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idempleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
     }
 }

@@ -158,13 +158,6 @@ namespace MakeupBarSystem.Venta
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Viw_Empleado_Load(object sender, EventArgs e)
-        {
-            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM DetalleDeVenta;"));
-            dgvVenta.DataSource = Datos;
-            dgvVenta.Refresh();
-        }
-
 
         private void Cargar_Datos()
         {
@@ -214,6 +207,9 @@ namespace MakeupBarSystem.Venta
                 if (venta.Insertar())
                 {
                     MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento FROM DetalleDeVenta;"));
+                    dgvVenta.DataSource = Datos;
+                    dgvVenta.Refresh();
                 }
                 else
                 {
@@ -314,6 +310,13 @@ namespace MakeupBarSystem.Venta
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Ins_Venta_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento FROM DetalleDeVenta;"));
+            dgvVenta.DataSource = Datos;
+            dgvVenta.Refresh();
         }
     }
 }

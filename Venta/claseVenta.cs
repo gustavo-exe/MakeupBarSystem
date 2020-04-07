@@ -157,7 +157,7 @@ namespace MakeupBarSystem.Venta
         {
            
             /*Inserta datos en la tabla de detalle de venta */
-            if (conexion.IUD(string.Format("insert into DetalleDeVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento) value('{0}','{1}','{2}','{3}','{4}','{5}')", idCliente, idEmpleado, idVenta, idFactura, idProducto, precio, cantidades, descuento)))
+            if (conexion.IUD(string.Format("insert into DetalleDeVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento) value('{0}','{1}','{2}','{3}','{4}','{5}')", idVenta, idFactura, idProducto, precio, cantidades, descuento)))
             {
                 return true;
             }
@@ -197,13 +197,13 @@ namespace MakeupBarSystem.Venta
 
 
         }
-        /*
+        
         public claseVenta BucarID(string id)
         {
             claseVenta claseventa = new claseVenta();
 
 
-            DataTable Tabla = conexion.consulta(string.Format("SELECT idcliente,idEmpleado,idVenta ,idFactura, Contraseña, Rol FROM empleado WHERE idEmpleado='{0}';", id));
+            DataTable Tabla = conexion.consulta(string.Format("SELECT idDetalleDeVenta ,idVenta ,idFactura, idProducto, precio, Cantidad,Descuento FROM Factura WHERE idEmpleado='{0}';", id));
             //MessageBox.Show(Convert.ToString(id));
             //empleado.usuario = "HHHH";
             //MessageBox.Show(Convert.ToString(idEmpleado = Tabla.Rows[0][0].ToString()));
@@ -224,7 +224,7 @@ namespace MakeupBarSystem.Venta
             return claseventa;
 
         }
-        */
+        
 
         public Boolean Eliminar()
         {

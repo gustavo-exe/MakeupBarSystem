@@ -41,11 +41,6 @@
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvVenta = new System.Windows.Forms.DataGridView();
-            this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -244,42 +239,11 @@
             // dgvVenta
             // 
             this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iddetalle,
-            this.idcliente,
-            this.idempleado,
-            this.idventa,
-            this.idfactura});
             this.dgvVenta.Location = new System.Drawing.Point(3, 363);
             this.dgvVenta.Name = "dgvVenta";
             this.dgvVenta.Size = new System.Drawing.Size(615, 107);
             this.dgvVenta.TabIndex = 2;
             this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
-            // 
-            // iddetalle
-            // 
-            this.iddetalle.HeaderText = "Detalle";
-            this.iddetalle.Name = "iddetalle";
-            // 
-            // idcliente
-            // 
-            this.idcliente.HeaderText = "Cliente";
-            this.idcliente.Name = "idcliente";
-            // 
-            // idempleado
-            // 
-            this.idempleado.HeaderText = "Empleado";
-            this.idempleado.Name = "idempleado";
-            // 
-            // idventa
-            // 
-            this.idventa.HeaderText = "Venta";
-            this.idventa.Name = "idventa";
-            // 
-            // idfactura
-            // 
-            this.idfactura.HeaderText = "Factura";
-            this.idfactura.Name = "idfactura";
             // 
             // groupBox2
             // 
@@ -642,6 +606,7 @@
             this.Name = "Ins_Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ins_Venta";
+            this.Load += new System.EventHandler(this.Ins_Venta_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -701,10 +666,5 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.DataGridView dgvVenta;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idempleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idventa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idfactura;
     }
 }
