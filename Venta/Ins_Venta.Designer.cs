@@ -40,7 +40,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvVenta = new System.Windows.Forms.DataGridView();
             this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +80,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +106,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 603);
             this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -189,6 +190,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(632, 64);
             this.panel5.TabIndex = 13;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label1
             // 
@@ -231,7 +233,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvVenta);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Location = new System.Drawing.Point(42, 103);
@@ -239,19 +241,20 @@
             this.panel2.Size = new System.Drawing.Size(632, 497);
             this.panel2.TabIndex = 15;
             // 
-            // dataGridView1
+            // dgvVenta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddetalle,
             this.idcliente,
             this.idempleado,
             this.idventa,
             this.idfactura});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 363);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(615, 107);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvVenta.Location = new System.Drawing.Point(3, 363);
+            this.dgvVenta.Name = "dgvVenta";
+            this.dgvVenta.Size = new System.Drawing.Size(615, 107);
+            this.dgvVenta.TabIndex = 2;
+            this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
             // 
             // iddetalle
             // 
@@ -646,7 +649,7 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -696,7 +699,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtidproducto;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVenta;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn idcliente;

@@ -13,21 +13,34 @@ namespace MakeupBarSystem.Factura
 {
     public partial class Viw_Factura : Form
     {
+
         public Viw_Factura()
         {
             InitializeComponent();
         }
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+ 
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
             Men_Venta ventana = new Men_Venta();
             ventana.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

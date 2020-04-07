@@ -174,27 +174,57 @@ namespace MakeupBarSystem.Venta
             if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado) value('{0}','{1}')", idCliente, idEmpleado)))
             {
                 IdVenta = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(idVenta) from Venta")).Rows[0][0].ToString());
-                IdFactura = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(IdFactura) from factura")).Rows[0][0].ToString());
-                return true;
             }
             else
             {
                 error = conexion.Error;
             }
+
+            if (conexion.IUD(string.Format("insert into Factura(IdEmpleado,idCliente) value('{0}','{1}')", idEmpleado,idCliente)))
+            {
+                IdFactura = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(IdFactura) from Factura")).Rows[0][0].ToString());
+                return true;
+            }
+            else
+            {
+                //error = conexion.Error;
+                return false;
+            }
+
 
 
             /*Inserta datos en la tabla de factura */
 
-            if (conexion.IUD(string.Format("insert into factura(FechaActual,IdEmpleado,idCliente) value(NOW(),'{0}','{1}')",idCliente, idEmpleado)))
-            {
-                return true;
-            }
-            else
-            {
-                error = conexion.Error;
-                return false;
-            }
+
         }
+        /*
+        public claseVenta BucarID(string id)
+        {
+            claseVenta claseventa = new claseVenta();
+
+
+            DataTable Tabla = conexion.consulta(string.Format("SELECT idcliente,idEmpleado,idVenta ,idFactura, Contraseña, Rol FROM empleado WHERE idEmpleado='{0}';", id));
+            //MessageBox.Show(Convert.ToString(id));
+            //empleado.usuario = "HHHH";
+            //MessageBox.Show(Convert.ToString(idEmpleado = Tabla.Rows[0][0].ToString()));
+            if (Tabla.Rows.Count > 0)
+            {
+
+                claseventa.idCliente = Convert.ToInt32(Tabla.Rows[0][0]);
+                claseventa.idEmpleado = Convert.ToInt32(Tabla.Rows[0][1]);
+                claseventa.idVenta = Convert.ToInt32(Tabla.Rows[0][2]);
+                claseventa.idFactura = Convert.ToInt32(Tabla.Rows[0][3]);
+                claseventa.idProducto = Convert.ToInt32(Tabla.Rows[0][0]);
+                claseventa.precio = Convert.ToInt32(Tabla.Rows[0][1]);
+                claseventa.cantidades = Convert.ToInt32(Tabla.Rows[0][2]);
+                claseventa.descuento = Convert.ToInt32(Tabla.Rows[0][3]);
+                //MessageBox.Show("Si hay");
+
+            }
+            return claseventa;
+
+        }
+        */
 
         public Boolean Eliminar()
         {

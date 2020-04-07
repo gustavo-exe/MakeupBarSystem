@@ -12,6 +12,7 @@ namespace MakeupBarSystem.Venta
 {
     public partial class Ins_Venta : Form
     {
+        Conexion conexion;
         private int state;
         private claseVenta venta;
 
@@ -19,6 +20,7 @@ namespace MakeupBarSystem.Venta
         {
             InitializeComponent();
             venta = new claseVenta();
+            conexion = new Conexion();
         }
 
 
@@ -155,6 +157,15 @@ namespace MakeupBarSystem.Venta
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Viw_Empleado_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM DetalleDeVenta;"));
+            dgvVenta.DataSource = Datos;
+            dgvVenta.Refresh();
+        }
+
+
         private void Cargar_Datos()
         {
             txtCliente.Text = Convert.ToString(venta.IdCliente);
@@ -288,6 +299,21 @@ namespace MakeupBarSystem.Venta
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

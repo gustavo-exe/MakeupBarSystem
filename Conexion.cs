@@ -21,21 +21,23 @@ namespace MakeupBarSystem
         public Conexion()
         {
             //Elias
+           // bd = "makeupbar";
+            //servidor = "127.0.0.1";
+            //usuario = "MakeupBarElias";
+            //pass = "Y o l o Y o l o 1";
+
+           // yovany
             bd = "makeupbar";
             servidor = "127.0.0.1";
-            usuario = "MakeupBarElias";
-            pass = "Y o l o Y o l o 1";
-
-            /* yovany
-             bd = "makeupbar";
-            servidor = "127.0.0.1";
+            usuario = "root";
+            pass = "987654321";
+            /* 
 <<<<<<< HEAD
             usuario = "wilmer";
             pass = "Rasengan 1";
            
 =======
-            usuario = "root";
-            pass = "987654321";
+
 <<<<<<< HEAD
 >>>>>>> 96378c884ef18bbdca5bdb37a6bccecaadafea1a
 =======

@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgFactura = new System.Windows.Forms.DataGridView();
+            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -41,11 +45,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.idfactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idempleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).BeginInit();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -54,19 +54,40 @@
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dvgFactura
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idfactura,
             this.fecha,
             this.idempleado,
             this.idcliente});
-            this.dataGridView1.Location = new System.Drawing.Point(108, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(453, 286);
-            this.dataGridView1.TabIndex = 0;
+            this.dvgFactura.Location = new System.Drawing.Point(108, 39);
+            this.dvgFactura.Name = "dvgFactura";
+            this.dvgFactura.RowHeadersWidth = 51;
+            this.dvgFactura.Size = new System.Drawing.Size(453, 286);
+            this.dvgFactura.TabIndex = 0;
+            this.dvgFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idfactura
+            // 
+            this.idfactura.HeaderText = "IdFactura";
+            this.idfactura.Name = "idfactura";
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            // 
+            // idempleado
+            // 
+            this.idempleado.HeaderText = "Empleado";
+            this.idempleado.Name = "idempleado";
+            // 
+            // idcliente
+            // 
+            this.idcliente.HeaderText = "Cliente";
+            this.idcliente.Name = "idcliente";
             // 
             // label1
             // 
@@ -194,12 +215,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dvgFactura);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(42, 85);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(630, 362);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel4
             // 
@@ -219,26 +241,6 @@
             this.panel6.Size = new System.Drawing.Size(33, 46);
             this.panel6.TabIndex = 14;
             // 
-            // idfactura
-            // 
-            this.idfactura.HeaderText = "IdFactura";
-            this.idfactura.Name = "idfactura";
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            // 
-            // idempleado
-            // 
-            this.idempleado.HeaderText = "Empleado";
-            this.idempleado.Name = "idempleado";
-            // 
-            // idcliente
-            // 
-            this.idcliente.HeaderText = "Cliente";
-            this.idcliente.Name = "idcliente";
-            // 
             // Viw_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,7 +252,7 @@
             this.Name = "Viw_Factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Viw_Factura";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgFactura)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -265,7 +267,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvgFactura;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button4;
