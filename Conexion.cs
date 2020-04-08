@@ -21,6 +21,7 @@ namespace MakeupBarSystem
         public Conexion()
         {
             //Elias
+
             // bd = "makeupbar";
             //servidor = "127.0.0.1";
             //usuario = "MakeupBarElias";
@@ -36,12 +37,30 @@ namespace MakeupBarSystem
             //W I L M E R 
             bd = "makeuppruebas";
             servidor = "127.0.0.1";
+
+            bd = "makeupbar";
+            servidor = "127.0.0.1";
+            usuario = "MakeupBarElias";
+            pass = "Y o l o Y o l o 1";
+
+            // yovany
+            // bd = "makeupbar";
+            //servidor = "127.0.0.1";
+            //usuario = "root";
+            //pass = "987654321";
+            
             usuario = "wilmer";
             pass = "Rasengan 1";
 
 
+            //Dina
+            //bd = "makeupbar";
+            //servidor = "127.0.0.1";
+            //usuario = "root";
+            //pass = "";
             conexion = new MySqlConnection();
         }
+
         public Conexion(string b, string se, string u, string p)
         {
             bd = b;
@@ -112,5 +131,6 @@ namespace MakeupBarSystem
         {
             get { return error; }
         }
+        
     }
 }

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MakeupBarSystem.Proveedor
 {
-    public partial class Men_Proveedor : Form
+    public partial class View_inventario : Form
     {
         private int state;
 
-        public Men_Proveedor()
+        public View_inventario()
         {
             InitializeComponent();
         }

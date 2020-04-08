@@ -229,11 +229,19 @@
     <Compile Include="Maquillaje_\View_Maquillaje.Designer.cs">
       <DependentUpon>View_Maquillaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Men_Proveedor.cs" />
     <Compile Include="Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos.Designer.cs">
       <DependentUpon>Modulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\Producto.cs" />
+    <Compile Include="Producto\Viw_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Viw_Producto.Designer.cs">
+      <DependentUpon>Viw_Producto.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto_General\Act_ProductoGeneral.cs">
       <SubType>Form</SubType>
@@ -348,6 +356,7 @@
     <Compile Include="Venta\Viw_Venta.Designer.cs">
       <DependentUpon>Viw_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Viw_inventario.cs" />
     <EmbeddedResource Include="Cliente\Act_Cliente.resx">
       <DependentUpon>Act_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos.resx">
       <DependentUpon>Modulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Viw_Producto.resx">
+      <DependentUpon>Viw_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto_General\Act_ProductoGeneral.resx">
       <DependentUpon>Act_ProductoGeneral.cs</DependentUpon>

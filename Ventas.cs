@@ -12,6 +12,7 @@ using MakeupBarSystem.Maquillaje_;
 using MakeupBarSystem.Producto_General;
 using MakeupBarSystem.Factura;
 using MakeupBarSystem.Venta;
+using MakeupBarSystem.Producto;
 
 namespace MakeupBarSystem
 {
@@ -92,6 +93,12 @@ namespace MakeupBarSystem
             ventana.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Viw_Producto ventana = new Viw_Producto();
+            ventana.Show();
+        }
     }
     }
    

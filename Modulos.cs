@@ -11,6 +11,8 @@ using MakeupBarSystem.MenuDelModulo;
 using MakeupBarSystem.Cliente;
 using MakeupBarSystem.ServicioDeEntrega;
 using MakeupBarSystem.Proveedor;
+using MakeupBarSystem.Inventario;
+using MakeupBarSystem.Producto;
 
 namespace MakeupBarSystem
 {
@@ -118,11 +120,12 @@ namespace MakeupBarSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Instagram
-            //Cliente
-            //Empleado
-            //ServicioDeEntrega
-            //Proveedor
+            /*
+            Instagram
+            Cliente
+            Empleado
+            ServicioDeEntrega
+           */
 
 
             if (comboBox1.SelectedIndex == 0)
@@ -149,18 +152,31 @@ namespace MakeupBarSystem
                 Men_Entrega venta = new Men_Entrega();
                 venta.Show();
             }
+
+            /*
+            Proveedor
+           MisProductos
+            Inventario
+            */
             if (comboBox1.SelectedIndex == 4)
             {
                 this.Hide();
-                Men_Proveedor venta = new Men_Proveedor();
+                ViewProveedor ventana = new ViewProveedor();
+                ventana.Show();
+            }
+            if (comboBox1.SelectedIndex == 5)
+            {
+                this.Hide();
+                Viw_Producto venta = new Viw_Producto();
                 venta.Show();
             }
-            //if (comboBox1.SelectedIndex == 4)
-            //{
-            //    this.Hide();
-            //    View_Productos venta = new Men_Proveedor();
-            //    venta.Show();
-            //}
+
+            if (comboBox1.SelectedIndex == 6)
+            {
+                this.Hide();
+                View_inventario venta = new View_inventario();
+                venta.Show();
+            }
 
         }
     }
