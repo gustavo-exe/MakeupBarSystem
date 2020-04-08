@@ -12,11 +12,13 @@ namespace MakeupBarSystem.Inventario
 {
     public partial class Viw_Inventario : Form
     {
+        Conexion conexion;
         private int state;
 
         public Viw_Inventario()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -50,6 +52,13 @@ namespace MakeupBarSystem.Inventario
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Viw_Inventario_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT idInventario AS 'N', precio AS 'Precio', idCodigoDeBarra AS CodigoDeBarra,Cantidad  FROM inventario;"));
+            dataGridView1.DataSource = Datos;
+            dataGridView1.Refresh();
         }
     }
 }

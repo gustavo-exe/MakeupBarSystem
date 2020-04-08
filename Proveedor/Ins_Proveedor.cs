@@ -58,7 +58,7 @@ namespace MakeupBarSystem.Proveedor
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Men_Proveedor ventana = new Men_Proveedor();
+            View_inventario ventana = new View_inventario();
             ventana.Show();
         }
 
@@ -70,7 +70,7 @@ namespace MakeupBarSystem.Proveedor
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Men_Proveedor ventana = new Men_Proveedor();
+            View_inventario ventana = new View_inventario();
             ventana.Show();
         }
 

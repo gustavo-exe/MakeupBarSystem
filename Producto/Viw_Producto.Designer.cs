@@ -208,6 +208,7 @@
             this.btnReturn.TabIndex = 12;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // Viw_Producto
             // 
@@ -219,6 +220,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Viw_Producto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Viw_Producto";
             this.Load += new System.EventHandler(this.Viw_Producto_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

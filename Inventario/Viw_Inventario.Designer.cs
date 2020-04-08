@@ -225,6 +225,7 @@
             this.Name = "Viw_Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Viw_Inventario";
+            this.Load += new System.EventHandler(this.Viw_Inventario_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

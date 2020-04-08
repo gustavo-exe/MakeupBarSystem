@@ -99,7 +99,7 @@ namespace MakeupBarSystem
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
-
+            txtContraseña.PasswordChar ='●';
         }
     }
 }

@@ -21,9 +21,16 @@ namespace MakeupBarSystem.Producto
 
         private void Viw_Producto_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT idProducto AS N, CodigoDeBarra,NombreDelProducto,Precio,Cantidad  FROM Producto;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT idProducto AS 'N', CodigoDeBarra,NombreDelProducto,Precio,Cantidad  FROM Producto;"));
             dataGridView1.DataSource = Datos;
             dataGridView1.Refresh();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ventas ventana = new Ventas();
+            ventana.Show();
         }
     }
 }

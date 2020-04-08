@@ -226,6 +226,7 @@
     <Compile Include="Maquillaje_\View_Maquillaje.Designer.cs">
       <DependentUpon>View_Maquillaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Men_Proveedor.cs" />
     <Compile Include="Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +353,7 @@
     <Compile Include="Venta\Viw_Venta.Designer.cs">
       <DependentUpon>Viw_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Viw_inventario.cs" />
     <EmbeddedResource Include="Cliente\Act_Cliente.resx">
       <DependentUpon>Act_Cliente.cs</DependentUpon>
     </EmbeddedResource>
