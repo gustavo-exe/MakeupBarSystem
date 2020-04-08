@@ -39,9 +39,9 @@ namespace MakeupBarSystem.Envio_
         }
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO Envio (idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega) " +
-                "                           VALUES ('{0}','{1}', '{2}', '{3}', '{4}')", 
-                                            idEnvio, idCliente, Direccion, Telefono, idServicioEntrega)))
+            if (conexion.IUD(string.Format("INSERT INTO envio (idCliente, Direccion, Telefono, idServicioDeEntrega) " +
+                                           "VALUES ('{0}','{1}', '{2}', {3})", 
+                                            idCliente, Direccion, Telefono, idServicioEntrega)))
             {
                 return true;
             }
@@ -65,11 +65,40 @@ namespace MakeupBarSystem.Envio_
             }
 
         }
+        public Boolean LlenarVenta(string idEnvio)
+        {
+            //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
+            DataTable t1 = conexion.consulta(string.Format("SELECT idVenta FROM makeupbar.Venta where idEnvio='{0}'", idEnvio));
+            if (t1.Rows.Count > 0)
+            {
+                idEnvio = t1.Rows[0][0].ToString();
 
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public Boolean LlenarFactura(string idenvio)
+        {
+            //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
+            DataTable t1 = conexion.consulta(string.Format("SELECT IdFactura FROM makeupbar.factura where idEnvio='{0}'", idenvio));
+            if (t1.Rows.Count > 0)
+            {
+                idEnvio = t1.Rows[0][0].ToString();
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public Boolean BuscarID(string id)
         {
             //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.Envio where idEnvio='{0}'", id));
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.envio where idEnvio='{0}'", id));
             if (t1.Rows.Count > 0)
             {
                 idEnvio = t1.Rows[0][0].ToString();
@@ -84,15 +113,35 @@ namespace MakeupBarSystem.Envio_
                 return false;
             }
         }
+        public Boolean Modificar()
+        {
+            if (conexion.IUD(string.Format("UPDATE envio SET Direccion='{0}', Telefono='{1}' WHERE idEnvio='{2}'",Direccion ,Telefono, idEnvio)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+                return false;
+            }
+        }
+        public Boolean Eliminar()
+        {
+            if (conexion.IUD(string.Format("DELETE FROM envio WHERE idEnvio='{0}'", idEnvio)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+                return false;
+            }
+        }
         public string IdEnvio
         {
             get
             {
                 return idEnvio;
-            }
-            set
-            {
-                idEnvio = value;
             }
         }
         public string IdCliente
