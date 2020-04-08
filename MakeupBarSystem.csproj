@@ -232,6 +232,13 @@
     <Compile Include="Modulos.Designer.cs">
       <DependentUpon>Modulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Producto\Producto.cs" />
+    <Compile Include="Producto\Viw_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\Viw_Producto.Designer.cs">
+      <DependentUpon>Viw_Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Producto_General\Act_ProductoGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -422,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos.resx">
       <DependentUpon>Modulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\Viw_Producto.resx">
+      <DependentUpon>Viw_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto_General\Act_ProductoGeneral.resx">
       <DependentUpon>Act_ProductoGeneral.cs</DependentUpon>
