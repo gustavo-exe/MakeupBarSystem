@@ -53,7 +53,7 @@ namespace MakeupBarSystem
             bd = "makeupbar";
             servidor = "127.0.0.1";
             usuario = "root";
-            pass = "Cukyytreisy20";
+            pass = "";
             conexion = new MySqlConnection();
         }
 
