@@ -47,7 +47,11 @@ namespace MakeupBarSystem
             
             try
             {
-                IniciarSecion login = empleado.BucarUsuario(txtUsuario.Text);
+                conexion.conectar();
+                this.Hide();
+                Modulos ventana = new Modulos();
+                ventana.Show();
+                /*IniciarSecion login = empleado.BucarUsuario(txtUsuario.Text);
 
                 if(login.Password == txtContraseña.Text)
                 {
@@ -61,26 +65,8 @@ namespace MakeupBarSystem
 
                 }
                 else { MessageBox.Show("DATOS INCORRECTOS"); }
+                */
 
-                // Objeto de tipo usuario que almacena el valor del usuario
-                // si éste existe en la base de datos
-                //Empleado empleado = empleado.BuscarUsuario(txtUserName.Text);
-                // Verificar que la contraseña ingresada es igual a la almacenada
-                // en la base de datos
-                /* if (empleado.Password == pwbPassword.Password)
-                 {
-                     MessageBox.Show("Bienvenido al sistema de Reservaciones");
-
-                     // Crear un objeto de tipo Modulos para mostrar el menú
-                     this.Hide();
-                     Modulos ventana = new Modulos();
-                     ventana.Show();
-                 }
-                 else
-                 {
-                     MessageBox.Show("Base de datos no conectado.");
-                 }*/
-                
 
 
             }

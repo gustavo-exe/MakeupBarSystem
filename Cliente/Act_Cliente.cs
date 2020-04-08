@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,14 @@ namespace MakeupBarSystem.Cliente
     {
         private int state;
         private claseCliente cliente;
+        private claseListaCliente clientes;
+        private Conexion conexion;
         public Act_Cliente()
         {
             InitializeComponent();
             cliente = new claseCliente();
+            clientes = new claseListaCliente();
+            Cargar_Datos();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,18 +75,30 @@ namespace MakeupBarSystem.Cliente
 
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
 
-        /*private void Cargar_Datos()
+        }
+
+        
+
+        private void Cargar_Datos()
         {
             string sql = "";
-            sql = string.Format("SELECT iddepartamento, codigoDepartamento, nombreDepartamento, habilitado FROM sigecli.departamentos where codigoDepartamento like '%{0}%' or nombreDepartamento like '%{0}%'", txtFiltro.Text);
-            
-            DataTable t1 = cliente.SQL(sql);
-            cliente.DataSource = null;
-            cliente.DataSource = t1;
-            cliente.Refresh();
+
+            sql = string.Format("SELECT * FROM cliente");
+            DataTable t1 = clientes.SQL(sql);
+            ListaClientes.DataSource = null;
+            ListaClientes.DataSource = t1;
+            ListaClientes.DisplayMember = "Nombre";
+            ListaClientes.ValueMember = "idCliente";
+            ListaClientes.Refresh();
+
+
+
+
         }
-        */
         
+
     }
 }

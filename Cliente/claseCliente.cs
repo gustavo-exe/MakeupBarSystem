@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MakeupBarSystem.Cliente
 {
-    class claseCliente
+    public class claseCliente
     {
         private Conexion conexion;
         private string idCliente;

@@ -68,7 +68,7 @@ namespace MakeupBarSystem.Cliente
         private void btnVer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            View_Cliente ventana = new View_Cliente();
+            Ver_Datos_Cliente ventana = new Ver_Datos_Cliente();
             ventana.Show();
         }
 
