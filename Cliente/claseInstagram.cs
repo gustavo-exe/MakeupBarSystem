@@ -97,17 +97,19 @@ namespace MakeupBarSystem.Cliente
             }
         }
 
+        public claseInstagram BuscarURL(string user)
+        {
+            claseInstagram instagram = new claseInstagram();
 
+            DataTable Tabla = conexion.consulta(string.Format("SELECT URL FROM instagram WHERE Usuario='{0}';", user));
+            if (Tabla.Rows.Count > 0)
+            {
+                instagram.url = Tabla.Rows[0][0].ToString();
+                //MessageBox.Show("Si hay");
+            }
+            return instagram;
 
-
-
-
-
-
-
-
-
-
+        }
 
     }
 }

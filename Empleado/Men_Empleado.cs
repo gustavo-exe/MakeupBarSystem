@@ -46,7 +46,7 @@ namespace MakeupBarSystem.MenuDelModulo
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Modulos ventana = new Modulos();
+            Administrativo ventana = new Administrativo();
             ventana.Show();
         }
 

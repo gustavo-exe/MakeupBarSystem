@@ -47,11 +47,12 @@ namespace MakeupBarSystem
             
             try
             {
-                conexion.conectar();
+                /*conexion.conectar();
                 this.Hide();
                 Modulos ventana = new Modulos();
                 ventana.Show();
-                /*IniciarSecion login = empleado.BucarUsuario(txtUsuario.Text);
+                */
+                IniciarSecion login = empleado.BucarUsuario(txtUsuario.Text);
 
                 if(login.Password == txtContraseña.Text)
                 {
@@ -65,7 +66,7 @@ namespace MakeupBarSystem
 
                 }
                 else { MessageBox.Show("DATOS INCORRECTOS"); }
-                */
+                
 
 
 

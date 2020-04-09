@@ -69,6 +69,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrativo.Designer.cs">
+      <DependentUpon>Administrativo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\Act_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,12 @@
     <Compile Include="Modulos.Designer.cs">
       <DependentUpon>Modulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Navegador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Navegador.Designer.cs">
+      <DependentUpon>Navegador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Producto\Producto.cs" />
     <Compile Include="Producto\Viw_Producto.cs">
       <SubType>Form</SubType>
@@ -357,6 +369,9 @@
       <DependentUpon>Viw_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Viw_inventario.cs" />
+    <EmbeddedResource Include="Administrativo.resx">
+      <DependentUpon>Administrativo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cliente\Act_Cliente.resx">
       <DependentUpon>Act_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos.resx">
       <DependentUpon>Modulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navegador.resx">
+      <DependentUpon>Navegador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\Viw_Producto.resx">
       <DependentUpon>Viw_Producto.cs</DependentUpon>

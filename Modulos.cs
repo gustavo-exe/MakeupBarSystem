@@ -85,7 +85,7 @@ namespace MakeupBarSystem
 
             //Agregan MakeupBarSystem.MenuDelModulo;
             this.Hide();
-            Men_Empleado ventana = new Men_Empleado();
+            Administrativo ventana = new Administrativo();
             ventana.Show();
         }
 
