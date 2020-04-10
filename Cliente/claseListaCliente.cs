@@ -9,7 +9,7 @@ namespace MakeupBarSystem.Cliente
 {
     public class claseListaCliente
     {
-        private List<claseCliente> clientes;
+      private List<claseCliente> clientes;
         private Conexion conexion;
         private DataTable tabla;
         
@@ -23,7 +23,7 @@ namespace MakeupBarSystem.Cliente
         public void Cargar_Datos()
         {
             conexion.conectar();
-            tabla = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.cliente"));
+            tabla = conexion.consulta(string.Format("SELECT * FROM cliente"));
             foreach (DataRow f in tabla.Rows)
             {
                 claseCliente c = new claseCliente();
@@ -32,7 +32,7 @@ namespace MakeupBarSystem.Cliente
                 c.CorreoCliente = f.Field<string>(2);
                 c.TelefonoCliente = f.Field<string>(3);
                 c.PerfilInstagram = f.Field<string>(4);
-                c.CumpleaniosCliente = f.Field<DateTime>(5);
+                c.CumpleanosCliente = f.Field<DateTime>(5);
                 c.CiudadCliente = f.Field<string>(6);
                 c.TonoDeBaseCliente = f.Field<string>(7);
                 c.TonodePolvoCliente = f.Field<string>(8);

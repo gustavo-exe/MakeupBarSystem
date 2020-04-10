@@ -51,5 +51,33 @@ namespace MakeupBarSystem.Compra
         {
 
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Compra ventana = new Menu_Compra();
+            ventana.Show();
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            claseCompra compra = new claseCompra();
+
+
+            compra.IdProveedor = Convert.ToInt32(txtproveedor.ToString());
+            compra.NombreProducto = txtnombre.ToString();
+            compra.Cantidad = Convert.ToInt32(txtcantidad.ToString());
+            compra.Costo = Convert.ToInt32(txtcosto.ToString());
+            compra.Descripcion = txtdescripcion.ToString();
+
+            if (compra.Insertar())
+            {
+                MessageBox.Show("Registro guardado correctamente", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(string.Format("Error\n{0}", compra.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

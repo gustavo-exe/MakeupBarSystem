@@ -31,5 +31,12 @@ namespace MakeupBarSystem.Compra
         {
 
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Compra ventana = new Menu_Compra();
+            ventana.Show();
+        }
     }
 }

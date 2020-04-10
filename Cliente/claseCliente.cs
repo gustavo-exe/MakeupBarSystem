@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MakeupBarSystem.Cliente
 {
@@ -115,44 +116,52 @@ namespace MakeupBarSystem.Cliente
             }
         }
 
-        public Boolean BuscarID(string id)
+        public claseCliente BuscarID(string id)
         {
+            claseCliente cliente = new claseCliente();
             //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.cliente where IdCliente='{0}'", id));
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.cliente where IdCliente='{0}'", id));
             if (t1.Rows.Count > 0)
             {
-                idCliente =     t1.Rows[0][0].ToString();
-                nombreCliente = t1.Rows[0][1].ToString();
-                correoCliente = t1.Rows[0][2].ToString();
-                telefonoCliente = t1.Rows[0][3].ToString();
-                perfilInstagram = t1.Rows[0][4].ToString();
-                cumpleaniosCliente = Convert.ToDateTime(t1.Rows[0][5].ToString());
-                ciudadCliente = t1.Rows[0][6].ToString();
-                tonodeBaseCliente = t1.Rows[0][7].ToString();
-                tonodePolvoCliente = t1.Rows[0][8].ToString();
-                tipodeCutieCliente = t1.Rows[0][9].ToString();
+                cliente.idCliente =     t1.Rows[0][0].ToString();
+                cliente.nombreCliente = t1.Rows[0][1].ToString();
+                cliente.correoCliente = t1.Rows[0][2].ToString();
+                cliente.telefonoCliente = t1.Rows[0][3].ToString();
+                cliente.perfilInstagram = t1.Rows[0][4].ToString();
+                cliente.cumpleaniosCliente = Convert.ToDateTime(t1.Rows[0][5].ToString());
+                cliente.ciudadCliente = t1.Rows[0][6].ToString();
+                cliente.tonodeBaseCliente = t1.Rows[0][7].ToString();
+                cliente.tonodePolvoCliente = t1.Rows[0][8].ToString();
+                cliente.tipodeCutieCliente = t1.Rows[0][9].ToString();
+            }
+            return cliente;
 
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
-        public Boolean Modificar()
+        public void Modificar(claseCliente cliente)
         {
-            if (conexion.IUD(string.Format("UPDATE cliente SET Nombre='{0}', Correo='{1}', Telefono='{2}', PerfilInstagram='{3}', Cumpleaños='{4}', Ciudad='{5}', TonoDeBase='{6}', TonoDePolvo='{7}', TipoDeCuties='{8}'   WHERE IdCliente='{9}'", nombreCliente, correoCliente, telefonoCliente, perfilInstagram, cumpleaniosCliente.ToString("yyyy-MM-dd"), ciudadCliente, tonodeBaseCliente, tonodePolvoCliente, tipodeCutieCliente, idCliente)))
+            string id;
+
+            id = cliente.idCliente;
+            if (conexion.IUD(string.Format("UPDATE cliente " +
+                                            "SET " +
+                                            "Nombre='{0}', " +
+                                            "Correo='{1}', " +
+                                            "Telefono='{2}' " +
+                                            "PerfilInstagram='{3}', " +
+                                            "Cumpleaños='{4}', " +
+                                            "Ciudad='{5}' " +
+                                            "TonoDeBase='{6}', " +
+                                            "TonoDePolvo='{7}', " +
+                                            "TipoDeCuties='{8}' " +
+                                            "WHERE idEmpleado='{9}';",
+                                            cliente.IdCliente,cliente.NombreCliente ,cliente.CorreoCliente,cliente.TelefonoCliente,cliente.PerfilInstagram,
+                                            cliente.CumpleanosCliente,cliente.CiudadCliente,cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie)))
             {
-                return true;
-            }
-            else
-            {
-                error = conexion.Error;
-                return false;
+                MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
         }
-        public Boolean Eliminar()
+      /*  public Boolean Eliminar()
         {
             if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}'", idCliente)))
             {
@@ -162,6 +171,18 @@ namespace MakeupBarSystem.Cliente
             {
                 error = conexion.Error;
                 return false;
+            }
+        }
+        */
+
+        public void Eliminar(claseCliente cliente)
+        {
+            string id;
+
+            id = cliente.idCliente;
+            if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}';", cliente.IdCliente)))
+            {
+                MessageBox.Show("Se elimino el cliente: " + Convert.ToString(id));
             }
         }
 
@@ -226,7 +247,7 @@ namespace MakeupBarSystem.Cliente
             }
         }
 
-        public DateTime CumpleaniosCliente
+        public DateTime CumpleanosCliente
         {
             get
             {

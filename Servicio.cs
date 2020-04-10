@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeupBarSystem.Compra;
 
 namespace MakeupBarSystem
 {
@@ -73,6 +74,13 @@ namespace MakeupBarSystem
         {
             this.Hide();
             Men_Envio ventana = new Men_Envio();
+            ventana.Show();
+        }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Compra ventana = new Menu_Compra();
             ventana.Show();
         }
     }

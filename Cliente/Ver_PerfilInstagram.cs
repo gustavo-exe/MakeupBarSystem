@@ -12,15 +12,17 @@ namespace MakeupBarSystem.Cliente
 {
     public partial class Ver_PerfilInstagram : Form
     {
+        Conexion conexion;
         private int state;
-        private claseListaInstagram usuariosInstagram;
-        private claseInstagram usuarioInstagram;
+       // private claseListaInstagram usuariosInstagram;
+       // private claseInstagram usuarioInstagram;
         public Ver_PerfilInstagram()
         {
             InitializeComponent();
-            usuariosInstagram = new claseListaInstagram();
-            usuarioInstagram = new claseInstagram();
-            Cargar_Datos();
+            // usuariosInstagram = new claseListaInstagram();
+            //usuarioInstagram = new claseInstagram();
+            //Cargar_Datos();
+            conexion = new Conexion();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace MakeupBarSystem.Cliente
                 state = 0;
             }
         }
-
+        /*
         private void Cargar_Datos()
         {
             string sql = "";
@@ -67,23 +69,24 @@ namespace MakeupBarSystem.Cliente
             dgvUsuarios.Refresh();
 
         }
+        */
         private void dgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            usuarioInstagram.IdCliente = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
-            usuarioInstagram.Usuario = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
-            usuarioInstagram.Url = dgvUsuarios.CurrentRow.Cells[3].Value.ToString();
-            this.DialogResult = DialogResult.OK;
+           // usuarioInstagram.IdCliente = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+            //usuarioInstagram.Usuario = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
+           // usuarioInstagram.Url = dgvUsuarios.CurrentRow.Cells[3].Value.ToString();
+            //this.DialogResult = DialogResult.OK;
         }
 
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-         public claseInstagram UsuarioInstagram
+      /*   public claseInstagram UsuarioInstagram
         {
             get { return usuarioInstagram; }
         }
-
+        */ 
         private void mostrar(object sender, PaintEventArgs e)
         {
 
@@ -91,10 +94,14 @@ namespace MakeupBarSystem.Cliente
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Cargar_Datos();
+          //  Cargar_Datos();
         }
-
-
-
+       
+        private void Ver_PerfilInstagram_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdCliente, Usuario, URL FROM Instagram"));
+            dgvUsuarios.DataSource = Datos;
+            dgvUsuarios.Refresh();
+        }
     }
 }

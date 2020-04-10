@@ -259,6 +259,7 @@
             this.btnCompra.Text = "C o m p r a";
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCompra.UseVisualStyleBackColor = false;
+            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // panel8
             // 
