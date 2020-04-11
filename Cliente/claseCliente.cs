@@ -154,9 +154,9 @@ namespace MakeupBarSystem.Cliente
                                             "TonoDeBase='{6}', " +
                                             "TonoDePolvo='{7}', " +
                                             "TipoDeCuties='{8}' " +
-                                            "WHERE idEmpleado='{9}';",
-                                            cliente.IdCliente,cliente.NombreCliente ,cliente.CorreoCliente,cliente.TelefonoCliente,cliente.PerfilInstagram,
-                                            cliente.CumpleanosCliente,cliente.CiudadCliente,cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie)))
+                                            "WHERE IdCliente='{9}';",
+                                            cliente.NombreCliente ,cliente.CorreoCliente,cliente.TelefonoCliente,cliente.PerfilInstagram, cliente.CumpleanosCliente,cliente.CiudadCliente,
+                                            cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie,cliente.IdCliente)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }

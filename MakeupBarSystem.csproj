@@ -320,6 +320,7 @@
     <Compile Include="ServicioDeEntrega\Act_Entrega.designer.cs">
       <DependentUpon>Act_Entrega.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServicioDeEntrega\claseEntrega.cs" />
     <Compile Include="ServicioDeEntrega\Ins_Entrega.cs">
       <SubType>Form</SubType>
     </Compile>

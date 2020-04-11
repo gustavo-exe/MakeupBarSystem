@@ -104,10 +104,10 @@ namespace MakeupBarSystem.Proveedor
         {
 
         }
-
+        /*
         private void datos()
         {
-            txtProveedor.Text = proveedor.IdProveedor;
+            txtProveedor.Text = Convert.ToString(proveedor.IdProveedor);
             txtNombreEmpresa.Text = proveedor.NombreEmpresaProveedor;
             txtNombreContacto.Text = proveedor.NombreContacto;
             txtTelefonoContacto.Text = proveedor.TelefonoProveedor;
@@ -116,11 +116,12 @@ namespace MakeupBarSystem.Proveedor
 
             SendKeys.Send("{Tab}");
         }
+        */
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             if (Validar() == true)
             {
-                //proveedor.idProveedor = txtProveedor.Text;
+                proveedor.IdProveedor = Convert.ToInt32(txtProveedor.Text);
                 proveedor.NombreEmpresaProveedor = txtNombreEmpresa.Text;
                 proveedor.NombreContacto = txtNombreContacto.Text;
                 proveedor.CorreoProveedor = txtCorreo.Text;
@@ -140,6 +141,19 @@ namespace MakeupBarSystem.Proveedor
             {
                 MessageBox.Show("Se cancelo el proceso");
             }
+
+            limpiar();
+        }
+
+        private void limpiar()
+        {
+            txtProveedor.Text = "";
+            txtNombreEmpresa.Text = "";
+            txtNombreContacto.Text = "";
+            txtTelefonoContacto.Text = "";
+            txtCorreo.Text = "";
+            txtDescripcion.Text = "";
+
         }
 
         private Boolean Validar()

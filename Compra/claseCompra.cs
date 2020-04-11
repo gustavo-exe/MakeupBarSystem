@@ -81,7 +81,7 @@ namespace MakeupBarSystem.Compra
         public Boolean Insertar()
         {
             Boolean r = false;
-            r = conexion.IUD(String.Format("INSERT INTO compra (IDProveedor, NombreDelProducto, Cantidad, Costo, Descripcion) VALUE ('{0}','{1}','{2}','{3}','{4}');", idProveedor,nombreProducto ,cantidad,costo,descripcion));
+            r = conexion.IUD(String.Format("INSERT INTO compra (IDProveedor, NombreDelProducto, Cantidad, Costo, Descripcion) VALUE ('{0}','{1}','{2}','{3}','{4}');",idProveedor,nombreProducto ,cantidad,costo,descripcion));
             return r;
         }
 
@@ -91,7 +91,7 @@ namespace MakeupBarSystem.Compra
         /// 
         /// </summary>
 
-        public claseCompra BucarID(string id)
+        public claseCompra BuscarID(string id)
         {
             claseCompra compra = new claseCompra();
 
@@ -125,10 +125,10 @@ namespace MakeupBarSystem.Compra
                                             "IDProveedor='{0}', " +
                                             "NombreDelProducto='{1}', " +
                                             "Cantidad='{2}' " +
-                                            "Costo='{1}', " +
-                                            "Descripcion='{2}' " +
-                                            "WHERE idEmpleado='{3}';",
-                                            compra.IdProveedor, compra.NombreProducto, compra.Cantidad,compra.Costo, compra.Descripcion)))
+                                            "Costo='{3}', " +
+                                            "Descripcion='{4}' " +
+                                            "WHERE IdCompra='{5}';",
+                                            compra.IdProveedor, compra.NombreProducto, compra.Cantidad,compra.Costo, compra.Descripcion,compra.IdCompra)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
@@ -144,9 +144,9 @@ namespace MakeupBarSystem.Compra
             int id;
 
             id = compra.idCompra;
-            if (conexion.IUD(string.Format("DELETE FROM compra WHERE idCliente='{0}';", id)))
+            if (conexion.IUD(string.Format("DELETE FROM compra WHERE IdCompra='{0}';", id)))
             {
-                MessageBox.Show("Se elimino el empleado: " + Convert.ToString(id));
+                MessageBox.Show("Se elimino la compra: " + Convert.ToString(id));
             }
         }
 

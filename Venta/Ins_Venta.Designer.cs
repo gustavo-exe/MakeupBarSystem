@@ -283,14 +283,15 @@
             this.button4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(139, 196);
+            this.button4.Location = new System.Drawing.Point(412, 196);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 34);
+            this.button4.Size = new System.Drawing.Size(148, 34);
             this.button4.TabIndex = 34;
-            this.button4.Text = "E l i m i n a r";
+            this.button4.Text = "C a n c e l a r  ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label7
             // 
@@ -312,7 +313,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(285, 196);
+            this.btnLimpiar.Location = new System.Drawing.Point(41, 196);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(0);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(149, 34);
@@ -343,7 +344,7 @@
             this.btnInsertar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
             this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(455, 196);
+            this.btnInsertar.Location = new System.Drawing.Point(227, 200);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(149, 34);

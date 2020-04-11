@@ -88,25 +88,64 @@ namespace MakeupBarSystem.Empleado
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            Empleado empleado = new Empleado();
-            empleado.IdEmpleado = Convert.ToString( txtId.Text);
-            empleado.Usuario = Convert.ToString(txtUsuario.Text);
-            empleado.Password = Convert.ToString(txtContraseña.Text);
-            empleado.Rol = Convert.ToString(txtRol.Text);
-            if (empleado.Insertar())
+            if (Validar() == true)
             {
-                MessageBox.Show("Empleado insertado.");
 
-                txtId.Text = "";
-                txtUsuario.Text = "";
-                txtContraseña.Text = "";
-                txtRol.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Error al guardar >:v");
+                Empleado empleado = new Empleado();
+                empleado.IdEmpleado = Convert.ToString(txtId.Text);
+                empleado.Usuario = Convert.ToString(txtUsuario.Text);
+                empleado.Password = Convert.ToString(txtContraseña.Text);
+                empleado.Rol = Convert.ToString(txtRol.Text);
+                if (empleado.Insertar())
+                {
+                    MessageBox.Show("Empleado insertado.");
+
+                    txtId.Text = "";
+                    txtUsuario.Text = "";
+                    txtContraseña.Text = "";
+                    txtRol.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar >:v");
+                }
             }
         }
+
+        private Boolean Validar()
+        {
+            Boolean validar = true;
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Ingrese un  id", "Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtId.Focus();
+                validar = false;
+            }
+            else if (txtUsuario.Text == "")
+            {
+                MessageBox.Show("Ingrese un usuario", "Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsuario.Focus();
+                validar = false;
+            }
+            else if (txtContraseña.Text == "")
+            {
+                MessageBox.Show("Ingrese una contraseña", "Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtContraseña.Focus();
+                validar = false;
+            }
+            else if (txtRol.Text == "")
+            {
+                MessageBox.Show("Ingrese un rol", "Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtRol.Focus();
+                validar = false;
+            }
+            else
+                validar = true;
+            return validar;
+
+
+        }
+
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {

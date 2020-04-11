@@ -158,20 +158,6 @@ namespace MakeupBarSystem.Venta
             this.WindowState = FormWindowState.Minimized;
         }
 
-
-        private void Cargar_Datos()
-        {
-            txtCliente.Text = Convert.ToString(venta.IdCliente);
-            txtEmpleado.Text = Convert.ToString(venta.IdEmpleado);
-            txtidventa.Text = Convert.ToString(venta.IdVenta);
-            txtidfactura.Text = Convert.ToString(venta.IdFactura);
-            txtidproducto.Text = Convert.ToString(venta.IdProducto);
-            txtprecio.Text = Convert.ToString(venta.Precio);
-            txtcantidad.Text = Convert.ToString(venta.Cantidades);
-            txtdescuento.Text = Convert.ToString(venta.Descuento);
-
-            SendKeys.Send("{Tab}");
-        }
         private void limpiar()
         {
             txtCliente.Text = "";
@@ -203,11 +189,13 @@ namespace MakeupBarSystem.Venta
                 venta.Precio = Convert.ToInt32(txtprecio.Text);
                 venta.Cantidades = Convert.ToInt32(txtcantidad.Text);
                 venta.Descuento = Convert.ToInt32(txtdescuento.Text);
+                venta.Total = ((Convert.ToInt32(txtprecio.Text) * Convert.ToInt32(txtcantidad.Text))-(Convert.ToInt32(txtprecio.Text) * Convert.ToInt32(txtcantidad.Text)* (Convert.ToInt32(txtdescuento.Text)/100)));
 
                 if (venta.Insertar())
                 {
                     MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento FROM DetalleDeVenta;"));
+                    venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};", venta.IdVenta));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }
@@ -314,9 +302,22 @@ namespace MakeupBarSystem.Venta
 
         private void Ins_Venta_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento FROM DetalleDeVenta;"));
-            dgvVenta.DataSource = Datos;
-            dgvVenta.Refresh();
+           // venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+            //DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};",venta.IdVenta));
+            //dgvVenta.DataSource = Datos;
+            //dgvVenta.Refresh();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (venta.Eliminar() == true)
+            {
+                MessageBox.Show("La compra ha sido cancelada", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};", venta.IdVenta));
+                dgvVenta.DataSource = Datos;
+                dgvVenta.Refresh();
+            }
         }
     }
 }
