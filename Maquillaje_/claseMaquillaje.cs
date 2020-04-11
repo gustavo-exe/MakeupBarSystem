@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,9 +48,9 @@ namespace MakeupBarSystem.Maquillaje_
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO Maquillaje (idCodigoDeBarra,NombreDelProducto,Marca, TonoNumero, FechaDeExpiracio, PrecioUnitario, Cantidad, Descripcion) " +
-                                            "VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}')",
-                                            idCodigoDeBarra, NombreDelProducto, Marca,  TonoNumero, FechaDeExpiracion,PrecioUnitario,Cantidad,Descripcion)))
+            if (conexion.IUD(string.Format("INSERT INTO Maquillaje (NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion) " +
+                                            "VALUES ('{0}','{1}', '{2}', '{3}', {4}, {5}, '{6}')",
+                                            NombreDelProducto, Marca,  TonoNumero, FechaDeExpiracion.ToString("yyyy-MM-dd"),PrecioUnitario,Cantidad,Descripcion)))
             {
                 return true;
             }
@@ -59,16 +60,50 @@ namespace MakeupBarSystem.Maquillaje_
                 return false;
             }
         }
+        public List<claseMaquillaje> MostrarMaquillaje()
+        {
+            List<claseMaquillaje> maquillaje = new List<claseMaquillaje>();
+            try
+            {
+                return maquillaje;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public Boolean BuscarID(string id)
+        {
+            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.maquillaje where IdCodigoDeBarra='{0}'", id));
+            if (t1.Rows.Count > 0)
+            {
+                idCodigoDeBarra = t1.Rows[0][0].ToString();
+                NombreDelProducto = t1.Rows[0][1].ToString();
+                Marca = t1.Rows[0][2].ToString();
+                TonoNumero = t1.Rows[0][3].ToString();
+                FechaDeExpiracion = Convert.ToDateTime(t1.Rows[0][5].ToString());
+                PrecioUnitario = Convert.ToInt32(t1.Rows[0][6].ToString());
+                Cantidad = Convert.ToInt32(t1.Rows[0][7].ToString());
+                Descripcion = t1.Rows[0][8].ToString();
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public string IdCodigoDeBarra
         {
             get
             {
                 return idCodigoDeBarra;
             }
-            set
-            {
-                idCodigoDeBarra = value;
-            }
+
         }
         public string nombreDelProducto
         {
@@ -111,7 +146,7 @@ namespace MakeupBarSystem.Maquillaje_
             }
             set
             {
-                FechaDeExpiracion = value;
+                FechaDeExpiracion = value.Date;
             }
         }
         public int precioUnitario

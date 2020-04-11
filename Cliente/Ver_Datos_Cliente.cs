@@ -83,6 +83,9 @@ namespace MakeupBarSystem.Cliente
             get { return cliente; }
         }
 
+        private void dvDatosCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

@@ -14,9 +14,11 @@ namespace MakeupBarSystem.Maquillaje
     public partial class Ins_Maquillaje : Form
     {
         private int state;
+        private claseMaquillaje maquillaje;
         public Ins_Maquillaje()
         {
             InitializeComponent();
+            maquillaje = new claseMaquillaje();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -51,5 +53,108 @@ namespace MakeupBarSystem.Maquillaje
                 state = 0;
             }
         }
+
+        private void Cargar_Datos()
+        {
+            txtNombre.Text = maquillaje.nombreDelProducto;
+            txtMarca.Text = maquillaje.marca;
+            txtTonoNum.Text = maquillaje.tonoNumero;
+            txtFechaEx.Text = maquillaje.fechaDeExpiracion.ToString();
+            txtPrecio.Text = maquillaje.precioUnitario.ToString();
+            txtCantidad.Text = maquillaje.cantidad.ToString();
+            txtDescripcion.Text = maquillaje.descripcion;
+
+            SendKeys.Send("{Tab}");
+        }
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            if (Validar() == true)
+            {
+                maquillaje.nombreDelProducto = txtNombre.Text;
+                maquillaje.marca = txtMarca.Text;
+                maquillaje.tonoNumero = txtTonoNum.Text;
+                maquillaje.fechaDeExpiracion = Convert.ToDateTime( txtFechaEx.Text);
+                maquillaje.precioUnitario = Convert.ToInt32(txtPrecio.Text);
+                maquillaje.cantidad = Convert.ToInt32(txtCantidad.Text);
+                maquillaje.descripcion = txtDescripcion.Text;
+                if (maquillaje.Guardar())
+                {
+                    MessageBox.Show("Registro guardado correctamente", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Error\n{0}", maquillaje.Error.ToString()), "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo la edición");
+            }
+            limpiar();
+
+        }
+
+
+        private Boolean Validar()
+        {
+            Boolean validar = true;
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Escriba el nombre del maquillaje", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombre.Focus();
+                validar = false;
+            }
+            else if (txtMarca.Text == "")
+            {
+                MessageBox.Show("Escriba la marca del maquillaje", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMarca.Focus();
+                validar = false;
+            }
+            else if (txtTonoNum.Text == "")
+            {
+                MessageBox.Show("Escriba el tono o numero del maquillaje", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTonoNum.Focus();
+                validar = false;
+            }
+            else if (txtFechaEx.Text == "")
+            {
+                MessageBox.Show("Escriba la fecha de expiracion del maquillaje", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtFechaEx.Focus();
+                validar = false;
+            }
+            else if (txtPrecio.Text == "")
+            {
+                MessageBox.Show("Escriba el precio del maquillaje", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPrecio.Focus();
+                validar = false;
+            }
+            else if (txtCantidad.Text == "")
+            {
+                MessageBox.Show("Escriba la cantidad de maquillaje", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidad.Focus();
+                validar = false;
+            }
+            else if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Escriba la descripcion del maquillaje", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDescripcion.Focus();
+                validar = false;
+            }
+            else
+                validar = true;
+            return validar;
+
+        }
+
+        private void limpiar()
+        {
+            txtNombre.Text = "";
+            txtMarca.Text = "";
+            txtTonoNum.Text = "";
+            txtPrecio.Text = "";
+            txtCantidad.Text = "";
+            txtDescripcion.Text = "";
+        }
+
     }
 }

@@ -22,10 +22,10 @@ namespace MakeupBarSystem
         {
             //Elias
 
-            bd = "makeupbar";
+            /*bd = "makeupbar";
             servidor = "127.0.0.1";
             usuario = "MakeupBarElias";
-            pass = "Y o l o Y o l o 1";
+            pass = "Y o l o Y o l o 1";*/
 
             // yovany
             /* 
@@ -54,10 +54,10 @@ namespace MakeupBarSystem
             */
 
             //Dina
-            //bd = "makeupbar";
-            //servidor = "127.0.0.1";
-            //usuario = "root";
-            //pass = "";
+            bd = "makeupbar";
+            servidor = "127.0.0.1";
+            usuario = "root";
+            pass = "Cukyytreisy20";
             conexion = new MySqlConnection();
         }
 

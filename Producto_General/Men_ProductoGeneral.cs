@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MakeupBarSystem.Producto_General;
 
+
 namespace MakeupBarSystem.Producto_General
 {
     public partial class Men_ProductoGeneral : Form
@@ -20,10 +21,10 @@ namespace MakeupBarSystem.Producto_General
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-           /* this.Hide();
+            this.Hide();
             Ins_ProductoGeneral ventana = new Ins_ProductoGeneral(); 
             ventana.Show();
-            */
+            
         }
 
         private void btnVer_Click(object sender, EventArgs e)

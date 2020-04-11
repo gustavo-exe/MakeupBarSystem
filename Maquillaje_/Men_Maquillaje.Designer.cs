@@ -275,6 +275,7 @@
             this.btnReturn.TabIndex = 13;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // Men_Maquillaje
             // 

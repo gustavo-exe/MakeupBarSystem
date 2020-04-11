@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,8 @@ namespace MakeupBarSystem.Producto_General
         private string idCodigoDeBarra;
         private string NombreProducto;
         private string Marca;
-        private int PrecioUnitario;
-        private int Cantidad;
+        private string PrecioUnitario;
+        private string Cantidad;
         private string Descripcion;
         private MySqlException error;
 
@@ -24,12 +25,12 @@ namespace MakeupBarSystem.Producto_General
             idCodigoDeBarra = "";
             NombreProducto = "";
             Marca = "";
-            PrecioUnitario = 0;
-            Cantidad = 0;
+            PrecioUnitario = "";
+            Cantidad = "";
             Descripcion = "";
             conexion = new Conexion();
         }
-        public claseProductoGeneral(string c,string n,string m,int p,int ca,string d)
+        public claseProductoGeneral(string c,string n,string m,string p,string ca,string d)
         {
             idCodigoDeBarra = c;
             NombreProducto = n;
@@ -42,9 +43,72 @@ namespace MakeupBarSystem.Producto_General
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO ProductoGeneral (idCodigoDeBarra,NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion) " +
-                "                           VALUES ('{0}','{1}', '{2}', '{3}', '{4}','5')",
-                                            idCodigoDeBarra, NombreProducto, Marca,PrecioUnitario, Cantidad,Descripcion)))
+            if (conexion.IUD(string.Format("INSERT INTO productogeneral (NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion) " +
+                "                           VALUES ('{0}','{1}', '{2}', '{3}', '{4}')",
+                                           NombreProducto, Marca,PrecioUnitario, Cantidad,Descripcion)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+                return false;
+            }
+        }
+
+        public List<claseProductoGeneral> MostrarProductoGeneral()
+        {
+            List<claseProductoGeneral> productoGeneral = new List<claseProductoGeneral>();
+            try
+            {
+
+
+                return productoGeneral;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public Boolean BuscarID(string id)
+        {
+            //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.productogeneral where idCodigoDeBarra='{0}'", id));
+            if (t1.Rows.Count > 0)
+            {
+                idCodigoDeBarra = t1.Rows[0][0].ToString();
+                NombreProducto = t1.Rows[0][1].ToString();
+                Marca = t1.Rows[0][2].ToString();
+                PrecioUnitario = t1.Rows[0][3].ToString();
+                Cantidad = t1.Rows[0][4].ToString();
+                Descripcion = t1.Rows[0][5].ToString();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Boolean Modificar()
+        {
+            if (conexion.IUD(string.Format("UPDATE envio SET NombreProducto='{0}', Marca='{1}' WHERE idCodigoDeBarra='{2}'", NombreProducto, Marca, idCodigoDeBarra)))
+            {
+                return true;
+            }
+            else
+            {
+                error = conexion.Error;
+                return false;
+            }
+        }
+
+        public Boolean Eliminar()
+        {
+            if (conexion.IUD(string.Format("DELETE FROM envio WHERE idCodigoDeBarra='{0}'", idCodigoDeBarra)))
             {
                 return true;
             }
@@ -64,6 +128,7 @@ namespace MakeupBarSystem.Producto_General
             {
                 idCodigoDeBarra = value;
             }
+
         }
         public string nombreProducto
         {
@@ -87,7 +152,7 @@ namespace MakeupBarSystem.Producto_General
                 Marca = value;
             }
         }
-        public int precioUnitario
+        public string precioUnitario
         {
             get
             {
@@ -98,7 +163,7 @@ namespace MakeupBarSystem.Producto_General
                 PrecioUnitario = value;
             }
         }
-        public int cantidad
+        public string cantidad
         {
             get
             {
