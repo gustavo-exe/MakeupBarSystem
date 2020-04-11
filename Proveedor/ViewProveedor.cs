@@ -13,10 +13,12 @@ namespace MakeupBarSystem.Proveedor
     public partial class ViewProveedor : Form
     {
         private int state;
+        Conexion conexion;
 
         public ViewProveedor()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -55,6 +57,13 @@ namespace MakeupBarSystem.Proveedor
             this.Hide();
             View_inventario ventana = new View_inventario();
             ventana.Show();
+        }
+
+        private void ViewProveedor_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdProveedor, nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion FROM proveedor;"));
+            verproveedor.DataSource = Datos;
+            verproveedor.Refresh();
         }
     }
 }

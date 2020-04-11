@@ -15,12 +15,14 @@ namespace MakeupBarSystem.Cliente
         private int state;
         private claseListaCliente clientes;
         private claseCliente cliente;
+        Conexion conexion;
         public Ver_Datos_Cliente()
         {
             InitializeComponent();
-            clientes = new claseListaCliente();
-            cliente = new claseCliente();
-            Cargar_Datos();
+          //  clientes = new claseListaCliente();
+            //cliente = new claseCliente();
+            conexion = new Conexion();
+            // Cargar_Datos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace MakeupBarSystem.Cliente
             ventana.Show();
         }
 
-        private void Cargar_Datos()
+      /*  private void Cargar_Datos()
         {
             string sql = "";
 
@@ -66,6 +68,8 @@ namespace MakeupBarSystem.Cliente
             dvDatosCliente.Refresh();
 
         }
+
+            */
        /* private void dgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             usuarioInstagram.IdCliente = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
@@ -83,9 +87,11 @@ namespace MakeupBarSystem.Cliente
             get { return cliente; }
         }
 
-        private void dvDatosCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Ver_Datos_Cliente_Load(object sender, EventArgs e)
         {
-
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties FROM cliente;"));
+            dvDatosCliente.DataSource = Datos;
+            dvDatosCliente.Refresh();
         }
     }
 }

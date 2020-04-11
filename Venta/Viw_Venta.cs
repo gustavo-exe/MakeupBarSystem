@@ -12,9 +12,15 @@ namespace MakeupBarSystem.Venta
 {
     public partial class Viw_Venta : Form
     {
+
+        Conexion conexion;
+        private int state;
+        private claseVenta venta;
+        private int codigo;
         public Viw_Venta()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -27,6 +33,20 @@ namespace MakeupBarSystem.Venta
             this.Hide();
             Men_Venta ventana = new Men_Venta();
             ventana.Show();
+        }
+
+        private void Viw_Venta_Load(object sender, EventArgs e)
+        {
+
+            DataTable Datos = conexion.consulta(String.Format("SELECT idVenta, SUM(Total) as 'Total' FROM DetalleDeVenta where idVenta > 0 GROUP BY idVenta ;"));
+            VerVenta.DataSource = Datos;
+            VerVenta.Refresh();
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

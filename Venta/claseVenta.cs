@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MakeupBarSystem.Venta
 {
@@ -20,8 +21,8 @@ namespace MakeupBarSystem.Venta
         private float precio;
         private int cantidades;
         private int descuento;
+        private float total;
         private MySqlException error;
-        private int VentaId;
 
         public claseVenta()
         {
@@ -32,9 +33,10 @@ namespace MakeupBarSystem.Venta
             precio = 0;
             cantidades = 0;
             descuento = 0;
+            total = 0;
             conexion = new Conexion();
         }
-        public claseVenta(int a, int b, int c, float d, int e, int f)
+        public claseVenta(int a, int b, int c, float d, int e, int f,int t)
         {
             idCliente = a;
             idEmpleado = b;
@@ -43,7 +45,20 @@ namespace MakeupBarSystem.Venta
             precio = d;
             cantidades = e;
             descuento = f;
+            total = t;
             conexion = new Conexion();
+        }
+
+        public float Total
+        {
+            get
+            {
+                return total;
+            }
+            set
+            {
+                total = value;
+            }
         }
         public int IdVenta
         {
@@ -157,7 +172,7 @@ namespace MakeupBarSystem.Venta
         {
            
             /*Inserta datos en la tabla de detalle de venta */
-            if (conexion.IUD(string.Format("insert into DetalleDeVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento) value('{0}','{1}','{2}','{3}','{4}','{5}')", idVenta, idFactura, idProducto, precio, cantidades, descuento)))
+            if (conexion.IUD(string.Format("insert into DetalleDeVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento ,Total) value('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", idVenta, idFactura, idProducto, precio, cantidades, descuento,total)))
             {
                 return true;
             }
@@ -214,10 +229,11 @@ namespace MakeupBarSystem.Venta
                 claseventa.idEmpleado = Convert.ToInt32(Tabla.Rows[0][1]);
                 claseventa.idVenta = Convert.ToInt32(Tabla.Rows[0][2]);
                 claseventa.idFactura = Convert.ToInt32(Tabla.Rows[0][3]);
-                claseventa.idProducto = Convert.ToInt32(Tabla.Rows[0][0]);
-                claseventa.precio = Convert.ToInt32(Tabla.Rows[0][1]);
-                claseventa.cantidades = Convert.ToInt32(Tabla.Rows[0][2]);
+                claseventa.idProducto = Convert.ToInt32(Tabla.Rows[0][4]);
+                claseventa.precio = Convert.ToInt32(Tabla.Rows[0][5]);
+                claseventa.cantidades = Convert.ToInt32(Tabla.Rows[0][6]);
                 claseventa.descuento = Convert.ToInt32(Tabla.Rows[0][3]);
+                claseventa.total = Convert.ToInt32(Tabla.Rows[0][7]);
                 //MessageBox.Show("Si hay");
 
             }
@@ -228,17 +244,29 @@ namespace MakeupBarSystem.Venta
 
         public Boolean Eliminar()
         {
-            if (conexion.IUD(string.Format("DELETE FROM Venta WHERE idVenta='{0}'", idVenta)))
+
+            if (conexion.IUD(string.Format("DELETE FROM DetalleDeVenta WHERE idVenta='{0}'", IdVenta)))
             {
-                return true;
+                
             }
             else
             {
                 error = conexion.Error;
             }
 
-            if (conexion.IUD(string.Format("DELETE FROM factura WHERE IdFactura='{0}'", idFactura)))
+
+            if (conexion.IUD(string.Format("DELETE FROM Venta WHERE idVenta='{0}'", IdVenta)))
             {
+
+            }
+            else
+            {
+                error = conexion.Error;
+            }
+
+            if (conexion.IUD(string.Format("DELETE FROM factura WHERE IdFactura='{0}'", IdFactura)))
+            {
+               // MessageBox.Show("La compra ha sido cancelada", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
             else

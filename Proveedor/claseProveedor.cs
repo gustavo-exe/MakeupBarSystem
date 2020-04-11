@@ -11,7 +11,7 @@ namespace MakeupBarSystem.Proveedor
     class claseProveedor
     {
         private Conexion conexion;
-        private string idProveedor;
+        private int idProveedor;
         private string nombreEmpresaProveedor;
         private string nombreContacto;
         private string correoProveedor;
@@ -22,7 +22,7 @@ namespace MakeupBarSystem.Proveedor
 
         public claseProveedor()
         {
-            idProveedor = "";
+            idProveedor = 0;
             nombreEmpresaProveedor = "";
             nombreContacto = "";
             correoProveedor = "";
@@ -31,19 +31,19 @@ namespace MakeupBarSystem.Proveedor
             conexion = new Conexion();
         }
 
-        public claseProveedor(string ip, string np, string nc, string cp, string tp, string d)
+        public claseProveedor(int ip, string np, string nc, string cp, string tp, string d)
         {
-            idProveedor = "ip";
-            nombreEmpresaProveedor = "np";
-            nombreContacto = "nc";
-            correoProveedor = "cp";
-            telefonoProveedor = "tp";
-            descripcionProveedor = "d";
+            idProveedor = ip;
+            nombreEmpresaProveedor = np;
+            nombreContacto = nc;
+            correoProveedor = cp;
+            telefonoProveedor = tp;
+            descripcionProveedor = d;
         }
 
         public Boolean Insertar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO proveedor (IdProveedor, NombreEmpresaProveedor, NombreContacto, CorreoProveedor, TelefonoProveedor, DescripcionProveedor) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}')", idProveedor, nombreEmpresaProveedor, nombreContacto, correoProveedor, telefonoProveedor, descripcionProveedor)))
+            if (conexion.IUD(string.Format("INSERT INTO proveedor (IdProveedor, nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}')", idProveedor, nombreEmpresaProveedor, nombreContacto, correoProveedor, telefonoProveedor, descripcionProveedor)))
             {
                 return true;
             }
@@ -54,11 +54,15 @@ namespace MakeupBarSystem.Proveedor
             }
         }
 
-        public string IdProveedor
+        public int IdProveedor
         {
             get
             {
                 return idProveedor;
+            }
+            set
+            {
+                idProveedor = value;
             }
 
         }

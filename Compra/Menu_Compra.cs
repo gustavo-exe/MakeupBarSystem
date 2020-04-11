@@ -16,5 +16,33 @@ namespace MakeupBarSystem.Compra
         {
             InitializeComponent();
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Insertar_Compra ventana = new Insertar_Compra();
+            ventana.Show();
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ver_Compra ventana = new Ver_Compra();
+            ventana.Show();
+        }
+
+        private void btnActulizar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Modificar_Compra ventana = new Modificar_Compra();
+            ventana.Show();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Modulos ventana = new Modulos();
+            ventana.Show();
+        }
     }
 }

@@ -12,10 +12,12 @@ namespace MakeupBarSystem.Compra
 {
     public partial class Ver_Compra : Form
     {
+        Conexion conexion;
         private int state;
         public Ver_Compra()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -42,6 +44,20 @@ namespace MakeupBarSystem.Compra
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Compra ventana = new Menu_Compra();
+            ventana.Show();
+        }
+
+        private void Ver_Compra_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM compra;"));
+            ViewCompra.DataSource = Datos;
+            ViewCompra.Refresh();
         }
     }
 }

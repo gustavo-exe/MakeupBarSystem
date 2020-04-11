@@ -109,6 +109,7 @@
     <Compile Include="Cliente\Ver_PerfilInstagram.Designer.cs">
       <DependentUpon>Ver_PerfilInstagram.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compra\claseCompra.cs" />
     <Compile Include="Compra\Insertar_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +320,7 @@
     <Compile Include="ServicioDeEntrega\Act_Entrega.designer.cs">
       <DependentUpon>Act_Entrega.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServicioDeEntrega\claseEntrega.cs" />
     <Compile Include="ServicioDeEntrega\Ins_Entrega.cs">
       <SubType>Form</SubType>
     </Compile>

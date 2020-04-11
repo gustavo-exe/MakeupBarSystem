@@ -223,6 +223,7 @@
             this.Name = "Ver_Datos_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ver_Datos_Cliente";
+            this.Load += new System.EventHandler(this.Ver_Datos_Cliente_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
