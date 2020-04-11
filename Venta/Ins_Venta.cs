@@ -182,14 +182,17 @@ namespace MakeupBarSystem.Venta
         {
             if (Validar() == true)
             {
-              
+                float subventa;
+                subventa = (Convert.ToSingle(txtprecio.Text) * Convert.ToSingle(txtcantidad.Text));
+
+
                 venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
                 venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
                 venta.Precio = Convert.ToInt32(txtprecio.Text);
                 venta.Cantidades = Convert.ToInt32(txtcantidad.Text);
                 venta.Descuento = Convert.ToInt32(txtdescuento.Text);
-                venta.Total = ((Convert.ToInt32(txtprecio.Text) * Convert.ToInt32(txtcantidad.Text))-(Convert.ToInt32(txtprecio.Text) * Convert.ToInt32(txtcantidad.Text)* (Convert.ToInt32(txtdescuento.Text)/100)));
+                venta.Total = subventa * (subventa / 100);
 
                 if (venta.Insertar())
                 {

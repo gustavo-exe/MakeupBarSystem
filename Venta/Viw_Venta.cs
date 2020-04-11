@@ -15,6 +15,8 @@ namespace MakeupBarSystem.Venta
 
         Conexion conexion;
         private int state;
+        private claseVenta venta;
+        private int codigo;
         public Viw_Venta()
         {
             InitializeComponent();
@@ -35,9 +37,16 @@ namespace MakeupBarSystem.Venta
 
         private void Viw_Venta_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT idVenta, nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion FROM DetalleDeVenta ;"));
+
+            DataTable Datos = conexion.consulta(String.Format("SELECT idVenta, SUM(Total) as 'Total' FROM DetalleDeVenta where idVenta > 0 GROUP BY idVenta ;"));
             VerVenta.DataSource = Datos;
             VerVenta.Refresh();
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -144,7 +144,7 @@ namespace MakeupBarSystem.Compra
             int id;
 
             id = compra.idCompra;
-            if (conexion.IUD(string.Format("DELETE FROM compra WHERE IdCompra='{0}';", id)))
+            if (conexion.IUD(string.Format("DELETE FROM compra WHERE IdCompra='{0}';",compra.idCompra)))
             {
                 MessageBox.Show("Se elimino la compra: " + Convert.ToString(id));
             }
