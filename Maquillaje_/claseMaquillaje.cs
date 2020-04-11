@@ -16,9 +16,10 @@ namespace MakeupBarSystem.Maquillaje_
         private string Marca;
         private string TonoNumero;
         private DateTime FechaDeExpiracion;
-        private int PrecioUnitario;
-        private int Cantidad;
+        private string PrecioUnitario;
+        private string Cantidad;
         private string Descripcion;
+        private int idProveedor;
         private MySqlException error;
 
         public claseMaquillaje()
@@ -28,12 +29,13 @@ namespace MakeupBarSystem.Maquillaje_
             Marca = "";
             TonoNumero = "";
             FechaDeExpiracion = DateTime.Now;
-            PrecioUnitario = 0;
-            Cantidad = 0;
+            PrecioUnitario = "";
+            Cantidad = "";
             Descripcion = "";
+            idProveedor = 0;
             conexion = new Conexion();
         }
-        public claseMaquillaje(string c,string n,string m,string t,DateTime f,int p,int ca,string d)
+        public claseMaquillaje(string c,string n,string m,string t,DateTime f,string p,string ca,string d,int pr)
         {
             idCodigoDeBarra = c;
             NombreDelProducto = n;
@@ -43,14 +45,15 @@ namespace MakeupBarSystem.Maquillaje_
             PrecioUnitario = p;
             Cantidad = ca;
             Descripcion = d;
+            idProveedor = pr;
             conexion = new Conexion();
         }
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO Maquillaje (NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion) " +
-                                            "VALUES ('{0}','{1}', '{2}', '{3}', {4}, {5}, '{6}')",
-                                            NombreDelProducto, Marca,  TonoNumero, FechaDeExpiracion.ToString("yyyy-MM-dd"),PrecioUnitario,Cantidad,Descripcion)))
+            if (conexion.IUD(string.Format("INSERT INTO Maquillaje (NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion, idProveedor) " +
+                                            "VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', '{6}')",
+                                            NombreDelProducto, Marca,  TonoNumero, FechaDeExpiracion.ToString("yyyy-MM-dd"),PrecioUnitario,Cantidad,Descripcion,idProveedor)))
             {
                 return true;
             }
@@ -77,7 +80,7 @@ namespace MakeupBarSystem.Maquillaje_
 
         public Boolean BuscarID(string id)
         {
-            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
+            //NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion
             DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.maquillaje where IdCodigoDeBarra='{0}'", id));
             if (t1.Rows.Count > 0)
             {
@@ -86,9 +89,10 @@ namespace MakeupBarSystem.Maquillaje_
                 Marca = t1.Rows[0][2].ToString();
                 TonoNumero = t1.Rows[0][3].ToString();
                 FechaDeExpiracion = Convert.ToDateTime(t1.Rows[0][5].ToString());
-                PrecioUnitario = Convert.ToInt32(t1.Rows[0][6].ToString());
-                Cantidad = Convert.ToInt32(t1.Rows[0][7].ToString());
+                PrecioUnitario = t1.Rows[0][6].ToString();
+                Cantidad = t1.Rows[0][7].ToString();
                 Descripcion = t1.Rows[0][8].ToString();
+                idProveedor= Convert.ToInt32(t1.Rows[0][9].ToString());
 
                 return true;
             }
@@ -149,7 +153,7 @@ namespace MakeupBarSystem.Maquillaje_
                 FechaDeExpiracion = value.Date;
             }
         }
-        public int precioUnitario
+        public string precioUnitario
         {
             get
             {
@@ -160,7 +164,7 @@ namespace MakeupBarSystem.Maquillaje_
                 PrecioUnitario = value;
             }
         }
-        public int cantidad
+        public string cantidad
         {
             get
             {
@@ -180,6 +184,18 @@ namespace MakeupBarSystem.Maquillaje_
             set
             {
                 Descripcion = value;
+            }
+        }
+
+        public int proveedor
+        {
+            get
+            {
+                return idProveedor;
+            }
+            set 
+            {
+                idProveedor = value;
             }
         }
         public MySqlException Error

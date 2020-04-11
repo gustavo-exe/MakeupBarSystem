@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace MakeupBarSystem.Envio_
@@ -95,10 +96,11 @@ namespace MakeupBarSystem.Envio_
                 return false;
             }
         }
-        public Boolean BuscarID(string id)
+        public ClaseEnvio BuscarID(string id)
         {
+            ClaseEnvio envio = new ClaseEnvio();
             //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.envio where idEnvio='{0}'", id));
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.envio where idEnvio='{0}'", id));
             if (t1.Rows.Count > 0)
             {
                 idEnvio = t1.Rows[0][0].ToString();
@@ -106,42 +108,45 @@ namespace MakeupBarSystem.Envio_
                 Direccion = t1.Rows[0][2].ToString();
                 Telefono = t1.Rows[0][3].ToString();
                 idServicioEntrega = t1.Rows[0][4].ToString();
-                return true;
             }
-            else
-            {
-                return false;
-            }
+            return envio;
+
         }
-        public Boolean Modificar()
+        public void Modificar(ClaseEnvio envio)
         {
-            if (conexion.IUD(string.Format("UPDATE envio SET Direccion='{0}', Telefono='{1}' WHERE idEnvio='{2}'",Direccion ,Telefono, idEnvio)))
+            string id;
+            id = envio.idEnvio;
+
+            if (conexion.IUD(string.Format("UPDATE envio SET Direccion='{0}'" +
+                                                           ", Telefono='{1}'" +
+                                                           ",idCliente='{2}'" +
+                                                           ",idServicioEntrega='{3}'  " +
+                                                           "WHERE idEnvio='{4}'",
+                                                           envio.Direccion ,envio.Telefono,envio.idCliente,envio.idServicioEntrega, envio.idEnvio)))
             {
-                return true;
+                MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
-            else
-            {
-                error = conexion.Error;
-                return false;
-            }
+
         }
-        public Boolean Eliminar()
+        public void Eliminar(ClaseEnvio envio)
         {
+            string id;
+            id = envio.IdEnvio;
             if (conexion.IUD(string.Format("DELETE FROM envio WHERE idEnvio='{0}'", idEnvio)))
             {
-                return true;
+                MessageBox.Show("Se elimino el envio: " + Convert.ToString(id));
             }
-            else
-            {
-                error = conexion.Error;
-                return false;
-            }
+           
         }
         public string IdEnvio
         {
             get
             {
                 return idEnvio;
+            }
+            set
+            {
+                idEnvio = value;
             }
         }
         public string IdCliente

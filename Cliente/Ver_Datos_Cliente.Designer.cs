@@ -146,7 +146,7 @@
             this.dvDatosCliente.RowHeadersWidth = 51;
             this.dvDatosCliente.Size = new System.Drawing.Size(453, 286);
             this.dvDatosCliente.TabIndex = 0;
-            this.dvDatosCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvDatosCliente_CellContentClick);
+         
             // 
             // panel4
             // 

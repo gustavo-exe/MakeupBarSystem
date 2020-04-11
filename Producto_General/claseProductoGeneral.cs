@@ -18,6 +18,7 @@ namespace MakeupBarSystem.Producto_General
         private string PrecioUnitario;
         private string Cantidad;
         private string Descripcion;
+        private int idProveedor;
         private MySqlException error;
 
         public claseProductoGeneral()
@@ -28,9 +29,10 @@ namespace MakeupBarSystem.Producto_General
             PrecioUnitario = "";
             Cantidad = "";
             Descripcion = "";
+            idProveedor = 0;
             conexion = new Conexion();
         }
-        public claseProductoGeneral(string c,string n,string m,string p,string ca,string d)
+        public claseProductoGeneral(string c,string n,string m,string p,string ca,string d,int pr)
         {
             idCodigoDeBarra = c;
             NombreProducto = n;
@@ -38,14 +40,15 @@ namespace MakeupBarSystem.Producto_General
             PrecioUnitario = p;
             Cantidad = ca;
             Descripcion = d;
+            idProveedor = pr;
             conexion = new Conexion();
         }
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO productogeneral (NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion) " +
-                "                           VALUES ('{0}','{1}', '{2}', '{3}', '{4}')",
-                                           NombreProducto, Marca,PrecioUnitario, Cantidad,Descripcion)))
+            if (conexion.IUD(string.Format("INSERT INTO productogeneral (NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion,idProveedor) " +
+                                           "VALUES ('{0}','{1}', '{2}', '{3}', '{4}',{5})",
+                                           NombreProducto, Marca,PrecioUnitario, Cantidad,Descripcion,idProveedor)))
             {
                 return true;
             }
@@ -75,8 +78,8 @@ namespace MakeupBarSystem.Producto_General
 
         public Boolean BuscarID(string id)
         {
-            //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.productogeneral where idCodigoDeBarra='{0}'", id));
+            //NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.productogeneral where idCodigoDeBarra='{0}'", id));
             if (t1.Rows.Count > 0)
             {
                 idCodigoDeBarra = t1.Rows[0][0].ToString();
@@ -85,6 +88,7 @@ namespace MakeupBarSystem.Producto_General
                 PrecioUnitario = t1.Rows[0][3].ToString();
                 Cantidad = t1.Rows[0][4].ToString();
                 Descripcion = t1.Rows[0][5].ToString();
+                idProveedor = Convert.ToInt32(t1.Rows[0][6].ToString());
                 return true;
             }
             else
@@ -123,10 +127,6 @@ namespace MakeupBarSystem.Producto_General
             get
             {
                 return idCodigoDeBarra;
-            }
-            set
-            {
-                idCodigoDeBarra = value;
             }
 
         }
@@ -183,6 +183,18 @@ namespace MakeupBarSystem.Producto_General
             set
             {
                 Descripcion = value;
+            }
+        }
+
+        public int proveedor
+        {
+            get
+            {
+                return idProveedor;
+            }
+            set
+            {
+                idProveedor = value;
             }
         }
         public MySqlException Error

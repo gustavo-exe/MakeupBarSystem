@@ -59,10 +59,11 @@ namespace MakeupBarSystem.Maquillaje
             txtNombre.Text = maquillaje.nombreDelProducto;
             txtMarca.Text = maquillaje.marca;
             txtTonoNum.Text = maquillaje.tonoNumero;
-            txtFechaEx.Text = maquillaje.fechaDeExpiracion.ToString();
-            txtPrecio.Text = maquillaje.precioUnitario.ToString();
-            txtCantidad.Text = maquillaje.cantidad.ToString();
+            txtFechaEx.Value = maquillaje.fechaDeExpiracion;
+            txtPrecio.Text = maquillaje.precioUnitario;
+            txtCantidad.Text = maquillaje.cantidad;
             txtDescripcion.Text = maquillaje.descripcion;
+            txtidProveedor.Text = maquillaje.proveedor.ToString();
 
             SendKeys.Send("{Tab}");
         }
@@ -73,17 +74,18 @@ namespace MakeupBarSystem.Maquillaje
                 maquillaje.nombreDelProducto = txtNombre.Text;
                 maquillaje.marca = txtMarca.Text;
                 maquillaje.tonoNumero = txtTonoNum.Text;
-                maquillaje.fechaDeExpiracion = Convert.ToDateTime( txtFechaEx.Text);
-                maquillaje.precioUnitario = Convert.ToInt32(txtPrecio.Text);
-                maquillaje.cantidad = Convert.ToInt32(txtCantidad.Text);
+                maquillaje.fechaDeExpiracion =txtFechaEx.Value;
+                maquillaje.precioUnitario = txtPrecio.Text;
+                maquillaje.cantidad = txtCantidad.Text;
                 maquillaje.descripcion = txtDescripcion.Text;
+                maquillaje.proveedor =Convert.ToInt32(txtidProveedor.Text);
                 if (maquillaje.Guardar())
                 {
                     MessageBox.Show("Registro guardado correctamente", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("Error\n{0}", maquillaje.Error.ToString()), "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(string.Format("Error\n{0}", maquillaje.Error.ToString()), "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -140,6 +142,12 @@ namespace MakeupBarSystem.Maquillaje
                 txtDescripcion.Focus();
                 validar = false;
             }
+            else if(txtidProveedor.Text == "")
+            {
+                MessageBox.Show("Escriba el id del proveedor", "Maquillaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtidProveedor.Focus();
+                validar = false;
+            }
             else
                 validar = true;
             return validar;
@@ -154,6 +162,7 @@ namespace MakeupBarSystem.Maquillaje
             txtPrecio.Text = "";
             txtCantidad.Text = "";
             txtDescripcion.Text = "";
+            txtidProveedor.Text = "";
         }
 
     }

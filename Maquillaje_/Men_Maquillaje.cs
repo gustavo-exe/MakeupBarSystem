@@ -21,7 +21,9 @@ namespace MakeupBarSystem.Maquillaje_
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Ins_Maquillaje ventana = new Ins_Maquillaje();
+            ventana.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

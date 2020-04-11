@@ -36,6 +36,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txtidProveedor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -67,7 +70,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.826087F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.17391F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnReturn, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
@@ -116,7 +119,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(685, 3);
+            this.panel1.Location = new System.Drawing.Point(683, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(106, 17);
             this.panel1.TabIndex = 13;
@@ -170,6 +173,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.txtidProveedor);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel6);
@@ -187,8 +193,41 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(56, 71);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(623, 315);
+            this.panel2.Size = new System.Drawing.Size(621, 315);
             this.panel2.TabIndex = 14;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Location = new System.Drawing.Point(189, 288);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(163, 1);
+            this.panel10.TabIndex = 65;
+            // 
+            // txtidProveedor
+            // 
+            this.txtidProveedor.BackColor = System.Drawing.Color.Black;
+            this.txtidProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtidProveedor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidProveedor.ForeColor = System.Drawing.Color.White;
+            this.txtidProveedor.Location = new System.Drawing.Point(185, 267);
+            this.txtidProveedor.Margin = new System.Windows.Forms.Padding(0);
+            this.txtidProveedor.Name = "txtidProveedor";
+            this.txtidProveedor.Size = new System.Drawing.Size(167, 22);
+            this.txtidProveedor.TabIndex = 64;
+            this.txtidProveedor.Tag = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(22, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 22);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "IdProveedor:";
             // 
             // panel9
             // 
@@ -369,8 +408,9 @@
             this.panel3.Controls.Add(this.btnInsertar);
             this.panel3.Location = new System.Drawing.Point(56, 392);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(623, 55);
+            this.panel3.Size = new System.Drawing.Size(621, 55);
             this.panel3.TabIndex = 15;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnInsertar
             // 
@@ -439,5 +479,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox txtidProveedor;
+        private System.Windows.Forms.Label label2;
     }
 }

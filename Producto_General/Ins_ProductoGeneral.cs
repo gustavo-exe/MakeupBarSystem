@@ -57,7 +57,8 @@ namespace MakeupBarSystem.Producto_General
             txtPrecio.Text = productoGeneral.precioUnitario;
             txtCantidad.Text = productoGeneral.cantidad;
             txtDescripcion.Text = productoGeneral.descripcion;
-            SendKeys.Send("{Tab}");
+            txtidProveedor.Text = productoGeneral.descripcion.ToString()
+;            SendKeys.Send("{Tab}");
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -69,13 +70,14 @@ namespace MakeupBarSystem.Producto_General
                 productoGeneral.precioUnitario = txtPrecio.Text;
                 productoGeneral.cantidad = txtCantidad.Text;
                 productoGeneral.descripcion = txtDescripcion.Text;
+                productoGeneral.proveedor = Convert.ToInt32(txtidProveedor.Text);
                 if (productoGeneral.Guardar())
                 {
                     MessageBox.Show("Registro guardado correctamente", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("Error\n{0}", productoGeneral.Error.ToString()), "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(string.Format("Error\n{0}", productoGeneral.Error.ToString()), "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -119,6 +121,12 @@ namespace MakeupBarSystem.Producto_General
                 txtDescripcion.Focus();
                 validar = false;
             }
+            else if (txtidProveedor.Text == "")
+            {
+                MessageBox.Show("Escriba el codigo del Proveedor", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtidProveedor.Focus();
+                validar = false;
+            }
             else
                 validar = true;
             return validar;
@@ -132,6 +140,7 @@ namespace MakeupBarSystem.Producto_General
             txtPrecio.Text = "";
             txtCantidad.Text = "";
             txtDescripcion.Text = "";
+            txtidProveedor.Text = "";
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -142,6 +151,11 @@ namespace MakeupBarSystem.Producto_General
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
