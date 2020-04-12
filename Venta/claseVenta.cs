@@ -18,10 +18,10 @@ namespace MakeupBarSystem.Venta
         private int idEmpleado;
         private DateTime fecha;
         private int idProducto;
-        private float precio;
+        private double precio;
         private int cantidades;
         private int descuento;
-        private float total;
+        private double total;
         private MySqlException error;
 
         public claseVenta()
@@ -30,13 +30,13 @@ namespace MakeupBarSystem.Venta
             idEmpleado = 0;
             fecha = DateTime.Today;
             idProducto = 0;
-            precio = 0;
+            precio = 0.0;
             cantidades = 0;
             descuento = 0;
-            total = 0;
+            total = 0.0;
             conexion = new Conexion();
         }
-        public claseVenta(int a, int b, int c, float d, int e, int f,int t)
+        public claseVenta(int a, int b, int c, double d, int e, int f,double t)
         {
             idCliente = a;
             idEmpleado = b;
@@ -49,7 +49,7 @@ namespace MakeupBarSystem.Venta
             conexion = new Conexion();
         }
 
-        public float Total
+        public double Total
         {
             get
             {
@@ -129,7 +129,7 @@ namespace MakeupBarSystem.Venta
                 idProducto = value;
             }
         }
-        public float Precio
+        public double Precio
         {
             get
             {
@@ -230,10 +230,10 @@ namespace MakeupBarSystem.Venta
                 claseventa.idVenta = Convert.ToInt32(Tabla.Rows[0][2]);
                 claseventa.idFactura = Convert.ToInt32(Tabla.Rows[0][3]);
                 claseventa.idProducto = Convert.ToInt32(Tabla.Rows[0][4]);
-                claseventa.precio = Convert.ToInt32(Tabla.Rows[0][5]);
+                claseventa.precio = Convert.ToDouble(Tabla.Rows[0][5]);
                 claseventa.cantidades = Convert.ToInt32(Tabla.Rows[0][6]);
                 claseventa.descuento = Convert.ToInt32(Tabla.Rows[0][3]);
-                claseventa.total = Convert.ToInt32(Tabla.Rows[0][7]);
+                claseventa.total = Convert.ToDouble(Tabla.Rows[0][7]);
                 //MessageBox.Show("Si hay");
 
             }
