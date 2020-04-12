@@ -68,7 +68,7 @@ namespace MakeupBarSystem.Compra
                 //MessageBox.Show(Convert.ToString(ListaDeEmpleados.Text));
 
                 //Llamo al metodo BUSCAR(WHERE) que esta en la clase empleado
-                compra = compra.BuscarID(Convert.ToString(ListaDeCompras.Text));
+                compra = compra.BuscarID(Convert.ToInt32(ListaDeCompras.Text));
 
 
                 ValoresParaLosTextDesdeObjeto(compra);
@@ -137,8 +137,8 @@ namespace MakeupBarSystem.Compra
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Cancelar
-            btnModificar.Visible = true;
-            btnEliminar.Visible = true;
+            btnguardar.Visible = true;
+            btnCancelar.Visible = true;
             CambiarDeColorElPanele(panelColor3, false);
             CambiarDeColorElPanele(PanelColor1, false);
             CambiarDeColorElPanele(panelColor2, false);

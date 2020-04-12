@@ -91,23 +91,23 @@ namespace MakeupBarSystem.Compra
         /// 
         /// </summary>
 
-        public claseCompra BuscarID(string id)
+        public claseCompra BuscarID(int id)
         {
             claseCompra compra = new claseCompra();
 
 
-            DataTable Tabla = conexion.consulta(string.Format("SELECT IDProveedor, NombreDelProducto, Cantidad, Costo, Descripcion FROM compra WHERE IdCompra='{0}';", id));
+            DataTable Tabla = conexion.consulta(string.Format("SELECT * FROM compra WHERE IdCompra='{0}';", id));
             //MessageBox.Show(Convert.ToString(id));
             //empleado.usuario = "HHHH";
             //MessageBox.Show(Convert.ToString(idEmpleado = Tabla.Rows[0][0].ToString()));
             if (Tabla.Rows.Count > 0)
             {
-
-                compra.idProveedor = Convert.ToInt32(Tabla.Rows[0][0]);
-                compra.nombreProducto = Tabla.Rows[0][1].ToString();
-                compra.cantidad = Convert.ToInt32(Tabla.Rows[0][2]);
-                compra.costo = Convert.ToInt32(Tabla.Rows[0][3]);
-                compra.descripcion = Tabla.Rows[0][4].ToString();
+                compra.idCompra = Convert.ToInt32(id);
+                compra.idProveedor = Convert.ToInt32(Tabla.Rows[0][1]);
+                compra.nombreProducto = Tabla.Rows[0][2].ToString();
+                compra.cantidad = Convert.ToInt32(Tabla.Rows[0][3]);
+                compra.costo = Convert.ToInt32(Tabla.Rows[0][4]);
+                compra.descripcion = Tabla.Rows[0][5].ToString();
                 //MessageBox.Show("Si hay");
 
             }
@@ -143,8 +143,8 @@ namespace MakeupBarSystem.Compra
         {
             int id;
 
-            id = compra.idCompra;
-            if (conexion.IUD(string.Format("DELETE FROM compra WHERE IdCompra='{0}';",compra.idCompra)))
+            id = Convert.ToInt32(compra.idCompra);
+            if (conexion.IUD(string.Format("DELETE FROM compra WHERE IdCompra='{0}';",id)))
             {
                 MessageBox.Show("Se elimino la compra: " + Convert.ToString(id));
             }

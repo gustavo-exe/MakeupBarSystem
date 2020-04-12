@@ -75,8 +75,8 @@ namespace MakeupBarSystem.Cliente
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             //cancelar
-            btnInsertar.Visible = true;
-            btnEliminar.Visible = true;
+            btnGuardar.Visible = true;
+            button2.Visible = true;
             CambiarDeColorElPanele(panelColor3, false);
             CambiarDeColorElPanele(PanelColor1, false);
             CambiarDeColorElPanele(panelColor2, false);
@@ -241,6 +241,8 @@ namespace MakeupBarSystem.Cliente
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
+            //guardar
             try
             {
                 cliente = ObetenerValoresDeLosText();
@@ -273,6 +275,7 @@ namespace MakeupBarSystem.Cliente
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             //modificar
 
             if (click == 0)
@@ -298,7 +301,6 @@ namespace MakeupBarSystem.Cliente
                 btnGuardar.Visible = false;
 
             }
-
 
         }
     }
