@@ -56,7 +56,7 @@ namespace MakeupBarSystem.Inventario
 
         private void Viw_Inventario_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT idInventario AS 'N', precio AS 'Precio', idCodigoDeBarra AS CodigoDeBarra,Cantidad  FROM inventario;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT idInventario AS 'N', precio AS 'Precio', idCodigoDeBarra AS 'Codigo de barra',Cantidad  FROM inventario;"));
             dataGridView1.DataSource = Datos;
             dataGridView1.Refresh();
         }

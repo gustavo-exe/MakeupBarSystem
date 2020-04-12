@@ -56,7 +56,7 @@ namespace MakeupBarSystem.Producto_General
 
         private void View_ProductoGeneral_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM productogeneral;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT idCodigoDeBarra as 'Codigo de barra',NombreProducto as 'Nombre del producto',Marca,PrecioUnitario as 'Precio por unidad',Cantidad,Descripcion,idProveedor as 'IdProveedor' FROM productogeneral;"));
             vistaProductoG.DataSource = Datos;
             vistaProductoG.Refresh();
         }

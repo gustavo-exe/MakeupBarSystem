@@ -55,7 +55,7 @@ namespace MakeupBarSystem.Compra
 
         private void Ver_Compra_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM compra;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdCompra as 'Numero de compra',IDProveedor as 'Llave del proveedor',NombreDelProducto as 'Nombre del producto',Cantidad,Costo,Descripcion FROM compra;"));
             ViewCompra.DataSource = Datos;
             ViewCompra.Refresh();
         }

@@ -61,7 +61,7 @@ namespace MakeupBarSystem.Proveedor
 
         private void ViewProveedor_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT IdProveedor, nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion FROM proveedor;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdProveedor, nombreEmpresa as 'Nombre de la empresa', nombreDelContrato as 'Nombre del contacto', telefonoContacto as 'Telefono del contacto', correo as 'Correo', descripcion as 'Descripción' FROM proveedor;"));
             verproveedor.DataSource = Datos;
             verproveedor.Refresh();
         }

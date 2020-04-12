@@ -89,7 +89,7 @@ namespace MakeupBarSystem.Cliente
 
         private void Ver_Datos_Cliente_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties FROM cliente;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase as 'Tono de base', TonoDePolvo as 'Tono de polvo', TipoDeCuties as 'Tipo de cuties' FROM cliente;"));
             dvDatosCliente.DataSource = Datos;
             dvDatosCliente.Refresh();
         }

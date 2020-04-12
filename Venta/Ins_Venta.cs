@@ -200,7 +200,7 @@ venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 {
                     MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     venta.IdVenta = Convert.ToInt32(txtidventa.Text);
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};", venta.IdVenta));
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};", venta.IdVenta));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }

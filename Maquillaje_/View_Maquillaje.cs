@@ -57,7 +57,7 @@ namespace MakeupBarSystem.Maquillaje
 
         private void View_Maquillaje_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM maquillaje;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT idCodigoDeBarra as 'Codigo de barra',NombreDelProducto as 'Nombre del producto', Marca,TonoNumero as 'Numero de tono',FechaDeExpiracion as 'Fecha de expiracion',PrecioUnitario as 'Precio Unitario',Cantidad,Descripcion,idProveedor as 'IdProveedor' FROM maquillaje;"));
             verMaquillaje.DataSource = Datos;
             verMaquillaje.Refresh();
         }
