@@ -165,5 +165,9 @@ namespace MakeupBarSystem.Maquillaje
             txtidProveedor.Text = "";
         }
 
+        private void Ins_Maquillaje_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

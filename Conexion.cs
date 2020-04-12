@@ -82,7 +82,7 @@ namespace MakeupBarSystem
                 {
                     conexion.Close();
                     conexion.ConnectionString = string.Format("Database={0};Server={1};Uid={2};Pwd={3};SslMode=none", bd, servidor, usuario, pass);
-                    conexion.Open();
+                    //conexion.Open();
                 }
             }
             catch (MySqlException ex)

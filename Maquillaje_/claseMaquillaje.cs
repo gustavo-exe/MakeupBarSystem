@@ -51,8 +51,8 @@ namespace MakeupBarSystem.Maquillaje_
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO Maquillaje (NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion, idProveedor) " +
-                                            "VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', '{6}')",
+            if (conexion.IUD(string.Format("INSERT INTO maquillaje (NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion, idProveedor) " +
+                                            "VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', {6})",
                                             NombreDelProducto, Marca,  TonoNumero, FechaDeExpiracion.ToString("yyyy-MM-dd"),PrecioUnitario,Cantidad,Descripcion,idProveedor)))
             {
                 return true;

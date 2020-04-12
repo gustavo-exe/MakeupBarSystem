@@ -440,6 +440,7 @@
             this.btnInsertar.Text = "M o d i f i c a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnEliminar
             // 

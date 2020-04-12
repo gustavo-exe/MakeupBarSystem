@@ -57,20 +57,6 @@ namespace MakeupBarSystem.Envio
             Application.Exit();
         }
 
-        private void Act_Envio_Load(object sender, EventArgs e)
-        {
-            ///<summary>
-            ///Al entrar al formulario de una sola vez inicio mi lista 
-            ///y vacios los text.
-            /// </summary>
-
-            //LISTA
-            CargarDatosDeLaLista();
-
-            //TEXTBOX
-            VaciarTextBox();
-
-        }
 
         private void VaciarTextBox()
         {
@@ -83,7 +69,7 @@ namespace MakeupBarSystem.Envio
 
         private void CargarDatosDeLaLista()
         {
-            DataTable datos = conexion.consulta(String.Format("Select idEmpleado FROM empleado;"));
+            DataTable datos = conexion.consulta(String.Format("Select idEnvio FROM Envio;"));
             ListaEnvio.DisplayMember = "idEnvio";
             ListaEnvio.DataSource = datos;
         }
@@ -91,10 +77,11 @@ namespace MakeupBarSystem.Envio
 
         private void ValoresParaLosText(ClaseEnvio envio)
         {
+            
             txtidEnvio.Text = envio.IdEnvio;
             txtidCliente.Text = envio.IdCliente;
             txtDireccion.Text = envio.direccion;
-            txtTelefono.Text = envio.direccion;
+            txtTelefono.Text = envio.telefono;
             txtidSerDeEn.Text = envio.IdServicioEntrega;
         }
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -116,37 +103,11 @@ namespace MakeupBarSystem.Envio
 
             }
         }
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                envio = ObetenerValoresDeLosText();
-
-                //Llamo al metodo de modificar(UPDATE)
-                envio.Modificar(envio);
-
-                //Mostrar los botones y paneles a su estado natural
-                btnModificar.Visible = true;
-                btnEliminar.Visible = true;
-                CambiarDeColorElPanel(panelColor2, false);
-                CambiarDeColorElPanel(panelColor3, false);
-                CambiarDeColorElPanel(panelColor5, false);
-
-                //Restauro el valor de click para cuando se realiza otra seleccion la evalue
-                click = 0;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
 
         private ClaseEnvio ObetenerValoresDeLosText()
         {
             ClaseEnvio envio = new ClaseEnvio();
-            envio.IdEnvio = txtidEnvio.Text;
+            //envio.IdEnvio = txtidEnvio.Text;
             envio.IdCliente = txtidCliente.Text;
             envio.direccion = txtDireccion.Text;
             envio.telefono = txtTelefono.Text;
@@ -216,9 +177,70 @@ namespace MakeupBarSystem.Envio
             }
         }
 
-        private void ListaDeEnvio_Click(object sender, EventArgs e)
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Act_Envio_Load_1(object sender, EventArgs e)
+        {
+            //LISTA
+            CargarDatosDeLaLista();
+            //TEXTBOX
+            VaciarTextBox();
+
+        }
+
+        private void ListaEnvio_Click(object sender, EventArgs e)
         {
             click = 1;
         }
+
+
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                envio = ObetenerValoresDeLosText();
+
+                //Llamo al metodo de modificar(UPDATE)
+                envio.Modificar(envio);
+
+                //Mostrar los botones y paneles a su estado natural
+                btnModificar.Visible = true;
+                btnEliminar.Visible = true;
+                CambiarDeColorElPanel(panelColor2, false);
+                CambiarDeColorElPanel(panelColor3, false);
+                CambiarDeColorElPanel(panelColor5, false);
+
+                //Restauro el valor de click para cuando se realiza otra seleccion la evalue
+                click = 0;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            ///<summary>
+            ///Devolviendo los botones a su estado natural
+            /// </summary>
+            btnModificar.Visible = true;
+            btnEliminar.Visible = true;
+            CambiarDeColorElPanel(panelColor2, false);
+            CambiarDeColorElPanel(panelColor3, false);
+            CambiarDeColorElPanel(panelColor5, false);
+        }
     }
+    
 }

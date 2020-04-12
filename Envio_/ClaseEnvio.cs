@@ -103,11 +103,12 @@ namespace MakeupBarSystem.Envio_
             DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.envio where idEnvio='{0}'", id));
             if (t1.Rows.Count > 0)
             {
-                idEnvio = t1.Rows[0][0].ToString();
-                idCliente = t1.Rows[0][1].ToString();
-                Direccion = t1.Rows[0][2].ToString();
-                Telefono = t1.Rows[0][3].ToString();
-                idServicioEntrega = t1.Rows[0][4].ToString();
+                //MessageBox.Show("ENTRO");
+                envio.idEnvio = t1.Rows[0][0].ToString();
+                envio.idCliente = t1.Rows[0][1].ToString();
+                envio.Direccion = t1.Rows[0][2].ToString();
+                envio.Telefono = t1.Rows[0][3].ToString();
+                envio.idServicioEntrega = t1.Rows[0][4].ToString();
             }
             return envio;
 
@@ -144,10 +145,8 @@ namespace MakeupBarSystem.Envio_
             {
                 return idEnvio;
             }
-            set
-            {
-                idEnvio = value;
-            }
+
+
         }
         public string IdCliente
         {

@@ -34,6 +34,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelColor5 = new System.Windows.Forms.Panel();
+            this.panelColor3 = new System.Windows.Forms.Panel();
+            this.panelColor2 = new System.Windows.Forms.Panel();
+            this.panelColor1 = new System.Windows.Forms.Panel();
+            this.panelColor6 = new System.Windows.Forms.Panel();
             this.txtidSerDeEn = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -46,6 +51,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ListaEnvio = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -54,11 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.panelColor6 = new System.Windows.Forms.Panel();
-            this.panelColor5 = new System.Windows.Forms.Panel();
-            this.panelColor3 = new System.Windows.Forms.Panel();
-            this.panelColor2 = new System.Windows.Forms.Panel();
-            this.panelColor1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,8 +83,8 @@
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
@@ -91,6 +93,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.1528F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -173,6 +176,47 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(632, 321);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panelColor5
+            // 
+            this.panelColor5.BackColor = System.Drawing.Color.White;
+            this.panelColor5.Location = new System.Drawing.Point(425, 146);
+            this.panelColor5.Name = "panelColor5";
+            this.panelColor5.Size = new System.Drawing.Size(163, 1);
+            this.panelColor5.TabIndex = 28;
+            // 
+            // panelColor3
+            // 
+            this.panelColor3.BackColor = System.Drawing.Color.White;
+            this.panelColor3.Location = new System.Drawing.Point(425, 110);
+            this.panelColor3.Name = "panelColor3";
+            this.panelColor3.Size = new System.Drawing.Size(163, 1);
+            this.panelColor3.TabIndex = 28;
+            // 
+            // panelColor2
+            // 
+            this.panelColor2.BackColor = System.Drawing.Color.White;
+            this.panelColor2.Location = new System.Drawing.Point(425, 76);
+            this.panelColor2.Name = "panelColor2";
+            this.panelColor2.Size = new System.Drawing.Size(163, 1);
+            this.panelColor2.TabIndex = 28;
+            // 
+            // panelColor1
+            // 
+            this.panelColor1.BackColor = System.Drawing.Color.White;
+            this.panelColor1.Location = new System.Drawing.Point(425, 45);
+            this.panelColor1.Name = "panelColor1";
+            this.panelColor1.Size = new System.Drawing.Size(163, 1);
+            this.panelColor1.TabIndex = 28;
+            // 
+            // panelColor6
+            // 
+            this.panelColor6.BackColor = System.Drawing.Color.White;
+            this.panelColor6.Location = new System.Drawing.Point(453, 181);
+            this.panelColor6.Name = "panelColor6";
+            this.panelColor6.Size = new System.Drawing.Size(163, 1);
+            this.panelColor6.TabIndex = 48;
             // 
             // txtidSerDeEn
             // 
@@ -311,17 +355,54 @@
             this.ListaEnvio.Name = "ListaEnvio";
             this.ListaEnvio.Size = new System.Drawing.Size(214, 286);
             this.ListaEnvio.TabIndex = 0;
+            this.ListaEnvio.Click += new System.EventHandler(this.ListaEnvio_Click);
             this.ListaEnvio.SelectedIndexChanged += new System.EventHandler(this.ListaEnvio_SelectedIndexChanged_1);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.btnModificar);
+            this.panel3.Controls.Add(this.btnGuardar);
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(42, 396);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(632, 51);
             this.panel3.TabIndex = 2;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Black;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(114, 10);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(195, 34);
+            this.btnGuardar.TabIndex = 17;
+            this.btnGuardar.Text = "G u a r d a r";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(321, 10);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(195, 34);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "C a n c e l a r";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -330,7 +411,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnModificar.Location = new System.Drawing.Point(337, 8);
+            this.btnModificar.Location = new System.Drawing.Point(321, 10);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(0);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(195, 34);
@@ -347,7 +428,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(119, 8);
+            this.btnEliminar.Location = new System.Drawing.Point(114, 8);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(195, 34);
@@ -420,46 +501,6 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // panelColor6
-            // 
-            this.panelColor6.BackColor = System.Drawing.Color.White;
-            this.panelColor6.Location = new System.Drawing.Point(453, 181);
-            this.panelColor6.Name = "panelColor6";
-            this.panelColor6.Size = new System.Drawing.Size(163, 1);
-            this.panelColor6.TabIndex = 48;
-            // 
-            // panelColor5
-            // 
-            this.panelColor5.BackColor = System.Drawing.Color.White;
-            this.panelColor5.Location = new System.Drawing.Point(425, 146);
-            this.panelColor5.Name = "panelColor5";
-            this.panelColor5.Size = new System.Drawing.Size(163, 1);
-            this.panelColor5.TabIndex = 28;
-            // 
-            // panelColor3
-            // 
-            this.panelColor3.BackColor = System.Drawing.Color.White;
-            this.panelColor3.Location = new System.Drawing.Point(425, 110);
-            this.panelColor3.Name = "panelColor3";
-            this.panelColor3.Size = new System.Drawing.Size(163, 1);
-            this.panelColor3.TabIndex = 28;
-            // 
-            // panelColor2
-            // 
-            this.panelColor2.BackColor = System.Drawing.Color.White;
-            this.panelColor2.Location = new System.Drawing.Point(425, 76);
-            this.panelColor2.Name = "panelColor2";
-            this.panelColor2.Size = new System.Drawing.Size(163, 1);
-            this.panelColor2.TabIndex = 28;
-            // 
-            // panelColor1
-            // 
-            this.panelColor1.BackColor = System.Drawing.Color.White;
-            this.panelColor1.Location = new System.Drawing.Point(425, 45);
-            this.panelColor1.Name = "panelColor1";
-            this.panelColor1.Size = new System.Drawing.Size(163, 1);
-            this.panelColor1.TabIndex = 28;
-            // 
             // Act_Envio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,6 +512,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Act_Envio";
             this.Text = "Act_Envio";
+            this.Load += new System.EventHandler(this.Act_Envio_Load_1);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -518,5 +560,7 @@
         private System.Windows.Forms.Panel panelColor2;
         private System.Windows.Forms.Panel panelColor1;
         private System.Windows.Forms.Panel panelColor6;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

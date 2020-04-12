@@ -51,5 +51,10 @@ namespace MakeupBarSystem.Maquillaje
                 state = 0;
             }
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
