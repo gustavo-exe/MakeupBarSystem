@@ -196,7 +196,7 @@
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(0);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(167, 22);
-            this.txtCorreo.TabIndex = 35;
+            this.txtCorreo.TabIndex = 4;
             this.txtCorreo.Tag = "";
             // 
             // label7
@@ -221,7 +221,7 @@
             this.txtTelefonoContacto.Margin = new System.Windows.Forms.Padding(0);
             this.txtTelefonoContacto.Name = "txtTelefonoContacto";
             this.txtTelefonoContacto.Size = new System.Drawing.Size(167, 22);
-            this.txtTelefonoContacto.TabIndex = 33;
+            this.txtTelefonoContacto.TabIndex = 3;
             this.txtTelefonoContacto.Tag = "";
             this.txtTelefonoContacto.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -275,7 +275,7 @@
             this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
             this.txtNombreEmpresa.Size = new System.Drawing.Size(167, 22);
-            this.txtNombreEmpresa.TabIndex = 19;
+            this.txtNombreEmpresa.TabIndex = 1;
             this.txtNombreEmpresa.Tag = "";
             // 
             // label5
@@ -332,7 +332,7 @@
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(0);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(167, 22);
-            this.txtDescripcion.TabIndex = 13;
+            this.txtDescripcion.TabIndex = 5;
             this.txtDescripcion.Tag = "";
             // 
             // txtProveedor
@@ -345,7 +345,7 @@
             this.txtProveedor.Margin = new System.Windows.Forms.Padding(0);
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(167, 22);
-            this.txtProveedor.TabIndex = 12;
+            this.txtProveedor.TabIndex = 0;
             this.txtProveedor.Tag = "";
             // 
             // panelColor2
@@ -374,7 +374,7 @@
             this.txtNombreContacto.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreContacto.Name = "txtNombreContacto";
             this.txtNombreContacto.Size = new System.Drawing.Size(167, 22);
-            this.txtNombreContacto.TabIndex = 9;
+            this.txtNombreContacto.TabIndex = 2;
             this.txtNombreContacto.Tag = "";
             // 
             // panel3
@@ -397,7 +397,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 34);
-            this.btnInsertar.TabIndex = 14;
+            this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;

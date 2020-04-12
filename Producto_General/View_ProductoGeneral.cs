@@ -14,9 +14,11 @@ namespace MakeupBarSystem.Producto_General
     public partial class View_ProductoGeneral : Form
     {
         private int state;
+        Conexion conexion;
         public View_ProductoGeneral()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -50,6 +52,13 @@ namespace MakeupBarSystem.Producto_General
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void View_ProductoGeneral_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM productogeneral;"));
+            vistaProductoG.DataSource = Datos;
+            vistaProductoG.Refresh();
         }
     }
 }

@@ -264,7 +264,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(149, 34);
-            this.btnInsertar.TabIndex = 14;
+            this.btnInsertar.TabIndex = 4;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -292,7 +292,7 @@
             this.txtdescripcion.Margin = new System.Windows.Forms.Padding(0);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(167, 19);
-            this.txtdescripcion.TabIndex = 26;
+            this.txtdescripcion.TabIndex = 3;
             this.txtdescripcion.Tag = "";
             // 
             // panel12
@@ -325,7 +325,7 @@
             this.txtcosto.Margin = new System.Windows.Forms.Padding(0);
             this.txtcosto.Name = "txtcosto";
             this.txtcosto.Size = new System.Drawing.Size(167, 19);
-            this.txtcosto.TabIndex = 23;
+            this.txtcosto.TabIndex = 2;
             this.txtcosto.Tag = "";
             // 
             // panel9
@@ -359,7 +359,7 @@
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(0);
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(167, 19);
-            this.txtcantidad.TabIndex = 20;
+            this.txtcantidad.TabIndex = 1;
             this.txtcantidad.Tag = "";
             // 
             // panel8
@@ -393,7 +393,7 @@
             this.txtnombre.Margin = new System.Windows.Forms.Padding(0);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(167, 19);
-            this.txtnombre.TabIndex = 17;
+            this.txtnombre.TabIndex = 0;
             this.txtnombre.Tag = "";
             this.txtnombre.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 

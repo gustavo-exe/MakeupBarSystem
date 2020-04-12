@@ -286,6 +286,7 @@ namespace MakeupBarSystem.Venta
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
+            limpiardetalle();
         }
 
         private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -317,6 +318,8 @@ namespace MakeupBarSystem.Venta
             {
                 MessageBox.Show("La compra ha sido cancelada", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                limpiar();
+                limpiardetalle();
                 DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};", venta.IdVenta));
                 dgvVenta.DataSource = Datos;
                 dgvVenta.Refresh();

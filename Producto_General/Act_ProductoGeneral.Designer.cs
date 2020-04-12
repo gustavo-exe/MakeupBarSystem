@@ -179,7 +179,7 @@
             this.textBox5.Margin = new System.Windows.Forms.Padding(0);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(167, 22);
-            this.textBox5.TabIndex = 39;
+            this.textBox5.TabIndex = 6;
             this.textBox5.Tag = "";
             this.textBox5.Text = "__________________";
             // 
@@ -205,7 +205,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(0);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(167, 22);
-            this.textBox4.TabIndex = 37;
+            this.textBox4.TabIndex = 5;
             this.textBox4.Tag = "";
             this.textBox4.Text = "__________________";
             // 
@@ -231,7 +231,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(0);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 22);
-            this.textBox3.TabIndex = 35;
+            this.textBox3.TabIndex = 4;
             this.textBox3.Tag = "";
             this.textBox3.Text = "__________________";
             // 
@@ -257,7 +257,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(167, 22);
-            this.textBox2.TabIndex = 33;
+            this.textBox2.TabIndex = 3;
             this.textBox2.Tag = "";
             this.textBox2.Text = "__________________";
             // 
@@ -283,7 +283,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 31;
+            this.textBox1.TabIndex = 2;
             this.textBox1.Tag = "";
             this.textBox1.Text = "__________________";
             // 
@@ -309,7 +309,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 29;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Tag = "";
             this.txtUsuario.Text = "__________________";
             // 
@@ -360,7 +360,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 34);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 2;
             this.button2.Text = "C a n c e l a r";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button2.UseVisualStyleBackColor = false;
@@ -376,7 +376,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 34);
-            this.btnInsertar.TabIndex = 15;
+            this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "M o d i f i c a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -392,7 +392,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(195, 34);
-            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "E l i m i  n a r";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnEliminar.UseVisualStyleBackColor = false;

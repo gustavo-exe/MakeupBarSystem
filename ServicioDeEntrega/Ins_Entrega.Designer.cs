@@ -189,7 +189,7 @@
             this.textBox4.Margin = new System.Windows.Forms.Padding(0);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(167, 22);
-            this.textBox4.TabIndex = 35;
+            this.textBox4.TabIndex = 4;
             this.textBox4.Tag = "";
             // 
             // label7
@@ -214,7 +214,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(0);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 22);
-            this.textBox3.TabIndex = 33;
+            this.textBox3.TabIndex = 3;
             this.textBox3.Tag = "";
             // 
             // panel9
@@ -267,7 +267,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(167, 22);
-            this.textBox2.TabIndex = 19;
+            this.textBox2.TabIndex = 1;
             this.textBox2.Tag = "";
             // 
             // label5
@@ -304,7 +304,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 12;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Tag = "";
             // 
             // panelColor2
@@ -333,7 +333,7 @@
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(167, 22);
-            this.txtContraseña.TabIndex = 9;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Tag = "";
             // 
             // panel3
@@ -356,7 +356,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 34);
-            this.btnInsertar.TabIndex = 14;
+            this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;

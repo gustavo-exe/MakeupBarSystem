@@ -171,7 +171,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(0);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(195, 34);
-            this.btnModificar.TabIndex = 17;
+            this.btnModificar.TabIndex = 0;
             this.btnModificar.Text = "M o d i f i c a r";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -188,7 +188,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(195, 34);
-            this.btnEliminar.TabIndex = 16;
+            this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "E l i m i n a r";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -323,7 +323,7 @@
             this.ListaDeEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.ListaDeEmpleados.Name = "ListaDeEmpleados";
             this.ListaDeEmpleados.Size = new System.Drawing.Size(179, 242);
-            this.ListaDeEmpleados.TabIndex = 34;
+            this.ListaDeEmpleados.TabIndex = 0;
             this.ListaDeEmpleados.Click += new System.EventHandler(this.ListaDeEmpleados_Click);
             this.ListaDeEmpleados.SelectedIndexChanged += new System.EventHandler(this.ListaDeEmpleados_SelectedIndexChanged);
             // 
@@ -349,7 +349,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(0);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(167, 22);
-            this.txtId.TabIndex = 32;
+            this.txtId.TabIndex = 1;
             this.txtId.Tag = "";
             // 
             // panelColor1
@@ -414,7 +414,7 @@
             this.txtRol.Margin = new System.Windows.Forms.Padding(0);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(167, 22);
-            this.txtRol.TabIndex = 26;
+            this.txtRol.TabIndex = 4;
             this.txtRol.Tag = "";
             // 
             // txtUsuario
@@ -427,7 +427,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 25;
+            this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Tag = "";
             // 
             // panelColor3
@@ -456,7 +456,7 @@
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(167, 22);
-            this.txtContraseña.TabIndex = 22;
+            this.txtContraseña.TabIndex = 3;
             this.txtContraseña.Tag = "";
             // 
             // Act_Empleado

@@ -186,7 +186,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 92);
-            this.btnInsertar.TabIndex = 13;
+            this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -212,7 +212,7 @@
             this.btnVer.Margin = new System.Windows.Forms.Padding(0);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(195, 92);
-            this.btnVer.TabIndex = 15;
+            this.btnVer.TabIndex = 0;
             this.btnVer.Text = "V e r";
             this.btnVer.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnVer.UseVisualStyleBackColor = false;
@@ -238,7 +238,7 @@
             this.btnActulizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnActulizar.Name = "btnActulizar";
             this.btnActulizar.Size = new System.Drawing.Size(195, 92);
-            this.btnActulizar.TabIndex = 16;
+            this.btnActulizar.TabIndex = 0;
             this.btnActulizar.Text = "M o d i f i c a r";
             this.btnActulizar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnActulizar.UseVisualStyleBackColor = false;
@@ -278,7 +278,7 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // Men_Proveedor
+            // View_inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,7 +287,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Men_Proveedor";
+            this.Name = "View_inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Men_Proveedor";
             this.tableLayoutPanel1.ResumeLayout(false);

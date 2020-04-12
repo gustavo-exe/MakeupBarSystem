@@ -181,7 +181,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 92);
-            this.btnInsertar.TabIndex = 13;
+            this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -207,7 +207,7 @@
             this.btnVer.Margin = new System.Windows.Forms.Padding(0);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(195, 92);
-            this.btnVer.TabIndex = 15;
+            this.btnVer.TabIndex = 0;
             this.btnVer.Text = "V e r  C o m p r a ";
             this.btnVer.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnVer.UseVisualStyleBackColor = false;
@@ -233,7 +233,7 @@
             this.btnActulizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnActulizar.Name = "btnActulizar";
             this.btnActulizar.Size = new System.Drawing.Size(195, 92);
-            this.btnActulizar.TabIndex = 16;
+            this.btnActulizar.TabIndex = 0;
             this.btnActulizar.Text = "M o d i f i c a r";
             this.btnActulizar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnActulizar.UseVisualStyleBackColor = false;
@@ -273,7 +273,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu_Compra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_Compra";

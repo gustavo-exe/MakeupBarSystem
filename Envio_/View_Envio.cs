@@ -14,9 +14,11 @@ namespace MakeupBarSystem.Envio
     public partial class View_Envio : Form
     {
         private int state;
+        Conexion conexion;
         public View_Envio()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -50,6 +52,13 @@ namespace MakeupBarSystem.Envio
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void View_Envio_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM maquillaje;"));
+            verEnvio.DataSource = Datos;
+            verEnvio.Refresh();
         }
     }
 }

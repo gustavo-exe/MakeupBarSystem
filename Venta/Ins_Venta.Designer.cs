@@ -287,7 +287,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(148, 34);
-            this.button4.TabIndex = 34;
+            this.button4.TabIndex = 5;
             this.button4.Text = "C a n c e l a r  ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button4.UseVisualStyleBackColor = false;
@@ -317,7 +317,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(0);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(149, 34);
-            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "L i m p i a r ";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -333,7 +333,7 @@
             this.txtdescuento.Margin = new System.Windows.Forms.Padding(0);
             this.txtdescuento.Name = "txtdescuento";
             this.txtdescuento.Size = new System.Drawing.Size(167, 19);
-            this.txtdescuento.TabIndex = 32;
+            this.txtdescuento.TabIndex = 3;
             this.txtdescuento.Tag = "";
             this.txtdescuento.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -348,7 +348,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(149, 34);
-            this.btnInsertar.TabIndex = 14;
+            this.btnInsertar.TabIndex = 4;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -386,7 +386,7 @@
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(0);
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(167, 19);
-            this.txtcantidad.TabIndex = 29;
+            this.txtcantidad.TabIndex = 2;
             this.txtcantidad.Tag = "";
             this.txtcantidad.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -422,7 +422,7 @@
             this.txtprecio.Margin = new System.Windows.Forms.Padding(0);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(167, 19);
-            this.txtprecio.TabIndex = 26;
+            this.txtprecio.TabIndex = 1;
             this.txtprecio.Tag = "";
             this.txtprecio.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -457,7 +457,7 @@
             this.txtidproducto.Margin = new System.Windows.Forms.Padding(0);
             this.txtidproducto.Name = "txtidproducto";
             this.txtidproducto.Size = new System.Drawing.Size(167, 19);
-            this.txtidproducto.TabIndex = 23;
+            this.txtidproducto.TabIndex = 0;
             this.txtidproducto.Tag = "";
             // 
             // panel9
@@ -558,7 +558,7 @@
             this.button1.Location = new System.Drawing.Point(546, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(54, 23);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Venta";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -578,7 +578,7 @@
             this.txtEmpleado.Location = new System.Drawing.Point(321, 17);
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.txtEmpleado.TabIndex = 2;
+            this.txtEmpleado.TabIndex = 1;
             // 
             // label2
             // 

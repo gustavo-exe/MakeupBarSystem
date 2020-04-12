@@ -149,7 +149,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 34);
-            this.btnInsertar.TabIndex = 14;
+            this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -198,7 +198,7 @@
             this.txtId.Margin = new System.Windows.Forms.Padding(0);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(167, 22);
-            this.txtId.TabIndex = 19;
+            this.txtId.TabIndex = 0;
             this.txtId.Tag = "";
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
@@ -265,7 +265,7 @@
             this.txtRol.Margin = new System.Windows.Forms.Padding(0);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(167, 22);
-            this.txtRol.TabIndex = 13;
+            this.txtRol.TabIndex = 3;
             this.txtRol.Tag = "";
             this.txtRol.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -279,7 +279,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 12;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Tag = "";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
@@ -309,7 +309,7 @@
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(167, 22);
-            this.txtContraseña.TabIndex = 9;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Tag = "";
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 

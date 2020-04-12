@@ -142,7 +142,7 @@ namespace MakeupBarSystem.Cliente
         {
             string id;
 
-            id = cliente.idCliente;
+            id = Convert.ToString(cliente.idCliente);
             if (conexion.IUD(string.Format("UPDATE cliente " +
                                             "SET " +
                                             "Nombre='{0}', " +
@@ -156,7 +156,7 @@ namespace MakeupBarSystem.Cliente
                                             "TipoDeCuties='{8}' " +
                                             "WHERE IdCliente='{9}';",
                                             cliente.NombreCliente ,cliente.CorreoCliente,cliente.TelefonoCliente,cliente.PerfilInstagram, cliente.CumpleanosCliente,cliente.CiudadCliente,
-                                            cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie,cliente.IdCliente)))
+                                            cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie,id)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
@@ -179,8 +179,8 @@ namespace MakeupBarSystem.Cliente
         {
             string id;
 
-            id = cliente.idCliente;
-            if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}';", cliente.IdCliente)))
+            id = Convert.ToString(cliente.idCliente);
+            if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}';",id)))
             {
                 MessageBox.Show("Se elimino el cliente: " + Convert.ToString(id));
             }

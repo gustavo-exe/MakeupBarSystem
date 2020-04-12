@@ -211,7 +211,7 @@
             this.dateFechaCumpleaños.Margin = new System.Windows.Forms.Padding(2);
             this.dateFechaCumpleaños.Name = "dateFechaCumpleaños";
             this.dateFechaCumpleaños.Size = new System.Drawing.Size(182, 20);
-            this.dateFechaCumpleaños.TabIndex = 60;
+            this.dateFechaCumpleaños.TabIndex = 6;
             // 
             // label11
             // 
@@ -291,7 +291,7 @@
             this.txtPolvo.Margin = new System.Windows.Forms.Padding(0);
             this.txtPolvo.Name = "txtPolvo";
             this.txtPolvo.Size = new System.Drawing.Size(167, 22);
-            this.txtPolvo.TabIndex = 53;
+            this.txtPolvo.TabIndex = 9;
             this.txtPolvo.Tag = "";
             // 
             // txtCiudad
@@ -304,7 +304,7 @@
             this.txtCiudad.Margin = new System.Windows.Forms.Padding(0);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(167, 22);
-            this.txtCiudad.TabIndex = 52;
+            this.txtCiudad.TabIndex = 7;
             this.txtCiudad.Tag = "";
             // 
             // panel11
@@ -333,7 +333,7 @@
             this.txtBase.Margin = new System.Windows.Forms.Padding(0);
             this.txtBase.Name = "txtBase";
             this.txtBase.Size = new System.Drawing.Size(167, 22);
-            this.txtBase.TabIndex = 49;
+            this.txtBase.TabIndex = 8;
             this.txtBase.Tag = "";
             // 
             // panel13
@@ -354,7 +354,7 @@
             this.txtCutie.Margin = new System.Windows.Forms.Padding(0);
             this.txtCutie.Name = "txtCutie";
             this.txtCutie.Size = new System.Drawing.Size(167, 22);
-            this.txtCutie.TabIndex = 47;
+            this.txtCutie.TabIndex = 10;
             this.txtCutie.Tag = "";
             // 
             // label6
@@ -391,7 +391,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(0);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(167, 22);
-            this.txtTelefono.TabIndex = 44;
+            this.txtTelefono.TabIndex = 4;
             this.txtTelefono.Tag = "";
             // 
             // panel8
@@ -420,7 +420,7 @@
             this.txtPerfil.Margin = new System.Windows.Forms.Padding(0);
             this.txtPerfil.Name = "txtPerfil";
             this.txtPerfil.Size = new System.Drawing.Size(167, 22);
-            this.txtPerfil.TabIndex = 41;
+            this.txtPerfil.TabIndex = 5;
             this.txtPerfil.Tag = "";
             // 
             // label4
@@ -477,7 +477,7 @@
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(0);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(167, 22);
-            this.txtCorreo.TabIndex = 36;
+            this.txtCorreo.TabIndex = 3;
             this.txtCorreo.Tag = "";
             this.txtCorreo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -491,7 +491,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 35;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Tag = "";
             // 
             // panelColor2
@@ -520,7 +520,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 22);
-            this.txtNombre.TabIndex = 32;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.Tag = "";
             // 
             // ListaClientes
@@ -562,7 +562,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(140, 34);
-            this.btnGuardar.TabIndex = 17;
+            this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "E l i m i  n a r";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -575,11 +575,11 @@
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(228, 11);
+            this.button2.Location = new System.Drawing.Point(181, 11);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 34);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 1;
             this.button2.Text = "M o d i f i c a r ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button2.UseVisualStyleBackColor = false;

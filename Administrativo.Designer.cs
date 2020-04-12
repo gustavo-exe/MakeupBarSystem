@@ -37,11 +37,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnMaquillaje = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnVentas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMaquillaje = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -113,6 +113,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "←";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel4
             // 
@@ -152,6 +153,23 @@
             this.panel5.Size = new System.Drawing.Size(394, 103);
             this.panel5.TabIndex = 3;
             // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(403, 125);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(394, 103);
+            this.panel6.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnMaquillaje);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(3, 234);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(394, 103);
+            this.panel2.TabIndex = 5;
+            // 
             // btnMaquillaje
             // 
             this.btnMaquillaje.BackColor = System.Drawing.Color.Black;
@@ -169,13 +187,14 @@
             this.btnMaquillaje.UseVisualStyleBackColor = false;
             this.btnMaquillaje.Click += new System.EventHandler(this.btnMaquillaje_Click);
             // 
-            // panel6
+            // panel7
             // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(403, 125);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(394, 103);
-            this.panel6.TabIndex = 4;
+            this.panel7.Controls.Add(this.btnVentas);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(403, 234);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(394, 103);
+            this.panel7.TabIndex = 6;
             // 
             // btnVentas
             // 
@@ -193,24 +212,6 @@
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnMaquillaje);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(3, 234);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(394, 103);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.btnVentas);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(403, 234);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(394, 103);
-            this.panel7.TabIndex = 6;
             // 
             // panel8
             // 

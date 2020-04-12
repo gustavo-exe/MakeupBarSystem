@@ -51,9 +51,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ListaEnvio = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -228,7 +228,7 @@
             this.txtidSerDeEn.Margin = new System.Windows.Forms.Padding(0);
             this.txtidSerDeEn.Name = "txtidSerDeEn";
             this.txtidSerDeEn.Size = new System.Drawing.Size(167, 22);
-            this.txtidSerDeEn.TabIndex = 47;
+            this.txtidSerDeEn.TabIndex = 5;
             this.txtidSerDeEn.Tag = "";
             // 
             // label9
@@ -253,7 +253,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(0);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(167, 22);
-            this.txtTelefono.TabIndex = 45;
+            this.txtTelefono.TabIndex = 4;
             this.txtTelefono.Tag = "";
             // 
             // label8
@@ -278,7 +278,7 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(0);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(167, 22);
-            this.txtDireccion.TabIndex = 37;
+            this.txtDireccion.TabIndex = 3;
             this.txtDireccion.Tag = "";
             // 
             // label4
@@ -303,7 +303,7 @@
             this.txtidCliente.Margin = new System.Windows.Forms.Padding(0);
             this.txtidCliente.Name = "txtidCliente";
             this.txtidCliente.Size = new System.Drawing.Size(167, 22);
-            this.txtidCliente.TabIndex = 35;
+            this.txtidCliente.TabIndex = 2;
             this.txtidCliente.Tag = "";
             // 
             // label3
@@ -328,7 +328,7 @@
             this.txtidEnvio.Margin = new System.Windows.Forms.Padding(0);
             this.txtidEnvio.Name = "txtidEnvio";
             this.txtidEnvio.Size = new System.Drawing.Size(167, 22);
-            this.txtidEnvio.TabIndex = 33;
+            this.txtidEnvio.TabIndex = 1;
             this.txtidEnvio.Tag = "";
             // 
             // label2
@@ -370,23 +370,6 @@
             this.panel3.Size = new System.Drawing.Size(632, 51);
             this.panel3.TabIndex = 2;
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Black;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(114, 10);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(195, 34);
-            this.btnGuardar.TabIndex = 17;
-            this.btnGuardar.Text = "G u a r d a r";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Black;
@@ -398,7 +381,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(195, 34);
-            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "C a n c e l a r";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -420,6 +403,23 @@
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Black;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(114, 10);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(195, 34);
+            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Text = "G u a r d a r";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // btnEliminar
             // 

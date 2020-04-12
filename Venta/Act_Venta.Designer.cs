@@ -242,7 +242,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(195, 34);
-            this.btnEliminar.TabIndex = 16;
+            this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "E l i m i n a r";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -258,7 +258,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(195, 34);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "C a n c e l a r";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -274,7 +274,7 @@
             this.btnModificar.Margin = new System.Windows.Forms.Padding(0);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(195, 34);
-            this.btnModificar.TabIndex = 14;
+            this.btnModificar.TabIndex = 0;
             this.btnModificar.Text = "M o d i f i c a r";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -385,7 +385,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(167, 22);
-            this.textBox2.TabIndex = 38;
+            this.textBox2.TabIndex = 5;
             this.textBox2.Tag = "";
             // 
             // label6
@@ -427,7 +427,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 35;
+            this.textBox1.TabIndex = 4;
             this.textBox1.Tag = "";
             // 
             // ListaDeVentas
@@ -441,7 +441,7 @@
             this.ListaDeVentas.Margin = new System.Windows.Forms.Padding(2);
             this.ListaDeVentas.Name = "ListaDeVentas";
             this.ListaDeVentas.Size = new System.Drawing.Size(179, 220);
-            this.ListaDeVentas.TabIndex = 34;
+            this.ListaDeVentas.TabIndex = 0;
             // 
             // label5
             // 
@@ -497,7 +497,7 @@
             this.txtRol.Margin = new System.Windows.Forms.Padding(0);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(167, 22);
-            this.txtRol.TabIndex = 26;
+            this.txtRol.TabIndex = 3;
             this.txtRol.Tag = "";
             // 
             // txtUsuario
@@ -510,7 +510,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 25;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Tag = "";
             // 
             // panelColor2
@@ -539,7 +539,7 @@
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(167, 22);
-            this.txtContraseña.TabIndex = 22;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Tag = "";
             // 
             // Act_Venta

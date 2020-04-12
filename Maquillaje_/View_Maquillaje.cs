@@ -14,9 +14,12 @@ namespace MakeupBarSystem.Maquillaje
     public partial class View_Maquillaje : Form
     {
         private int state;
+        Conexion conexion;
+
         public View_Maquillaje()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -50,6 +53,13 @@ namespace MakeupBarSystem.Maquillaje
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void View_Maquillaje_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM maquillaje;"));
+            verMaquillaje.DataSource = Datos;
+            verMaquillaje.Refresh();
         }
     }
 }

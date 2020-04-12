@@ -34,6 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.panelColor2 = new System.Windows.Forms.Panel();
             this.PanelColor1 = new System.Windows.Forms.Panel();
             this.txtnombre = new System.Windows.Forms.TextBox();
-            this.btnguardar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -167,6 +167,23 @@
             this.panel3.Size = new System.Drawing.Size(619, 71);
             this.panel3.TabIndex = 2;
             // 
+            // btnguardar
+            // 
+            this.btnguardar.BackColor = System.Drawing.Color.Black;
+            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnguardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnguardar.Location = new System.Drawing.Point(13, 30);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(141, 34);
+            this.btnguardar.TabIndex = 1;
+            this.btnguardar.Text = "E l i m i n a r";
+            this.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Black;
@@ -195,7 +212,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(159, 34);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 0;
             this.btnCancelar.Text = "M o d i f i c a r";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -344,7 +361,7 @@
             this.txtdescripcion.Margin = new System.Windows.Forms.Padding(0);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(167, 22);
-            this.txtdescripcion.TabIndex = 38;
+            this.txtdescripcion.TabIndex = 5;
             this.txtdescripcion.Tag = "";
             // 
             // label6
@@ -386,7 +403,7 @@
             this.txtcosto.Margin = new System.Windows.Forms.Padding(0);
             this.txtcosto.Name = "txtcosto";
             this.txtcosto.Size = new System.Drawing.Size(167, 22);
-            this.txtcosto.TabIndex = 35;
+            this.txtcosto.TabIndex = 4;
             this.txtcosto.Tag = "";
             // 
             // ListaDeCompras
@@ -400,7 +417,7 @@
             this.ListaDeCompras.Margin = new System.Windows.Forms.Padding(2);
             this.ListaDeCompras.Name = "ListaDeCompras";
             this.ListaDeCompras.Size = new System.Drawing.Size(179, 198);
-            this.ListaDeCompras.TabIndex = 34;
+            this.ListaDeCompras.TabIndex = 0;
             this.ListaDeCompras.Click += new System.EventHandler(this.ListaDeVentas_Click);
             this.ListaDeCompras.SelectedIndexChanged += new System.EventHandler(this.ListaDeVentas_SelectedIndexChanged);
             // 
@@ -458,7 +475,7 @@
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(0);
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(167, 22);
-            this.txtcantidad.TabIndex = 26;
+            this.txtcantidad.TabIndex = 3;
             this.txtcantidad.Tag = "";
             // 
             // txtproveedor
@@ -471,7 +488,7 @@
             this.txtproveedor.Margin = new System.Windows.Forms.Padding(0);
             this.txtproveedor.Name = "txtproveedor";
             this.txtproveedor.Size = new System.Drawing.Size(167, 22);
-            this.txtproveedor.TabIndex = 25;
+            this.txtproveedor.TabIndex = 1;
             this.txtproveedor.Tag = "";
             // 
             // panelColor2
@@ -500,25 +517,8 @@
             this.txtnombre.Margin = new System.Windows.Forms.Padding(0);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(167, 22);
-            this.txtnombre.TabIndex = 22;
+            this.txtnombre.TabIndex = 2;
             this.txtnombre.Tag = "";
-            // 
-            // btnguardar
-            // 
-            this.btnguardar.BackColor = System.Drawing.Color.Black;
-            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnguardar.Location = new System.Drawing.Point(13, 30);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(141, 34);
-            this.btnguardar.TabIndex = 16;
-            this.btnguardar.Text = "E l i m i n a r";
-            this.btnguardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // Modificar_Compra
             // 

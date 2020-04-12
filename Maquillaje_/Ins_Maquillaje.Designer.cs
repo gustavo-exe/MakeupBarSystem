@@ -72,7 +72,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.826087F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.17391F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnReturn, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
@@ -93,7 +93,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(56, 27);
+            this.label1.Location = new System.Drawing.Point(55, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(444, 36);
             this.label1.TabIndex = 0;
@@ -108,7 +108,7 @@
             this.btnReturn.Location = new System.Drawing.Point(0, 27);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(0);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(53, 39);
+            this.btnReturn.Size = new System.Drawing.Size(52, 39);
             this.btnReturn.TabIndex = 12;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -119,7 +119,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(680, 3);
+            this.panel1.Location = new System.Drawing.Point(679, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(106, 17);
             this.panel1.TabIndex = 13;
@@ -196,7 +196,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(56, 69);
+            this.panel2.Location = new System.Drawing.Point(55, 69);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(618, 315);
             this.panel2.TabIndex = 14;
@@ -219,7 +219,7 @@
             this.txtidProveedor.Margin = new System.Windows.Forms.Padding(0);
             this.txtidProveedor.Name = "txtidProveedor";
             this.txtidProveedor.Size = new System.Drawing.Size(167, 22);
-            this.txtidProveedor.TabIndex = 68;
+            this.txtidProveedor.TabIndex = 7;
             this.txtidProveedor.Tag = "";
             // 
             // label2
@@ -240,7 +240,7 @@
             this.txtFechaEx.Margin = new System.Windows.Forms.Padding(2);
             this.txtFechaEx.Name = "txtFechaEx";
             this.txtFechaEx.Size = new System.Drawing.Size(186, 20);
-            this.txtFechaEx.TabIndex = 66;
+            this.txtFechaEx.TabIndex = 3;
             // 
             // panel10
             // 
@@ -312,7 +312,7 @@
             this.txtTonoNum.Margin = new System.Windows.Forms.Padding(0);
             this.txtTonoNum.Name = "txtTonoNum";
             this.txtTonoNum.Size = new System.Drawing.Size(167, 22);
-            this.txtTonoNum.TabIndex = 29;
+            this.txtTonoNum.TabIndex = 2;
             this.txtTonoNum.Tag = "";
             // 
             // label8
@@ -337,7 +337,7 @@
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(0);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(167, 22);
-            this.txtDescripcion.TabIndex = 27;
+            this.txtDescripcion.TabIndex = 6;
             this.txtDescripcion.Tag = "";
             // 
             // label7
@@ -362,7 +362,7 @@
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(0);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(167, 22);
-            this.txtCantidad.TabIndex = 25;
+            this.txtCantidad.TabIndex = 5;
             this.txtCantidad.Tag = "";
             // 
             // label6
@@ -387,7 +387,7 @@
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(0);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(167, 22);
-            this.txtPrecio.TabIndex = 23;
+            this.txtPrecio.TabIndex = 4;
             this.txtPrecio.Tag = "";
             // 
             // label5
@@ -412,7 +412,7 @@
             this.txtMarca.Margin = new System.Windows.Forms.Padding(0);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(167, 22);
-            this.txtMarca.TabIndex = 21;
+            this.txtMarca.TabIndex = 1;
             this.txtMarca.Tag = "";
             // 
             // label4
@@ -437,7 +437,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 22);
-            this.txtNombre.TabIndex = 19;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.Tag = "";
             // 
             // label3
@@ -455,7 +455,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnInsertar);
-            this.panel3.Location = new System.Drawing.Point(56, 390);
+            this.panel3.Location = new System.Drawing.Point(55, 390);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(618, 55);
             this.panel3.TabIndex = 15;
@@ -471,7 +471,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 34);
-            this.btnInsertar.TabIndex = 15;
+            this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;

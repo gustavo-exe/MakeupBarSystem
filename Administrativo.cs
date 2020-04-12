@@ -31,5 +31,12 @@ namespace MakeupBarSystem
             Navegador ventana = new Navegador();
             ventana.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Modulos ventana = new Modulos();
+            ventana.Show();
+        }
     }
 }

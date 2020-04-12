@@ -128,7 +128,7 @@ namespace MakeupBarSystem.Compra
                                             "Costo='{3}', " +
                                             "Descripcion='{4}' " +
                                             "WHERE IdCompra='{5}';",
-                                            compra.IdProveedor, compra.NombreProducto, compra.Cantidad,compra.Costo, compra.Descripcion,compra.IdCompra)))
+                                            compra.IdProveedor, compra.NombreProducto, compra.Cantidad,compra.Costo, compra.Descripcion,id)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
