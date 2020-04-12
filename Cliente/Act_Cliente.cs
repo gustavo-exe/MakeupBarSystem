@@ -91,6 +91,7 @@ namespace MakeupBarSystem.Cliente
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //eliminar
+          //  string cli;
 
             if (click == 0)
             {
@@ -100,7 +101,7 @@ namespace MakeupBarSystem.Cliente
 
             else
             {
-                //MessageBox.Show(Convert.ToString(ListaDeEmpleados.SelectedIndices.Count));
+               // cli=Convert.ToString(ListaClientes.SelectedIndices.Count);
                 try
                 {
                     cliente = ObetenerValoresDeLosText();

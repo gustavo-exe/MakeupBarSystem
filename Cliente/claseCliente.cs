@@ -120,7 +120,7 @@ namespace MakeupBarSystem.Cliente
         {
             claseCliente cliente = new claseCliente();
             //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.cliente where IdCliente='{0}'", id));
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM cliente where IdCliente='{0}'", id));
             if (t1.Rows.Count > 0)
             {
                 cliente.idCliente =     t1.Rows[0][0].ToString();
@@ -148,7 +148,7 @@ namespace MakeupBarSystem.Cliente
                                              "TipoDeCuties = '{8}' WHERE IdCliente = '{9}';",
                                             cliente.NombreCliente ,cliente.CorreoCliente,cliente.TelefonoCliente,cliente.PerfilInstagram,
                                             cliente.CumpleanosCliente,cliente.CiudadCliente,
-                                            cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie,cliente.idCliente)))
+                                            cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie, cliente.idCliente)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
@@ -171,11 +171,14 @@ namespace MakeupBarSystem.Cliente
         {
             string id;
 
-            id = Convert.ToString(cliente.idCliente);
-            if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}';",id)))
+            id = cliente.idCliente;
+            if (conexion.IUD(string.Format("DELETE FROM makeupbar.cliente WHERE IdCliente='{0}';", cliente.idCliente)))
             {
                 MessageBox.Show("Se elimino el cliente: " + Convert.ToString(id));
             }
+
+
+
         }
 
 
@@ -303,14 +306,6 @@ namespace MakeupBarSystem.Cliente
         {
             get { return error; }
         }
-
-
-
-
-
-
-
-
 
 
     }
