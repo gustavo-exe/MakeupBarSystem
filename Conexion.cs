@@ -55,11 +55,11 @@ namespace MakeupBarSystem
             */
 
             //Dina
-            bd = "makeupbar";
-            servidor = "127.0.0.1";
-            usuario = "root";
-            pass = "Cukyytreisy20";
-            conexion = new MySqlConnection();
+            //bd = "makeupbar";
+            //servidor = "127.0.0.1";
+            //usuario = "root";
+            //pass = "Cukyytreisy20";
+            //conexion = new MySqlConnection();
         }
 
         public Conexion(string b, string se, string u, string p)
