@@ -44,38 +44,42 @@ namespace MakeupBarSystem
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             btnIniciar.ForeColor = Color.White;
-            
-            try
+
+            if (txtContraseña.Text == "" && txtUsuario.Text=="")
             {
-                /*conexion.conectar();
-                this.Hide();
-                Modulos ventana = new Modulos();
-                ventana.Show();
-                */
-                IniciarSecion login = empleado.BucarUsuario(txtUsuario.Text);
-
-                if(login.Password == txtContraseña.Text)
+                MessageBox.Show("Campos vacios.", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);         
+            }
+            else
+            {
+                try
                 {
-                    MessageBox.Show("Bienvenido al sistema.");
-
-                    conexion.conectar();
-
+                    /*conexion.conectar();
                     this.Hide();
                     Modulos ventana = new Modulos();
                     ventana.Show();
+                    */
+                    IniciarSecion login = empleado.BucarUsuario(txtUsuario.Text);
+
+                    if (login.Password == txtContraseña.Text)
+                    {
+                        MessageBox.Show("Bienvenido al sistema.");
+
+                        conexion.conectar();
+
+                        this.Hide();
+                        Modulos ventana = new Modulos();
+                        ventana.Show();
+
+                    }
+                    else { MessageBox.Show("DATOS INCORRECTOS"); }
 
                 }
-                else { MessageBox.Show("DATOS INCORRECTOS"); }
-                
-
-
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            
+                       
 
         }
 
