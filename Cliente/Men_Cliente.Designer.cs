@@ -91,7 +91,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(195, 92);
-            this.button3.TabIndex = 0;
+            this.button3.TabIndex = 4;
             this.button3.Text = "         V e r   P e r f i l    I n s t a g r a m";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button3.UseVisualStyleBackColor = false;
@@ -117,7 +117,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(195, 92);
-            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "M o d i f i c ar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             this.btnVer.Margin = new System.Windows.Forms.Padding(0);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(195, 92);
-            this.btnVer.TabIndex = 0;
+            this.btnVer.TabIndex = 2;
             this.btnVer.Text = "V e r ";
             this.btnVer.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnVer.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@
             this.panel2.Location = new System.Drawing.Point(403, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(394, 78);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 14;
             // 
             // label1
             // 
@@ -201,7 +201,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 24);
-            this.button4.TabIndex = 15;
+            this.button4.TabIndex = 7;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -217,7 +217,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 18);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 8;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -232,7 +232,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(37, 18);
-            this.btnClose.TabIndex = 13;
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -283,7 +283,7 @@
             this.btnReturn.Margin = new System.Windows.Forms.Padding(0);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(79, 78);
-            this.btnReturn.TabIndex = 13;
+            this.btnReturn.TabIndex = 5;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -332,7 +332,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 92);
-            this.btnInsertar.TabIndex = 16;
+            this.btnInsertar.TabIndex = 1;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -347,7 +347,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Men_Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Men_Cliente";

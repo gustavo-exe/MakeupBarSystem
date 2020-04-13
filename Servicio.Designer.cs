@@ -108,7 +108,7 @@
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(37, 24);
-            this.btnMaximize.TabIndex = 15;
+            this.btnMaximize.TabIndex = 8;
             this.btnMaximize.Text = "□";
             this.btnMaximize.UseVisualStyleBackColor = false;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -124,7 +124,7 @@
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(37, 18);
-            this.btnMinimize.TabIndex = 14;
+            this.btnMinimize.TabIndex = 9;
             this.btnMinimize.Text = "—";
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -139,7 +139,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(37, 18);
-            this.btnClose.TabIndex = 13;
+            this.btnClose.TabIndex = 7;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -194,7 +194,7 @@
             this.btnServicioEntrega.Margin = new System.Windows.Forms.Padding(0);
             this.btnServicioEntrega.Name = "btnServicioEntrega";
             this.btnServicioEntrega.Size = new System.Drawing.Size(195, 92);
-            this.btnServicioEntrega.TabIndex = 15;
+            this.btnServicioEntrega.TabIndex = 2;
             this.btnServicioEntrega.Text = "S e r v i c i o  d e\r\ne n t r e g a";
             this.btnServicioEntrega.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnServicioEntrega.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@
             this.btnEnvio.Margin = new System.Windows.Forms.Padding(0);
             this.btnEnvio.Name = "btnEnvio";
             this.btnEnvio.Size = new System.Drawing.Size(195, 92);
-            this.btnEnvio.TabIndex = 14;
+            this.btnEnvio.TabIndex = 3;
             this.btnEnvio.Text = "E n v i o";
             this.btnEnvio.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnEnvio.UseVisualStyleBackColor = false;
@@ -255,7 +255,7 @@
             this.btnCompra.Margin = new System.Windows.Forms.Padding(0);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(195, 92);
-            this.btnCompra.TabIndex = 15;
+            this.btnCompra.TabIndex = 4;
             this.btnCompra.Text = "C o m p r a";
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCompra.UseVisualStyleBackColor = false;
@@ -283,7 +283,7 @@
             this.btnReturn.Margin = new System.Windows.Forms.Padding(0);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(79, 78);
-            this.btnReturn.TabIndex = 13;
+            this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -307,7 +307,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 92);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 0;
             this.button2.Text = "I n s e r t a r";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button2.UseVisualStyleBackColor = false;
@@ -332,7 +332,7 @@
             this.btnProveedor.Margin = new System.Windows.Forms.Padding(0);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(195, 92);
-            this.btnProveedor.TabIndex = 16;
+            this.btnProveedor.TabIndex = 1;
             this.btnProveedor.Text = "P r o v e e d o r";
             this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnProveedor.UseVisualStyleBackColor = false;

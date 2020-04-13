@@ -170,7 +170,7 @@
             this.btnServicios.Margin = new System.Windows.Forms.Padding(0);
             this.btnServicios.Name = "btnServicios";
             this.btnServicios.Size = new System.Drawing.Size(195, 92);
-            this.btnServicios.TabIndex = 12;
+            this.btnServicios.TabIndex = 0;
             this.btnServicios.Text = "S e r v i c i o ";
             this.btnServicios.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnServicios.UseVisualStyleBackColor = false;
@@ -197,7 +197,7 @@
             this.BtnCliente.Margin = new System.Windows.Forms.Padding(0);
             this.BtnCliente.Name = "BtnCliente";
             this.BtnCliente.Size = new System.Drawing.Size(195, 92);
-            this.BtnCliente.TabIndex = 12;
+            this.BtnCliente.TabIndex = 1;
             this.BtnCliente.Text = "C l i e n t e";
             this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BtnCliente.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@
             this.BtnVenta.Margin = new System.Windows.Forms.Padding(0);
             this.BtnVenta.Name = "BtnVenta";
             this.BtnVenta.Size = new System.Drawing.Size(195, 92);
-            this.BtnVenta.TabIndex = 11;
+            this.BtnVenta.TabIndex = 2;
             this.BtnVenta.Text = "V e n t a ";
             this.BtnVenta.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BtnVenta.UseVisualStyleBackColor = false;
@@ -251,7 +251,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 92);
-            this.button2.TabIndex = 10;
+            this.button2.TabIndex = 3;
             this.button2.Text = "A d m i n i s t r a t i v o";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button2.UseVisualStyleBackColor = false;
@@ -279,7 +279,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 24);
-            this.button4.TabIndex = 12;
+            this.button4.TabIndex = 6;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -295,7 +295,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 18);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 7;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -310,7 +310,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(37, 18);
-            this.btnClose.TabIndex = 10;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -336,7 +336,7 @@
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(170, 24);
-            this.button3.TabIndex = 12;
+            this.button3.TabIndex = 4;
             this.button3.Text = "Cerrar Sesion";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);

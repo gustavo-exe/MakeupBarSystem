@@ -200,7 +200,7 @@ namespace MakeupBarSystem.Venta
                 {
                     MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     venta.IdVenta = Convert.ToInt32(txtidventa.Text);
-                    Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeVenta")).Rows[0][0].ToString());
+                    Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeVenta where idVenta = {0}",venta.IdVenta)).Rows[0][0].ToString());
                     DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idVenta = {0};", venta.IdVenta));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();

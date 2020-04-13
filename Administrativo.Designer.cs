@@ -110,7 +110,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(79, 86);
-            this.button5.TabIndex = 11;
+            this.button5.TabIndex = 3;
             this.button5.Text = "←";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -181,7 +181,7 @@
             this.btnMaquillaje.Margin = new System.Windows.Forms.Padding(0);
             this.btnMaquillaje.Name = "btnMaquillaje";
             this.btnMaquillaje.Size = new System.Drawing.Size(195, 92);
-            this.btnMaquillaje.TabIndex = 12;
+            this.btnMaquillaje.TabIndex = 1;
             this.btnMaquillaje.Text = "E m p l e a d o";
             this.btnMaquillaje.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnMaquillaje.UseVisualStyleBackColor = false;
@@ -207,7 +207,7 @@
             this.btnVentas.Margin = new System.Windows.Forms.Padding(0);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(195, 92);
-            this.btnVentas.TabIndex = 9;
+            this.btnVentas.TabIndex = 2;
             this.btnVentas.Text = "N a v e g a d o r";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnVentas.UseVisualStyleBackColor = false;
@@ -235,7 +235,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 24);
-            this.button4.TabIndex = 12;
+            this.button4.TabIndex = 5;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -250,7 +250,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 18);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 6;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -264,7 +264,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(37, 18);
-            this.btnClose.TabIndex = 10;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             // 

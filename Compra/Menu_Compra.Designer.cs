@@ -98,7 +98,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 24);
-            this.button4.TabIndex = 15;
+            this.button4.TabIndex = 6;
             this.button4.Text = "□";
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -113,7 +113,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 18);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 7;
             this.button1.Text = "—";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -127,7 +127,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(37, 18);
-            this.btnClose.TabIndex = 13;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
@@ -181,7 +181,7 @@
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 92);
-            this.btnInsertar.TabIndex = 0;
+            this.btnInsertar.TabIndex = 1;
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -207,7 +207,7 @@
             this.btnVer.Margin = new System.Windows.Forms.Padding(0);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(195, 92);
-            this.btnVer.TabIndex = 0;
+            this.btnVer.TabIndex = 2;
             this.btnVer.Text = "V e r  C o m p r a ";
             this.btnVer.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnVer.UseVisualStyleBackColor = false;
@@ -233,7 +233,7 @@
             this.btnActulizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnActulizar.Name = "btnActulizar";
             this.btnActulizar.Size = new System.Drawing.Size(195, 92);
-            this.btnActulizar.TabIndex = 0;
+            this.btnActulizar.TabIndex = 3;
             this.btnActulizar.Text = "M o d i f i c a r";
             this.btnActulizar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnActulizar.UseVisualStyleBackColor = false;
@@ -260,7 +260,7 @@
             this.btnReturn.Margin = new System.Windows.Forms.Padding(0);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(79, 78);
-            this.btnReturn.TabIndex = 13;
+            this.btnReturn.TabIndex = 4;
             this.btnReturn.Text = "←";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
