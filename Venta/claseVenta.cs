@@ -14,8 +14,8 @@ namespace MakeupBarSystem.Venta
         private Conexion conexion;
         private int idVenta;
         private int idFactura;
-        private int idCliente;
-        private int idEmpleado;
+        private string idCliente;
+        private string idEmpleado;
         private DateTime fecha;
         private int idProducto;
         private double precio;
@@ -26,8 +26,8 @@ namespace MakeupBarSystem.Venta
 
         public claseVenta()
         {
-            idCliente = 0;
-            idEmpleado = 0;
+            idCliente = "";
+            idEmpleado = "";
             fecha = DateTime.Today;
             idProducto = 0;
             precio = 0.0;
@@ -36,7 +36,7 @@ namespace MakeupBarSystem.Venta
             total = 0.0;
             conexion = new Conexion();
         }
-        public claseVenta(int a, int b, int c, double d, int e, int f,double t)
+        public claseVenta(string a, string b, int c, double d, int e, int f,double t)
         {
             idCliente = a;
             idEmpleado = b;
@@ -82,7 +82,7 @@ namespace MakeupBarSystem.Venta
                 idFactura = value;
             }
         }
-        public int IdCliente
+        public string IdCliente
         {
             get
             {
@@ -94,7 +94,7 @@ namespace MakeupBarSystem.Venta
             }
         }
 
-        public int IdEmpleado
+        public string IdEmpleado
         {
             get
             {
@@ -218,15 +218,13 @@ namespace MakeupBarSystem.Venta
             claseVenta claseventa = new claseVenta();
 
 
-            DataTable Tabla = conexion.consulta(string.Format("SELECT idDetalleDeVenta ,idVenta ,idFactura, idProducto, precio, Cantidad,Descuento FROM Factura WHERE idEmpleado='{0}';", id));
+            DataTable Tabla = conexion.consulta(string.Format("SELECT idVenta ,idFactura, idProducto, precio, Cantidad,Descuento,total FROM idDetalleDeVenta WHERE idEmpleado='{0}';", id));
             //MessageBox.Show(Convert.ToString(id));
             //empleado.usuario = "HHHH";
             //MessageBox.Show(Convert.ToString(idEmpleado = Tabla.Rows[0][0].ToString()));
             if (Tabla.Rows.Count > 0)
             {
 
-                claseventa.idCliente = Convert.ToInt32(Tabla.Rows[0][0]);
-                claseventa.idEmpleado = Convert.ToInt32(Tabla.Rows[0][1]);
                 claseventa.idVenta = Convert.ToInt32(Tabla.Rows[0][2]);
                 claseventa.idFactura = Convert.ToInt32(Tabla.Rows[0][3]);
                 claseventa.idProducto = Convert.ToInt32(Tabla.Rows[0][4]);

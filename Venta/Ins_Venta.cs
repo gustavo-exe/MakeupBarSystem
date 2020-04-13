@@ -100,8 +100,8 @@ namespace MakeupBarSystem.Venta
         {
             if (ValidarVenta() == true)
             {
-                venta.IdCliente = Convert.ToInt32(txtCliente.Text);
-                venta.IdEmpleado = Convert.ToInt32(txtEmpleado.Text);
+                venta.IdCliente = (Convert.ToString(txtCliente.Text));
+                venta.IdEmpleado = (Convert.ToString(txtEmpleado.Text));
                 venta.Fecha = DateTime.Today;
 
 
@@ -188,7 +188,7 @@ namespace MakeupBarSystem.Venta
                 descuento = ((Convert.ToDouble(txtdescuento.Text) / 100)*subventa);
 
 
-venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
                 venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
                 venta.Precio = Convert.ToDouble(txtprecio.Text);
