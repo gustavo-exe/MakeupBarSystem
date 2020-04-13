@@ -78,7 +78,7 @@ namespace MakeupBarSystem.Envio
         private void ValoresParaLosText(ClaseEnvio envio)
         {
             
-            txtidEnvio.Text = envio.IdEnvio;
+            txtidEnvio.Text = envio.IdEnvio.ToString();
             txtidCliente.Text = envio.IdCliente;
             txtDireccion.Text = envio.direccion;
             txtTelefono.Text = envio.telefono;
@@ -130,9 +130,9 @@ namespace MakeupBarSystem.Envio
         {
             try
             {
-                //MessageBox.Show(Convert.ToString(ListaDeEmpleados.Text));
+                //MessageBox.Show(Convert.ToString(ListaDeEnvio.Text));
 
-                //Llamo al metodo BUSCAR(WHERE) que esta en la clase empleado
+                //Llamo al metodo BUSCAR(WHERE) que esta en la clase Envio
                 envio = envio.BuscarID(Convert.ToString(ListaEnvio.Text));
 
 

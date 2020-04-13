@@ -100,7 +100,8 @@ namespace MakeupBarSystem.Envio_
         {
             ClaseEnvio envio = new ClaseEnvio();
             //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.envio where idEnvio='{0}'", id));
+            DataTable t1 = conexion.consulta(string.Format("SELECT idEnvio, idCliente, Direccion, " +
+                                                           "Telefono, idServicioDeEntrega FROM envio WHERE idEnvio='{0}';", id));
             if (t1.Rows.Count > 0)
             {
                 //MessageBox.Show("ENTRO");
@@ -118,12 +119,12 @@ namespace MakeupBarSystem.Envio_
             string id;
             id = envio.idEnvio;
 
-            if (conexion.IUD(string.Format("UPDATE envio SET Direccion='{0}'" +
-                                                           ", Telefono='{1}'" +
-                                                           ",idCliente='{2}'" +
+            if (conexion.IUD(string.Format("UPDATE envio SET idCliente='{0}'" +
+                                                           ",Direccion='{1}'" +
+                                                           ",Telefono='{2}'" +
                                                            ",idServicioEntrega='{3}'  " +
                                                            "WHERE idEnvio='{4}'",
-                                                           envio.Direccion ,envio.Telefono,envio.idCliente,envio.idServicioEntrega, envio.idEnvio)))
+                                                           envio.idCliente ,envio.Direccion,envio.Telefono,envio.idServicioEntrega, envio.idEnvio)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
@@ -145,6 +146,10 @@ namespace MakeupBarSystem.Envio_
             {
                 return idEnvio;
             }
+            //set
+            //{
+            //    idEnvio = value;
+            //}
 
 
         }

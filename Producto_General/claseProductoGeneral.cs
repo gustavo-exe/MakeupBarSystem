@@ -99,7 +99,15 @@ namespace MakeupBarSystem.Producto_General
 
         public Boolean Modificar()
         {
-            if (conexion.IUD(string.Format("UPDATE envio SET NombreProducto='{0}', Marca='{1}' WHERE idCodigoDeBarra='{2}'", NombreProducto, Marca, idCodigoDeBarra)))
+            if (conexion.IUD(string.Format("UPDATE envio SET NombreProducto='{0}'" +
+                                                             ", Marca='{1}'" +
+                                                             ", PrecioUnitario='{2}'" +
+                                                             ", Cantidad='{3}'" +
+                                                             ", Descripcion='{4}'" +
+                                                             ", idProveedor='{5}'  WHERE idCodigoDeBarra='{6}'", NombreProducto, Marca,
+                                                                                                                PrecioUnitario,Cantidad, 
+                                                                                                                Descripcion, idProveedor
+                                                                                                                ,idCodigoDeBarra)))
             {
                 return true;
             }

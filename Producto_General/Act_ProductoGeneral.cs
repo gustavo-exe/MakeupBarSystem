@@ -46,5 +46,14 @@ namespace MakeupBarSystem
         {
             Application.Exit();
         }
+
+        private void Act_ProductoGeneral_Load(object sender, EventArgs e)
+        {
+            //LISTA
+            //CargarDatosDeLaLista();
+            //TEXTBOX
+            //VaciarTextBox();
+        }
+
     }
 }

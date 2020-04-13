@@ -37,7 +37,6 @@
             this.panelColor5 = new System.Windows.Forms.Panel();
             this.panelColor3 = new System.Windows.Forms.Panel();
             this.panelColor2 = new System.Windows.Forms.Panel();
-            this.panelColor1 = new System.Windows.Forms.Panel();
             this.panelColor6 = new System.Windows.Forms.Panel();
             this.txtidSerDeEn = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,8 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtidCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtidEnvio = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.ListaEnvio = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -61,6 +58,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtidEnvio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -155,10 +155,12 @@
             // panel2
             // 
             this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.txtidEnvio);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelColor5);
             this.panel2.Controls.Add(this.panelColor3);
             this.panel2.Controls.Add(this.panelColor2);
-            this.panel2.Controls.Add(this.panelColor1);
             this.panel2.Controls.Add(this.panelColor6);
             this.panel2.Controls.Add(this.txtidSerDeEn);
             this.panel2.Controls.Add(this.label9);
@@ -168,8 +170,6 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtidCliente);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtidEnvio);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.ListaEnvio);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(42, 69);
@@ -201,14 +201,6 @@
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
             this.panelColor2.TabIndex = 28;
-            // 
-            // panelColor1
-            // 
-            this.panelColor1.BackColor = System.Drawing.Color.White;
-            this.panelColor1.Location = new System.Drawing.Point(425, 45);
-            this.panelColor1.Name = "panelColor1";
-            this.panelColor1.Size = new System.Drawing.Size(163, 1);
-            this.panelColor1.TabIndex = 28;
             // 
             // panelColor6
             // 
@@ -318,31 +310,6 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "IdCliente:";
             // 
-            // txtidEnvio
-            // 
-            this.txtidEnvio.BackColor = System.Drawing.Color.Black;
-            this.txtidEnvio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtidEnvio.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidEnvio.ForeColor = System.Drawing.Color.White;
-            this.txtidEnvio.Location = new System.Drawing.Point(425, 24);
-            this.txtidEnvio.Margin = new System.Windows.Forms.Padding(0);
-            this.txtidEnvio.Name = "txtidEnvio";
-            this.txtidEnvio.Size = new System.Drawing.Size(167, 22);
-            this.txtidEnvio.TabIndex = 1;
-            this.txtidEnvio.Tag = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(258, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 22);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "IdEnvio:";
-            // 
             // ListaEnvio
             // 
             this.ListaEnvio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(182)))), ((int)(((byte)(226)))));
@@ -360,10 +327,10 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Controls.Add(this.btnModificar);
-            this.panel3.Controls.Add(this.btnGuardar);
             this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Controls.Add(this.btnGuardar);
+            this.panel3.Controls.Add(this.btnCancelar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(42, 396);
             this.panel3.Name = "panel3";
@@ -377,7 +344,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(321, 10);
+            this.btnCancelar.Location = new System.Drawing.Point(344, 10);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(195, 34);
@@ -394,7 +361,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnModificar.Location = new System.Drawing.Point(321, 10);
+            this.btnModificar.Location = new System.Drawing.Point(86, 10);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(0);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(195, 34);
@@ -411,7 +378,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(114, 10);
+            this.btnGuardar.Location = new System.Drawing.Point(113, 10);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(195, 34);
@@ -428,7 +395,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(114, 8);
+            this.btnEliminar.Location = new System.Drawing.Point(344, 10);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(195, 34);
@@ -501,6 +468,39 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Location = new System.Drawing.Point(425, 45);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(163, 1);
+            this.panel8.TabIndex = 50;
+            // 
+            // txtidEnvio
+            // 
+            this.txtidEnvio.BackColor = System.Drawing.Color.Black;
+            this.txtidEnvio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtidEnvio.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidEnvio.ForeColor = System.Drawing.Color.White;
+            this.txtidEnvio.Location = new System.Drawing.Point(425, 24);
+            this.txtidEnvio.Margin = new System.Windows.Forms.Padding(0);
+            this.txtidEnvio.Name = "txtidEnvio";
+            this.txtidEnvio.Size = new System.Drawing.Size(167, 22);
+            this.txtidEnvio.TabIndex = 49;
+            this.txtidEnvio.Tag = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(258, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 22);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "IdEnvio:";
+            // 
             // Act_Envio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,8 +543,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtidCliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtidEnvio;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox ListaEnvio;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnModificar;
@@ -558,9 +556,11 @@
         private System.Windows.Forms.Panel panelColor5;
         private System.Windows.Forms.Panel panelColor3;
         private System.Windows.Forms.Panel panelColor2;
-        private System.Windows.Forms.Panel panelColor1;
         private System.Windows.Forms.Panel panelColor6;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txtidEnvio;
+        private System.Windows.Forms.Label label2;
     }
 }

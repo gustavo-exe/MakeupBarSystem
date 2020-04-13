@@ -57,6 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,7 +80,6 @@
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -340,9 +340,10 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnInsertar);
             this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Controls.Add(this.btnCancelar);
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(42, 396);
             this.panel3.Name = "panel3";
@@ -356,7 +357,7 @@
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(432, 11);
+            this.button2.Location = new System.Drawing.Point(375, 11);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 34);
@@ -372,7 +373,7 @@
             this.btnInsertar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
             this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(218, 11);
+            this.btnInsertar.Location = new System.Drawing.Point(470, 11);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 34);
@@ -388,7 +389,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(0, 11);
+            this.btnEliminar.Location = new System.Drawing.Point(71, 11);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(195, 34);
@@ -460,6 +461,22 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(136, 11);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(195, 34);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "C a n c e l a r";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // Act_ProductoGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +487,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Act_ProductoGeneral";
             this.Text = "Men_ProductoGeneral";
+            this.Load += new System.EventHandler(this.Act_ProductoGeneral_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -515,5 +533,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
