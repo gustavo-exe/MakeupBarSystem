@@ -22,30 +22,29 @@ namespace MakeupBarSystem
         {
             //Elias
 
+            bd = "makeupbar";
+            servidor = "127.0.0.1";
+            usuario = "MakeupBarElias";
+            pass = "Y o l o Y o l o 1";
+
+            // yovany
+            /* 
+             bd = "makeupbar";
+            servidor = "127.0.0.1";
+            usuario = "root";
+            pass = "987654321";
+            */
+
             //bd = "makeupbar";
             //servidor = "127.0.0.1";
             //usuario = "MakeupBarElias";
             //pass = "Y o l o Y o l o 1";
 
             // yovany
-            //bd = "makeupbar";
+            // bd = "makeupbar";
             //servidor = "127.0.0.1";
             //usuario = "root";
             //pass = "987654321";
-            
-
-            
-            //bd = "makeupbar";
-            //servidor = "127.0.0.1";
-            //usuario = "MakeupBarElias";
-            //pass = "Y o l o Y o l o 1";
-
-            // yovany
-            //bd = "makeupbar";
-            //servidor = "127.0.0.1";
-            //usuario = "root";
-            //pass = "987654321";
-            //conexion = new MySqlConnection();
 
             //W I L M E R 
             /*bd = "makeuppruebas";
@@ -58,8 +57,8 @@ namespace MakeupBarSystem
             //bd = "makeupbar";
             //servidor = "127.0.0.1";
             //usuario = "root";
-            //pass = "Cukyytreisy20";
-            //conexion = new MySqlConnection();
+            //pass = "";
+            conexion = new MySqlConnection();
         }
 
         public Conexion(string b, string se, string u, string p)
@@ -83,7 +82,7 @@ namespace MakeupBarSystem
                 {
                     conexion.Close();
                     conexion.ConnectionString = string.Format("Database={0};Server={1};Uid={2};Pwd={3};SslMode=none", bd, servidor, usuario, pass);
-                    //conexion.Open();
+                    conexion.Open();
                 }
             }
             catch (MySqlException ex)
@@ -132,6 +131,6 @@ namespace MakeupBarSystem
         {
             get { return error; }
         }
-        
+
     }
 }
