@@ -72,7 +72,7 @@ namespace MakeupBarSystem.Factura
         private void Viw_Factura_Load(object sender, EventArgs e)
         {
             
-             DataTable Datos = conexion.consulta(String.Format("SELECT IdFactura as 'Numero De Factura', FechaActual as 'Fecha', IdEmpleado as 'Empleado',idCliente as 'Cliente' FROM makeupbar.factura"));
+             DataTable Datos = conexion.consulta(String.Format("SELECT IdFactura as 'Numero De Factura', FechaActual as 'Fecha', IdEmpleado as 'Empleado',idCliente as 'Cliente' FROM Factura"));
              dvgFactura.DataSource = Datos;
              dvgFactura.Refresh();
         }

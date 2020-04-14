@@ -288,7 +288,7 @@
             this.button4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(412, 196);
+            this.button4.Location = new System.Drawing.Point(412, 193);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(148, 34);
@@ -318,7 +318,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(41, 196);
+            this.btnLimpiar.Location = new System.Drawing.Point(41, 193);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(0);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(149, 34);
