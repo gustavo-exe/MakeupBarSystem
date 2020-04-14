@@ -137,7 +137,7 @@ namespace MakeupBarSystem.Cliente
         {
 
             claseCliente unCliente = new claseCliente();
-            unCliente.IdCliente = txtUsuario.Text;
+            unCliente.IdCliente = txtcliente.Text;
             unCliente.NombreCliente = txtNombre.Text;
             unCliente.CorreoCliente = txtCorreo.Text;
             unCliente.TelefonoCliente = txtTelefono.Text;
@@ -169,7 +169,7 @@ namespace MakeupBarSystem.Cliente
         */
         private void VaciarTextBox()
         {
-            txtUsuario.Text = "";
+            txtcliente.Text = "";
             txtNombre.Text = "";
             txtCorreo.Text = "";
             txtTelefono.Text = "";
@@ -209,7 +209,7 @@ namespace MakeupBarSystem.Cliente
         }
         private void ValoresParaLosTextDesdeObejto(claseCliente cliente)
         {
-            txtUsuario.Text = cliente.IdCliente.ToString();
+            txtcliente.Text = cliente.IdCliente.ToString();
             txtNombre.Text = cliente.NombreCliente.ToString();
             txtCorreo.Text = cliente.CorreoCliente.ToString();
             txtTelefono.Text = cliente.TelefonoCliente.ToString();

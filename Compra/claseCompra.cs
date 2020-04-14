@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -14,9 +15,10 @@ namespace MakeupBarSystem.Compra
         private int idProveedor;
         private String nombreProducto;
         private int cantidad;
-        private int costo;
+        private double costo;
         private String descripcion;
         private Conexion conexion;
+        private MySqlException error;
 
         public claseCompra()
         {
@@ -24,19 +26,19 @@ namespace MakeupBarSystem.Compra
             idProveedor = 0;
             nombreProducto = "";
             cantidad = 0;
-            costo = 0;
+            costo = 0.0;
             descripcion = "";
             conexion = new Conexion();
         }
 
-        public claseCompra(int idc, int idp, string nomp, int can,int cos,string desc)
+        public claseCompra(int idc, int idp, string nomp, int can,double cos,string desc)
         {
-            idc = idCompra;
-            idp = idProveedor;
-            nomp = nombreProducto;
-            can = cantidad;
-            cos = costo;
-            desc = descripcion;
+            idCompra=idc;
+            idProveedor = idp;
+            nombreProducto = nomp;
+            cantidad = can;
+            costo = cos;
+            descripcion = desc;
             conexion = new Conexion();
         }
 
@@ -64,7 +66,7 @@ namespace MakeupBarSystem.Compra
             set { cantidad = value; }
         }
 
-        public int Costo
+        public double Costo
         {
             get { return costo; }
             set { costo = value; }
@@ -102,11 +104,11 @@ namespace MakeupBarSystem.Compra
             //MessageBox.Show(Convert.ToString(idEmpleado = Tabla.Rows[0][0].ToString()));
             if (Tabla.Rows.Count > 0)
             {
-                compra.idCompra = Convert.ToInt32(id);
+                compra.idCompra = Convert.ToInt32(Tabla.Rows[0][0]);
                 compra.idProveedor = Convert.ToInt32(Tabla.Rows[0][1]);
                 compra.nombreProducto = Tabla.Rows[0][2].ToString();
                 compra.cantidad = Convert.ToInt32(Tabla.Rows[0][3]);
-                compra.costo = Convert.ToInt32(Tabla.Rows[0][4]);
+                compra.costo = Convert.ToDouble(Tabla.Rows[0][4]);
                 compra.descripcion = Tabla.Rows[0][5].ToString();
                 //MessageBox.Show("Si hay");
 
@@ -114,43 +116,34 @@ namespace MakeupBarSystem.Compra
             return compra;
 
         }
-
+        
         public void Modificar(claseCompra compra)
         {
             int id;
-
             id = compra.idCompra;
             if (conexion.IUD(string.Format("UPDATE compra " +
                                             "SET " +
                                             "IDProveedor='{0}', " +
                                             "NombreDelProducto='{1}', " +
-                                            "Cantidad='{2}' " +
+                                            "Cantidad='{2}', " +
                                             "Costo='{3}', " +
                                             "Descripcion='{4}' " +
-                                            "WHERE IdCompra='{5}';",
-                                            compra.IdProveedor, compra.NombreProducto, compra.Cantidad,compra.Costo, compra.Descripcion,id)))
+                                            "WHERE IdCompra='{5}'",
+                                            compra.IdProveedor, compra.NombreProducto, compra.Cantidad,compra.Costo, compra.Descripcion,compra.IdCompra)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
         }
-
-        ///<summary>
-        ///
-        /// METODO CON DELETE
-        /// 
-        /// </summary>
         public void Eliminar(claseCompra compra)
         {
             int id;
 
             id = Convert.ToInt32(compra.idCompra);
-            if (conexion.IUD(string.Format("DELETE FROM compra WHERE IdCompra='{0}';",id)))
+            if (conexion.IUD(string.Format("DELETE FROM compra WHERE IdCompra='{0}';",compra.idCompra)))
             {
-                MessageBox.Show("Se elimino la compra: " + Convert.ToString(id));
+                MessageBox.Show("Se elimino la compra: " + Convert.ToString(compra.idCompra));
             }
         }
-
-
 
     }
 }

@@ -83,7 +83,7 @@ namespace MakeupBarSystem.Compra
                 compra.IdProveedor = Convert.ToInt32(txtproveedor.Text);
                 compra.NombreProducto = txtnombre.Text;
                 compra.Cantidad = Convert.ToInt32(txtcantidad.Text);
-                compra.Costo = Convert.ToInt32(txtcosto.Text);
+                compra.Costo = Convert.ToDouble(txtcosto.Text);
                 compra.Descripcion = txtdescripcion.Text;
 
                 if (compra.Insertar())
