@@ -157,6 +157,8 @@ namespace MakeupBarSystem.Proveedor
             int id;
 
             id = proveedor.idProveedor;
+
+            //
             if (conexion.IUD(string.Format("UPDATE proveedor " +
                                             "SET " +
                                             "nombreEmpresa='{0}', " +

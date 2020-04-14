@@ -4,14 +4,16 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace MakeupBarSystem.Maquillaje_
 {
     class claseMaquillaje
     {
+
         private Conexion conexion;
-        private string idCodigoDeBarra;
+        private int idCodigoDeBarra;
         private string NombreDelProducto;
         private string Marca;
         private string TonoNumero;
@@ -24,7 +26,7 @@ namespace MakeupBarSystem.Maquillaje_
 
         public claseMaquillaje()
         {
-            idCodigoDeBarra = "";
+            idCodigoDeBarra = 0;
             NombreDelProducto = "";
             Marca = "";
             TonoNumero = "";
@@ -35,7 +37,7 @@ namespace MakeupBarSystem.Maquillaje_
             idProveedor = 0;
             conexion = new Conexion();
         }
-        public claseMaquillaje(string c,string n,string m,string t,DateTime f,string p,string ca,string d,int pr)
+        public claseMaquillaje(int c, string n, string m, string t, DateTime f, string p, string ca, string d, int pr)
         {
             idCodigoDeBarra = c;
             NombreDelProducto = n;
@@ -53,7 +55,7 @@ namespace MakeupBarSystem.Maquillaje_
         {
             if (conexion.IUD(string.Format("INSERT INTO maquillaje (NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion, idProveedor) " +
                                             "VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}','{6}', {7})",
-                                            NombreDelProducto, Marca,  TonoNumero, FechaDeExpiracion.ToString("yyyy-MM-dd"),PrecioUnitario,Cantidad,Descripcion,idProveedor)))
+                                            NombreDelProducto, Marca, TonoNumero, FechaDeExpiracion.ToString("yyyy-MM-dd"), PrecioUnitario, Cantidad, Descripcion, idProveedor)))
             {
                 return true;
             }
@@ -78,34 +80,73 @@ namespace MakeupBarSystem.Maquillaje_
 
         }
 
-        public Boolean BuscarID(string id)
+        public claseMaquillaje BuscarID(int id)
         {
+
+            claseMaquillaje maquillaje = new claseMaquillaje();
             //NombreDelProducto,Marca, TonoNumero, FechaDeExpiracion, PrecioUnitario, Cantidad, Descripcion
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeuppruebas.maquillaje where IdCodigoDeBarra='{0}'", id));
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM maquillaje where idCodigoDeBarra={0}", id));
             if (t1.Rows.Count > 0)
             {
-                idCodigoDeBarra = t1.Rows[0][0].ToString();
-                NombreDelProducto = t1.Rows[0][1].ToString();
-                Marca = t1.Rows[0][2].ToString();
-                TonoNumero = t1.Rows[0][3].ToString();
-                FechaDeExpiracion = Convert.ToDateTime(t1.Rows[0][5].ToString());
-                PrecioUnitario = t1.Rows[0][6].ToString();
-                Cantidad = t1.Rows[0][7].ToString();
-                Descripcion = t1.Rows[0][8].ToString();
-                idProveedor= Convert.ToInt32(t1.Rows[0][9].ToString());
+                maquillaje.idCodigoDeBarra = Convert.ToInt32(t1.Rows[0][0].ToString());
+                maquillaje.NombreDelProducto = t1.Rows[0][1].ToString();
+                maquillaje.Marca = t1.Rows[0][2].ToString();
+                maquillaje.TonoNumero = t1.Rows[0][3].ToString();
+                maquillaje.FechaDeExpiracion = Convert.ToDateTime(t1.Rows[0][4].ToString());
+                maquillaje.PrecioUnitario = t1.Rows[0][5].ToString();
+                maquillaje.Cantidad = t1.Rows[0][6].ToString();
+                maquillaje.Descripcion = t1.Rows[0][7].ToString();
+                maquillaje.idProveedor = Convert.ToInt32(t1.Rows[0][8].ToString());
+            }
+            return maquillaje;
 
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
-        public string IdCodigoDeBarra
+
+        public void Eliminar(claseMaquillaje maquillaje)
+        {
+            int id;
+            id = maquillaje.idCodigoDeBarra;
+            if (conexion.IUD(string.Format("DELETE FROM maquillaje WHERE idCodigoDeBarra={0}", idCodigoDeBarra)))
+            {
+                MessageBox.Show("Se elimino el envio: " + Convert.ToString(id));
+            }
+
+        }
+
+        public void Modificar(claseMaquillaje maquillaje)
+        {
+            int id;
+            id = maquillaje.idCodigoDeBarra;
+
+            //MessageBox.Show(Convert.ToString(maquillaje.idCodigoDeBarra));
+            if (conexion.IUD(string.Format("UPDATE maquillaje SET NombreDelProducto='{0}'" +
+                                                           ",Marca='{1}'" +
+                                                           ",TonoNumero='{2}'" +
+                                                           
+                                                           ",PrecioUnitario='{3}'" +
+                                                           ",Cantidad='{4}'" +
+                                                           ",Descripcion='{5}'" +
+                                                           ",idProveedor={6} " +
+                                                           "WHERE idCodigoDeBarra={7}",
+                                                           maquillaje.NombreDelProducto, maquillaje.Marca, maquillaje.TonoNumero, maquillaje.PrecioUnitario, maquillaje.Cantidad,
+                                                           maquillaje.Descripcion, maquillaje.idProveedor,
+                                                           maquillaje.idCodigoDeBarra
+                                                           )))
+            {
+                MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
+            }
+
+        }
+
+        public int IdCodigoDeBarra
         {
             get
             {
                 return idCodigoDeBarra;
+            }
+            set
+            {
+                idCodigoDeBarra = value;
             }
 
         }
@@ -193,7 +234,7 @@ namespace MakeupBarSystem.Maquillaje_
             {
                 return idProveedor;
             }
-            set 
+            set
             {
                 idProveedor = value;
             }
