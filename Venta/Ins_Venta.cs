@@ -168,6 +168,7 @@ namespace MakeupBarSystem.Venta
             txtprecio.Text = "";
             txtcantidad.Text = "";
             txtdescuento.Text = "";
+            Total.Text = "";
         }
 
         private void limpiardetalle()

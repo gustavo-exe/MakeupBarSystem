@@ -170,6 +170,7 @@ namespace MakeupBarSystem.ServicioDeEntrega
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            click = 1;
             if (click == 0)
             {
                 //MessageBox.Show(Convert.ToString(Click));
@@ -235,6 +236,28 @@ namespace MakeupBarSystem.ServicioDeEntrega
             CambiarDeColorElPanele(panelColor1, false);
             CambiarDeColorElPanele(panelColor3, false);
             CambiarDeColorElPanele(panelColor4, false);
+        }
+        private void CargarDatosDeLaLista()
+        {
+            DataTable datos = conexion.consulta(String.Format("Select IdServicioEntrega FROM serviciodeentrega;"));
+            ListaDeEntregas.DisplayMember = "IdServicioEntrega";
+            ListaDeEntregas.DataSource = datos;
+        }
+
+
+        private void Act_Entrega_Load(object sender, EventArgs e)
+        {
+
+            //LISTA
+            CargarDatosDeLaLista();
+
+            //TEXTBOX
+            VaciarTextBox();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
