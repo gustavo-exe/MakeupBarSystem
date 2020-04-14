@@ -13,10 +13,12 @@ namespace MakeupBarSystem.ServicioDeEntrega
     public partial class View_Entrega : Form
     {
         private int state;
+        Conexion conexion;
 
         public View_Entrega()
         {
             InitializeComponent();
+            conexion = new Conexion();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,6 +52,13 @@ namespace MakeupBarSystem.ServicioDeEntrega
             this.Hide();
             Men_Entrega ventana = new Men_Entrega();
             ventana.Show();
+        }
+
+        private void View_Entrega_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(string.Format("SELECT nombreEmpresa as 'Nombre de la Empresa', nombreContrato as 'Nombre del contacto', telefono as 'Telefono', correo as 'Correo' FROM serviciodeentrega;"));
+            verServicio.DataSource = Datos;
+            verServicio.Refresh();
         }
     }
 }
