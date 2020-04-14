@@ -143,6 +143,7 @@ namespace MakeupBarSystem.Cliente
             unCliente.TelefonoCliente = txtTelefono.Text;
             unCliente.PerfilInstagram = txtPerfil.Text;
             unCliente.CumpleanosCliente = dateFechaCumpleaños.Value;
+            //unCliente.CumpleanosCliente = dateFechaCumpleaños.Value;
             unCliente.CiudadCliente = txtCiudad.Text;
             unCliente.TonoDeBaseCliente = txtBase.Text;
             unCliente.TonodePolvoCliente = txtPolvo.Text;
