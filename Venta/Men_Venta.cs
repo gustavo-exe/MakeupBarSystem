@@ -37,12 +37,6 @@ namespace MakeupBarSystem.Venta
             ventana.Show();
         }
 
-        private void btnActulizar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Act_Venta ventana = new Act_Venta();
-            ventana.Show();
-        }
 
         private void btnVer_Click(object sender, EventArgs e)
         {

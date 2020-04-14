@@ -345,12 +345,6 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Venta\Act_Venta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Venta\Act_Venta.Designer.cs">
-      <DependentUpon>Act_Venta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Venta\claseVenta.cs" />
     <Compile Include="Venta\Ins_Venta.cs">
       <SubType>Form</SubType>
@@ -503,9 +497,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Venta\Act_Venta.resx">
-      <DependentUpon>Act_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Ins_Venta.resx">
       <DependentUpon>Ins_Venta.cs</DependentUpon>

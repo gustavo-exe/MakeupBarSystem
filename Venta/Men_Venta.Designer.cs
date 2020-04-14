@@ -35,7 +35,6 @@ namespace MakeupBarSystem.Venta
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnActulizar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnVer = new System.Windows.Forms.Button();
@@ -51,7 +50,6 @@ namespace MakeupBarSystem.Venta
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -112,33 +110,15 @@ namespace MakeupBarSystem.Venta
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnActulizar);
+            this.panel5.Controls.Add(this.button2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(3, 285);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(394, 162);
             this.panel5.TabIndex = 4;
             // 
-            // btnActulizar
-            // 
-            this.btnActulizar.BackColor = System.Drawing.Color.Black;
-            this.btnActulizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActulizar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActulizar.ForeColor = System.Drawing.Color.White;
-            this.btnActulizar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnActulizar.Location = new System.Drawing.Point(141, 42);
-            this.btnActulizar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnActulizar.Name = "btnActulizar";
-            this.btnActulizar.Size = new System.Drawing.Size(195, 92);
-            this.btnActulizar.TabIndex = 3;
-            this.btnActulizar.Text = "M o d i f i c a r";
-            this.btnActulizar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnActulizar.UseVisualStyleBackColor = false;
-            this.btnActulizar.Click += new System.EventHandler(this.btnActulizar_Click);
-            // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(403, 285);
             this.panel6.Name = "panel6";
@@ -153,7 +133,7 @@ namespace MakeupBarSystem.Venta
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(100, 35);
+            this.button2.Location = new System.Drawing.Point(141, 30);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 92);
@@ -314,7 +294,6 @@ namespace MakeupBarSystem.Venta
             this.panel8.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -333,7 +312,6 @@ namespace MakeupBarSystem.Venta
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnActulizar;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.Panel panel4;
