@@ -146,6 +146,7 @@
             this.verEnvio.RowHeadersWidth = 51;
             this.verEnvio.Size = new System.Drawing.Size(453, 286);
             this.verEnvio.TabIndex = 0;
+            this.verEnvio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.verEnvio_CellContentClick);
             // 
             // panel4
             // 

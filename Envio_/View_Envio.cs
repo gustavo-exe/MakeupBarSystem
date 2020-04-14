@@ -56,9 +56,14 @@ namespace MakeupBarSystem.Envio
 
         private void View_Envio_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT idEnvio as 'Envio',  idCliente as 'Cliente',Direccion,Telefono,idServicioDeEntrega as 'Servicio de entrega' FROM maquillaje;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT idEnvio as 'Envio',  idCliente as 'Cliente',Direccion,Telefono,idServicioDeEntrega as 'Servicio de entrega' FROM envio;"));
             verEnvio.DataSource = Datos;
             verEnvio.Refresh();
+        }
+
+        private void verEnvio_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
