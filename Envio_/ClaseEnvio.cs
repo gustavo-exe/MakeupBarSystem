@@ -12,24 +12,24 @@ namespace MakeupBarSystem.Envio_
     class ClaseEnvio
     {
         private Conexion conexion;
-        private string idEnvio;
+        private int idEnvio;
         private string idCliente;
         private string Direccion;
         private string Telefono;
-        private string idServicioEntrega;
+        private int idServicioEntrega;
         private MySqlException error;
 
         public ClaseEnvio()
         {
-            idEnvio = "";
+            idEnvio = 0;
             idCliente = "";
             Direccion = "";
             Telefono = "";
-            idServicioEntrega = "";
+            idServicioEntrega = 0;
             conexion = new Conexion();
         }
 
-        public ClaseEnvio(string e, string c, string d, string t, string s)
+        public ClaseEnvio(int e, string c, string d, string t, int s)
         {
             idEnvio = e;
             idCliente = c;
@@ -87,7 +87,7 @@ namespace MakeupBarSystem.Envio_
             DataTable t1 = conexion.consulta(string.Format("SELECT IdFactura FROM makeupbar.factura where idEnvio='{0}'", idenvio));
             if (t1.Rows.Count > 0)
             {
-                idEnvio = t1.Rows[0][0].ToString();
+                idEnvio = Convert.ToInt32(t1.Rows[0][0].ToString());
 
                 return true;
             }
@@ -101,30 +101,31 @@ namespace MakeupBarSystem.Envio_
             ClaseEnvio envio = new ClaseEnvio();
             //idEnvio, ,idCliente, Direccion, Telefono, idServicioEntrega
             DataTable t1 = conexion.consulta(string.Format("SELECT idEnvio, idCliente, Direccion, " +
-                                                           "Telefono, idServicioDeEntrega FROM envio WHERE idEnvio='{0}';", id));
+                                                           "Telefono, idServicioDeEntrega FROM envio WHERE idEnvio={0};", id));
             if (t1.Rows.Count > 0)
             {
                 //MessageBox.Show("ENTRO");
-                envio.idEnvio = t1.Rows[0][0].ToString();
+                envio.idEnvio = Convert.ToInt32 (t1.Rows[0][0].ToString());
                 envio.idCliente = t1.Rows[0][1].ToString();
                 envio.Direccion = t1.Rows[0][2].ToString();
                 envio.Telefono = t1.Rows[0][3].ToString();
-                envio.idServicioEntrega = t1.Rows[0][4].ToString();
+                envio.idServicioEntrega = Convert.ToInt32(t1.Rows[0][4].ToString());
             }
             return envio;
 
         }
         public void Modificar(ClaseEnvio envio)
         {
-            string id;
+            int id;
             id = envio.idEnvio;
 
             if (conexion.IUD(string.Format("UPDATE envio SET idCliente='{0}'" +
                                                            ",Direccion='{1}'" +
                                                            ",Telefono='{2}'" +
-                                                           ",idServicioEntrega='{3}'  " +
-                                                           "WHERE idEnvio='{4}'",
-                                                           envio.idCliente ,envio.Direccion,envio.Telefono,envio.idServicioEntrega, envio.idEnvio)))
+                                                           ",idServicioDeEntrega={3}  " +
+                                                           "WHERE idEnvio={4}",
+                                                           envio.idCliente ,envio.Direccion,
+                                                           envio.Telefono,envio.idServicioEntrega, envio.idEnvio)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
@@ -132,7 +133,7 @@ namespace MakeupBarSystem.Envio_
         }
         public void Eliminar(ClaseEnvio envio)
         {
-            string id;
+            int id;
             id = envio.IdEnvio;
             if (conexion.IUD(string.Format("DELETE FROM envio WHERE idEnvio='{0}'", idEnvio)))
             {
@@ -140,16 +141,16 @@ namespace MakeupBarSystem.Envio_
             }
            
         }
-        public string IdEnvio
+        public int IdEnvio
         {
             get
             {
                 return idEnvio;
             }
-            //set
-            //{
-            //    idEnvio = value;
-            //}
+            set
+            {
+                idEnvio = value;
+            }
 
 
         }
@@ -186,7 +187,7 @@ namespace MakeupBarSystem.Envio_
                 Telefono = value;
             }
         }
-        public string IdServicioEntrega
+        public int IdServicioEntrega
         {
             get
             {

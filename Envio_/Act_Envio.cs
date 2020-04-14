@@ -82,7 +82,7 @@ namespace MakeupBarSystem.Envio
             txtidCliente.Text = envio.IdCliente;
             txtDireccion.Text = envio.direccion;
             txtTelefono.Text = envio.telefono;
-            txtidSerDeEn.Text = envio.IdServicioEntrega;
+            txtidSerDeEn.Text = envio.IdServicioEntrega.ToString();
         }
         private void btnInsertar_Click(object sender, EventArgs e)
         {
@@ -94,10 +94,7 @@ namespace MakeupBarSystem.Envio
 
             else
             {
-                //Cambiar estado de los botones y cambiar el color de los paneles
-                CambiarDeColorElPanel(panelColor2, true);
-                CambiarDeColorElPanel(panelColor3, true);
-                CambiarDeColorElPanel(panelColor6, true);
+
                 btnModificar.Visible = false;
                 btnEliminar.Visible = false;
 
@@ -107,24 +104,15 @@ namespace MakeupBarSystem.Envio
         private ClaseEnvio ObetenerValoresDeLosText()
         {
             ClaseEnvio envio = new ClaseEnvio();
-            //envio.IdEnvio = txtidEnvio.Text;
-            envio.IdCliente = txtidCliente.Text;
-            envio.direccion = txtDireccion.Text;
-            envio.telefono = txtTelefono.Text;
-            envio.IdServicioEntrega = txtidSerDeEn.Text;
+            envio.IdEnvio = Convert.ToInt32(txtidEnvio.Text.ToString());
+            envio.IdCliente = txtidCliente.Text.ToString();
+            envio.direccion = txtDireccion.Text.ToString();
+            envio.telefono = txtTelefono.Text.ToString();
+            envio.IdServicioEntrega = Convert.ToInt32(txtidSerDeEn.Text.ToString());
 
             return envio;
         }
 
-        private void CambiarDeColorElPanel(Panel panel, Boolean estado)
-        {
-            if (estado == true)
-                panel.BackColor = Color.Red;
-            else
-            {
-                panel.BackColor = Color.White;
-            }
-        }
 
         private void ListaEnvio_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -216,9 +204,7 @@ namespace MakeupBarSystem.Envio
                 //Mostrar los botones y paneles a su estado natural
                 btnModificar.Visible = true;
                 btnEliminar.Visible = true;
-                CambiarDeColorElPanel(panelColor2, false);
-                CambiarDeColorElPanel(panelColor3, false);
-                CambiarDeColorElPanel(panelColor5, false);
+
 
                 //Restauro el valor de click para cuando se realiza otra seleccion la evalue
                 click = 0;
@@ -237,9 +223,6 @@ namespace MakeupBarSystem.Envio
             /// </summary>
             btnModificar.Visible = true;
             btnEliminar.Visible = true;
-            CambiarDeColorElPanel(panelColor2, false);
-            CambiarDeColorElPanel(panelColor3, false);
-            CambiarDeColorElPanel(panelColor5, false);
         }
     }
     

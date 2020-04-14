@@ -58,7 +58,7 @@ namespace MakeupBarSystem.Envio
             txtIdCliente.Text = envio.IdCliente;
             txtDireccion.Text = envio.direccion;
             txtTelefono.Text = envio.telefono;
-            txtIdServicioDeEntrega.Text = envio.IdServicioEntrega;
+            txtIdServicioDeEntrega.Text = envio.IdServicioEntrega.ToString();
             SendKeys.Send("{Tab}");
         }
 
@@ -69,7 +69,7 @@ namespace MakeupBarSystem.Envio
                 envio.IdCliente = txtIdCliente.Text;
                 envio.direccion = txtDireccion.Text;
                 envio.telefono = txtTelefono.Text;
-                envio.IdServicioEntrega = txtIdServicioDeEntrega.Text;
+                envio.IdServicioEntrega = Convert.ToInt32(txtIdServicioDeEntrega.Text);
                 if (envio.Guardar())
                 {
                     MessageBox.Show("Registro guardado correctamente", "Envio", MessageBoxButtons.OK, MessageBoxIcon.Information);
