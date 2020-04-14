@@ -121,7 +121,7 @@ namespace MakeupBarSystem.Proveedor
         {
             if (Validar() == true)
             {
-                proveedor.IdProveedor = Convert.ToInt32(txtProveedor.Text);
+                //proveedor.IdProveedor = Convert.ToInt32(txtProveedor.Text);
                 proveedor.NombreEmpresaProveedor = txtNombreEmpresa.Text;
                 proveedor.NombreContacto = txtNombreContacto.Text;
                 proveedor.CorreoProveedor = txtCorreo.Text;
@@ -147,7 +147,7 @@ namespace MakeupBarSystem.Proveedor
 
         private void limpiar()
         {
-            txtProveedor.Text = "";
+            //txtProveedor.Text = "";
             txtNombreEmpresa.Text = "";
             txtNombreContacto.Text = "";
             txtTelefonoContacto.Text = "";

@@ -60,10 +60,7 @@ namespace MakeupBarSystem.Proveedor
             {
                 return idProveedor;
             }
-            set
-            {
-                idProveedor = value;
-            }
+           
 
         }
 
@@ -126,6 +123,65 @@ namespace MakeupBarSystem.Proveedor
                 descripcionProveedor = value;
             }
         }
+
+        public claseProveedor BucarID(string id)
+        {
+            claseProveedor proveedor = new claseProveedor();
+
+
+            DataTable Tabla = conexion.consulta(string.Format("SELECT nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion FROM proveedor WHERE idEmpleado='{0}';", id));
+
+            if (Tabla.Rows.Count > 0)
+            {
+
+                proveedor.nombreEmpresaProveedor = Tabla.Rows[0][1].ToString();
+                proveedor.nombreContacto = Tabla.Rows[0][2].ToString();
+                proveedor.correoProveedor = Tabla.Rows[0][3].ToString();
+                proveedor.telefonoProveedor = Tabla.Rows[0][4].ToString();
+                proveedor.descripcionProveedor = Tabla.Rows[0][5].ToString();
+
+            }
+            return proveedor;
+
+        }
+
+
+        public claseProveedor BuscarProveedor(string nameProveedor)
+        {
+            claseProveedor claseProveedor = new claseProveedor();
+            DataTable Tabla = conexion.consulta(string.Format("SELECT * FROM proveedor WHERE nombreDelContrato='{0}';", nameProveedor));
+            if (Tabla.Rows.Count > 0)
+            {
+
+                //claseProveedor.idProveedor = Tabla.Rows[0][0];
+                claseProveedor.nombreEmpresaProveedor = Tabla.Rows[0][1].ToString();
+                claseProveedor.nombreContacto = Tabla.Rows[0][2].ToString();
+                claseProveedor.telefonoProveedor = Tabla.Rows[0][3].ToString();
+                claseProveedor.correoProveedor = Tabla.Rows[0][4].ToString();
+                claseProveedor.descripcionProveedor = Tabla.Rows[0][5].ToString();
+
+            }
+            return claseProveedor;
+        }
+
+        /*public void Modificar(claseProveedor proveedor)
+        {
+            string id;
+
+            id = proveedor.nombreEmpresaProveedor;
+            if (conexion.IUD(string.Format("UPDATE proveedor " +
+                                            "SET " +
+                                            "nombre Empresa='{0}', " +
+                                            "nombre Contacto='{1}', " +
+                                            "telefono Proveedor='{2}' " +
+                                            "correo Proveedor='{3}' " +
+                                            "descripcion Proveedor='{4}' " +
+                                            "WHERE IdProveedor='{5}';",
+                                            proveedor.NombreEmpresaProveedor, proveedor.nombreContacto, proveedor.TelefonoProveedor, proveedor.corr, proveedor.descripcionProveedor, proveedor.IdProveedor)))
+            {
+                MessageBox.Show("Se actulizaron los datos de: " + (id));
+            }
+        }*/
 
         public MySqlException Error
         {

@@ -36,20 +36,17 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombreEmpresa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panelColor2 = new System.Windows.Forms.Panel();
-            this.PanelColor1 = new System.Windows.Forms.Panel();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtNombreContacto = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -151,20 +148,17 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtCorreo);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtNombreEmpresa);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtUsuario);
             this.panel2.Controls.Add(this.panelColor2);
-            this.panel2.Controls.Add(this.PanelColor1);
-            this.panel2.Controls.Add(this.txtContraseña);
+            this.panel2.Controls.Add(this.txtNombreContacto);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(42, 75);
             this.panel2.Name = "panel2";
@@ -179,18 +173,18 @@
             this.panel10.Size = new System.Drawing.Size(163, 1);
             this.panel10.TabIndex = 36;
             // 
-            // textBox4
+            // txtCorreo
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Black;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(352, 208);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 22);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Tag = "";
+            this.txtCorreo.BackColor = System.Drawing.Color.Black;
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.White;
+            this.txtCorreo.Location = new System.Drawing.Point(352, 208);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(167, 22);
+            this.txtCorreo.TabIndex = 4;
+            this.txtCorreo.Tag = "";
             // 
             // label7
             // 
@@ -204,18 +198,18 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Correo";
             // 
-            // textBox3
+            // txtTelefono
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Black;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(352, 171);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 22);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Tag = "";
+            this.txtTelefono.BackColor = System.Drawing.Color.Black;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.White;
+            this.txtTelefono.Location = new System.Drawing.Point(352, 171);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(167, 22);
+            this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.Tag = "";
             // 
             // panel9
             // 
@@ -257,18 +251,18 @@
             this.panel8.Size = new System.Drawing.Size(163, 1);
             this.panel8.TabIndex = 20;
             // 
-            // textBox2
+            // txtNombreEmpresa
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(352, 81);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 22);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Tag = "";
+            this.txtNombreEmpresa.BackColor = System.Drawing.Color.Black;
+            this.txtNombreEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreEmpresa.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEmpresa.ForeColor = System.Drawing.Color.White;
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(352, 81);
+            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNombreEmpresa.Name = "txtNombreEmpresa";
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(167, 22);
+            this.txtNombreEmpresa.TabIndex = 1;
+            this.txtNombreEmpresa.Tag = "";
             // 
             // label5
             // 
@@ -282,31 +276,6 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Nombre de Empresa";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(144, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 22);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "IdServicio de Entrega";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.Black;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(352, 41);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Tag = "";
-            // 
             // panelColor2
             // 
             this.panelColor2.BackColor = System.Drawing.Color.White;
@@ -315,26 +284,18 @@
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
             this.panelColor2.TabIndex = 11;
             // 
-            // PanelColor1
+            // txtNombreContacto
             // 
-            this.PanelColor1.BackColor = System.Drawing.Color.White;
-            this.PanelColor1.Location = new System.Drawing.Point(352, 66);
-            this.PanelColor1.Name = "PanelColor1";
-            this.PanelColor1.Size = new System.Drawing.Size(163, 1);
-            this.PanelColor1.TabIndex = 10;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.Color.Black;
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(352, 129);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(0);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(167, 22);
-            this.txtContraseña.TabIndex = 2;
-            this.txtContraseña.Tag = "";
+            this.txtNombreContacto.BackColor = System.Drawing.Color.Black;
+            this.txtNombreContacto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreContacto.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreContacto.ForeColor = System.Drawing.Color.White;
+            this.txtNombreContacto.Location = new System.Drawing.Point(352, 129);
+            this.txtNombreContacto.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNombreContacto.Name = "txtNombreContacto";
+            this.txtNombreContacto.Size = new System.Drawing.Size(167, 22);
+            this.txtNombreContacto.TabIndex = 2;
+            this.txtNombreContacto.Tag = "";
             // 
             // panel3
             // 
@@ -360,6 +321,7 @@
             this.btnInsertar.Text = "I n s e r t a r";
             this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // panel4
             // 
@@ -460,20 +422,17 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombreEmpresa;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Panel panelColor2;
-        private System.Windows.Forms.Panel PanelColor1;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtNombreContacto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Panel panel4;
