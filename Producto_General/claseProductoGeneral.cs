@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 
@@ -12,7 +13,7 @@ namespace MakeupBarSystem.Producto_General
     class claseProductoGeneral
     {
         private Conexion conexion;
-        private string idCodigoDeBarra;
+        private int idCodigoDeBarra;
         private string NombreProducto;
         private string Marca;
         private string PrecioUnitario;
@@ -23,7 +24,7 @@ namespace MakeupBarSystem.Producto_General
 
         public claseProductoGeneral()
         {
-            idCodigoDeBarra = "";
+            idCodigoDeBarra = 0;
             NombreProducto = "";
             Marca = "";
             PrecioUnitario = "";
@@ -32,7 +33,8 @@ namespace MakeupBarSystem.Producto_General
             idProveedor = 0;
             conexion = new Conexion();
         }
-        public claseProductoGeneral(string c,string n,string m,string p,string ca,string d,int pr)
+
+        public claseProductoGeneral(int c, string n, string m, string p, string ca, string d, int pr)
         {
             idCodigoDeBarra = c;
             NombreProducto = n;
@@ -48,7 +50,7 @@ namespace MakeupBarSystem.Producto_General
         {
             if (conexion.IUD(string.Format("INSERT INTO productogeneral (NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion,idProveedor) " +
                                            "VALUES ('{0}','{1}', '{2}', '{3}', '{4}',{5})",
-                                           NombreProducto, Marca,PrecioUnitario, Cantidad,Descripcion,idProveedor)))
+                                           NombreProducto, Marca, PrecioUnitario, Cantidad, Descripcion, idProveedor)))
             {
                 return true;
             }
@@ -76,46 +78,43 @@ namespace MakeupBarSystem.Producto_General
 
         }
 
-        public Boolean BuscarID(string id)
+        public claseProductoGeneral BuscarID(string id)
         {
+            claseProductoGeneral productoGeneral = new claseProductoGeneral();
             //NombreProducto,Marca,PrecioUnitario,Cantidad,Descripcion
-            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.productogeneral where idCodigoDeBarra='{0}'", id));
+            DataTable t1 = conexion.consulta(string.Format("SELECT * FROM makeupbar.productogeneral where idCodigoDeBarra={0}", id));
             if (t1.Rows.Count > 0)
             {
-                idCodigoDeBarra = t1.Rows[0][0].ToString();
-                NombreProducto = t1.Rows[0][1].ToString();
-                Marca = t1.Rows[0][2].ToString();
-                PrecioUnitario = t1.Rows[0][3].ToString();
-                Cantidad = t1.Rows[0][4].ToString();
-                Descripcion = t1.Rows[0][5].ToString();
-                idProveedor = Convert.ToInt32(t1.Rows[0][6].ToString());
-                return true;
+                productoGeneral.idCodigoDeBarra = Convert.ToInt32(t1.Rows[0][0].ToString());
+                productoGeneral.NombreProducto = t1.Rows[0][1].ToString();
+                productoGeneral.Marca = t1.Rows[0][2].ToString();
+                productoGeneral.PrecioUnitario = t1.Rows[0][3].ToString();
+                productoGeneral.Cantidad = t1.Rows[0][4].ToString();
+                productoGeneral.Descripcion = t1.Rows[0][5].ToString();
+                productoGeneral.idProveedor = Convert.ToInt32(t1.Rows[0][6].ToString());
+
             }
-            else
-            {
-                return false;
-            }
+            return productoGeneral;
         }
 
-        public Boolean Modificar()
+        public void Modificar(claseProductoGeneral productoGeneral)
         {
-            if (conexion.IUD(string.Format("UPDATE envio SET NombreProducto='{0}'" +
+            int id;
+            id = productoGeneral.idCodigoDeBarra;
+            if (conexion.IUD(string.Format("UPDATE productogeneral SET NombreProducto='{0}'" +
                                                              ", Marca='{1}'" +
                                                              ", PrecioUnitario='{2}'" +
                                                              ", Cantidad='{3}'" +
                                                              ", Descripcion='{4}'" +
-                                                             ", idProveedor='{5}'  WHERE idCodigoDeBarra='{6}'", NombreProducto, Marca,
-                                                                                                                PrecioUnitario,Cantidad, 
-                                                                                                                Descripcion, idProveedor
-                                                                                                                ,idCodigoDeBarra)))
+                                                             ", idProveedor={5}  " +
+                                                             "WHERE idCodigoDeBarra={6}", productoGeneral.NombreProducto, productoGeneral.Marca,
+                                                                                          productoGeneral.PrecioUnitario, productoGeneral.Cantidad,
+                                                                                          productoGeneral.Descripcion, productoGeneral.idProveedor,
+                                                                                          productoGeneral.idCodigoDeBarra)))
             {
-                return true;
+                MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
-            else
-            {
-                error = conexion.Error;
-                return false;
-            }
+
         }
 
         public Boolean Eliminar()
@@ -130,13 +129,16 @@ namespace MakeupBarSystem.Producto_General
                 return false;
             }
         }
-        public string IdCodigoDeBarra
+        public int IdCodigoDeBarra
         {
             get
             {
                 return idCodigoDeBarra;
             }
-
+            set
+            {
+                idCodigoDeBarra = value;
+            }
         }
         public string nombreProducto
         {

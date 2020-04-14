@@ -70,8 +70,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Total = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.Total = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -244,7 +244,7 @@
             // dgvVenta
             // 
             this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVenta.Location = new System.Drawing.Point(3, 363);
+            this.dgvVenta.Location = new System.Drawing.Point(15, 363);
             this.dgvVenta.Name = "dgvVenta";
             this.dgvVenta.Size = new System.Drawing.Size(615, 107);
             this.dgvVenta.TabIndex = 2;
@@ -613,6 +613,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(18, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Total Venta";
+            // 
             // Total
             // 
             this.Total.AutoSize = true;
@@ -623,16 +633,6 @@
             this.Total.Size = new System.Drawing.Size(22, 13);
             this.Total.TabIndex = 0;
             this.Total.Text = "0.0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(18, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Total Venta";
             // 
             // Ins_Venta
             // 

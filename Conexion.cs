@@ -41,23 +41,23 @@ namespace MakeupBarSystem
             //pass = "Y o l o Y o l o 1";
 
             // yovany
-            //bd = "makeupbar";
-            //servidor = "127.0.0.1";
-            //usuario = "root";
-            //pass = "987654321";
+            bd = "makeupbar";
+            servidor = "127.0.0.1";
+            usuario = "root";
+            pass = "987654321";
 
             //W I L M E R 
-            //bd = "makeupbar";
-            //servidor = "127.0.0.1";
-            //usuario = "wilmer";
-            //pass = "Rasengan 1";
+            bd = "makeupbar";
+            servidor = "127.0.0.1";
+            usuario = "wilmer";
+            pass = "Rasengan 1";
             
 
             //Dina
-            //bd = "makeupbar";
-            //servidor = "127.0.0.1";
-            //usuario = "root";
-            //pass = "";
+            bd = "makeupbar";
+            servidor = "127.0.0.1";
+            usuario = "root";
+            pass = "Cukyytreisy20";
             conexion = new MySqlConnection();
         }
 
