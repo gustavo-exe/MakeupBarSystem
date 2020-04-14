@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MakeupBarSystem.Proveedor
 {
@@ -43,7 +44,7 @@ namespace MakeupBarSystem.Proveedor
 
         public Boolean Insertar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO proveedor (IdProveedor, nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}')", idProveedor, nombreEmpresaProveedor, nombreContacto, correoProveedor, telefonoProveedor, descripcionProveedor)))
+            if (conexion.IUD(string.Format("INSERT INTO proveedor ( nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');", nombreEmpresaProveedor, nombreContacto, correoProveedor, telefonoProveedor, descripcionProveedor)))
             {
                 return true;
             }
@@ -60,6 +61,8 @@ namespace MakeupBarSystem.Proveedor
             {
                 return idProveedor;
             }
+            set
+            { idProveedor= value; }
            
 
         }
@@ -124,21 +127,23 @@ namespace MakeupBarSystem.Proveedor
             }
         }
 
-        public claseProveedor BucarID(string id)
+        public claseProveedor BucarID(int id)
         {
             claseProveedor proveedor = new claseProveedor();
 
+            
 
-            DataTable Tabla = conexion.consulta(string.Format("SELECT nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion FROM proveedor WHERE idEmpleado='{0}';", id));
+            DataTable Tabla = conexion.consulta(string.Format("SELECT nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion FROM proveedor WHERE IdProveedor = {0};",id));
 
             if (Tabla.Rows.Count > 0)
             {
+                
 
-                proveedor.nombreEmpresaProveedor = Tabla.Rows[0][1].ToString();
-                proveedor.nombreContacto = Tabla.Rows[0][2].ToString();
-                proveedor.correoProveedor = Tabla.Rows[0][3].ToString();
-                proveedor.telefonoProveedor = Tabla.Rows[0][4].ToString();
-                proveedor.descripcionProveedor = Tabla.Rows[0][5].ToString();
+                proveedor.nombreEmpresaProveedor = Tabla.Rows[0][0].ToString();
+                proveedor.nombreContacto = Tabla.Rows[0][1].ToString();
+                proveedor.correoProveedor = Tabla.Rows[0][2].ToString();
+                proveedor.telefonoProveedor = Tabla.Rows[0][3].ToString();
+                proveedor.descripcionProveedor = Tabla.Rows[0][4].ToString();
 
             }
             return proveedor;
@@ -146,48 +151,43 @@ namespace MakeupBarSystem.Proveedor
         }
 
 
-        public claseProveedor BuscarProveedor(string nameProveedor)
+       
+        public void Modificar(claseProveedor proveedor)
         {
-            claseProveedor claseProveedor = new claseProveedor();
-            DataTable Tabla = conexion.consulta(string.Format("SELECT * FROM proveedor WHERE nombreDelContrato='{0}';", nameProveedor));
-            if (Tabla.Rows.Count > 0)
-            {
+            int id;
 
-                //claseProveedor.idProveedor = Tabla.Rows[0][0];
-                claseProveedor.nombreEmpresaProveedor = Tabla.Rows[0][1].ToString();
-                claseProveedor.nombreContacto = Tabla.Rows[0][2].ToString();
-                claseProveedor.telefonoProveedor = Tabla.Rows[0][3].ToString();
-                claseProveedor.correoProveedor = Tabla.Rows[0][4].ToString();
-                claseProveedor.descripcionProveedor = Tabla.Rows[0][5].ToString();
-
-            }
-            return claseProveedor;
-        }
-
-        /*public void Modificar(claseProveedor proveedor)
-        {
-            string id;
-
-            id = proveedor.nombreEmpresaProveedor;
+            id = proveedor.idProveedor;
             if (conexion.IUD(string.Format("UPDATE proveedor " +
                                             "SET " +
-                                            "nombre Empresa='{0}', " +
-                                            "nombre Contacto='{1}', " +
-                                            "telefono Proveedor='{2}' " +
-                                            "correo Proveedor='{3}' " +
-                                            "descripcion Proveedor='{4}' " +
-                                            "WHERE IdProveedor='{5}';",
-                                            proveedor.NombreEmpresaProveedor, proveedor.nombreContacto, proveedor.TelefonoProveedor, proveedor.corr, proveedor.descripcionProveedor, proveedor.IdProveedor)))
+                                            "nombreEmpresa='{0}', " +
+                                            "nombreDelContrato='{1}', " +
+                                            "telefonoContacto='{2}'," +
+                                            "correo='{3}', " +
+                                            "descripcion ='{4}' " +
+                                            "WHERE IdProveedor={5};",
+                                            proveedor.NombreEmpresaProveedor, proveedor.nombreContacto, proveedor.TelefonoProveedor, proveedor.correoProveedor, proveedor.descripcionProveedor, proveedor.IdProveedor)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + (id));
             }
-        }*/
+        }
+
+
+        public void Eliminar(claseProveedor proveedor)
+        {
+            int id;
+
+            id = proveedor.idProveedor;
+            if (conexion.IUD(string.Format("DELETE FROM proveedor WHERE IdProveedor={0};", proveedor.idProveedor)))
+            {
+                MessageBox.Show("Se elimino el proveedor: " + Convert.ToString(id));
+            }
+        }
+
 
         public MySqlException Error
         {
             get { return error; }
         }
-
         
     }
 }
