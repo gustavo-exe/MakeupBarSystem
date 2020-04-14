@@ -22,6 +22,7 @@ namespace MakeupBarSystem
         public Modulos()
         {
             InitializeComponent();
+            
         }
 
         private void btnModuloVentas_Click(object sender, EventArgs e)
@@ -174,10 +175,17 @@ namespace MakeupBarSystem
             if (comboBox1.SelectedIndex == 6)
             {
                 this.Hide();
-                View_inventario venta = new View_inventario();
+                Viw_Inventario venta = new Viw_Inventario();
                 venta.Show();
+            }
+            if (comboBox1.SelectedIndex == 7)
+            {
+                this.Hide();
+                Navegador navegador = new Navegador();
+                navegador.Show();
             }
 
         }
+
     }
 }
