@@ -54,6 +54,7 @@ namespace MakeupBarSystem.Venta
         {
             this.Hide();
             Viw_Factura ventana = new Viw_Factura();
+            ventana.Show();
         }
         private void button1_Click(object sender, EventArgs e)
         {
