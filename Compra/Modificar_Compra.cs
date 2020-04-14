@@ -53,6 +53,7 @@ namespace MakeupBarSystem.Compra
         }
         private void ValoresParaLosTextDesdeObjeto(claseCompra compra)
         {
+            txtId.Text = compra.IdCompra.ToString();
             txtproveedor.Text = compra.IdProveedor.ToString();
             txtnombre.Text = compra.NombreProducto.ToString();
             txtcantidad.Text = compra.Cantidad.ToString();
@@ -97,6 +98,7 @@ namespace MakeupBarSystem.Compra
 
         private void VaciarTextBox()
         {
+            txtId.Text = "";
             txtproveedor.Text = "";
             txtnombre.Text = "";
             txtcantidad.Text = "";
@@ -117,10 +119,11 @@ namespace MakeupBarSystem.Compra
         {
 
             claseCompra unacompra = new claseCompra();
+            unacompra.IdCompra = Convert.ToInt32(txtId.Text);
             unacompra.IdProveedor = Convert.ToInt32(txtproveedor.Text);
             unacompra.NombreProducto = txtnombre.Text;
             unacompra.Cantidad = Convert.ToInt32(txtcantidad.Text);
-            unacompra.Costo = Convert.ToInt32(txtcosto.Text);
+            unacompra.Costo = Convert.ToDouble(txtcosto.Text);
             unacompra.Descripcion = txtdescripcion.Text;
 
 
@@ -131,6 +134,35 @@ namespace MakeupBarSystem.Compra
         {
 
             //guardar
+
+
+            try
+            {
+                compra = ObetenerValoresDeLosText();
+
+                //Llamo al metodo de modificar(UPDATE)
+                compra.Modificar(compra);
+
+
+                //Mostrar los botones y paneles a su estado natural
+                btnCancelar.Visible = true;
+                btnguardar.Visible = true;
+                CambiarDeColorElPanele(panelColor3, false);
+                CambiarDeColorElPanele(PanelColor1, false);
+                CambiarDeColorElPanele(panelColor2, false);
+                CambiarDeColorElPanele(panel9, false);
+                CambiarDeColorElPanele(panel11, false);
+                CambiarDeColorElPanele(panel12, false);
+                CambiarDeColorElPanele(panel10, false);
+
+                //Restauro el valor de click para cuando se realiza otra seleccion la evalue
+                click = 0;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
         }
 
@@ -197,7 +229,7 @@ namespace MakeupBarSystem.Compra
             {
                 //Cambiar estado de los botones y cambiar el color de los paneles
 
-                CambiarDeColorElPanele(panelColor3, true);
+               // CambiarDeColorElPanele(panelColor3, true);
                 CambiarDeColorElPanele(PanelColor1, true);
                 CambiarDeColorElPanele(panelColor2, true);
                 CambiarDeColorElPanele(panel9, true);

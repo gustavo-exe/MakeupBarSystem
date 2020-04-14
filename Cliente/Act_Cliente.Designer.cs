@@ -59,7 +59,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelColor3 = new System.Windows.Forms.Panel();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtcliente = new System.Windows.Forms.TextBox();
             this.panelColor2 = new System.Windows.Forms.Panel();
             this.PanelColor1 = new System.Windows.Forms.Panel();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -194,7 +194,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelColor3);
             this.panel2.Controls.Add(this.txtCorreo);
-            this.panel2.Controls.Add(this.txtUsuario);
+            this.panel2.Controls.Add(this.txtcliente);
             this.panel2.Controls.Add(this.panelColor2);
             this.panel2.Controls.Add(this.PanelColor1);
             this.panel2.Controls.Add(this.txtNombre);
@@ -481,18 +481,18 @@
             this.txtCorreo.Tag = "";
             this.txtCorreo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txtUsuario
+            // txtcliente
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.Black;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(446, 24);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(167, 22);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.Tag = "";
+            this.txtcliente.BackColor = System.Drawing.Color.Black;
+            this.txtcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcliente.ForeColor = System.Drawing.Color.White;
+            this.txtcliente.Location = new System.Drawing.Point(446, 24);
+            this.txtcliente.Margin = new System.Windows.Forms.Padding(0);
+            this.txtcliente.Name = "txtcliente";
+            this.txtcliente.Size = new System.Drawing.Size(167, 22);
+            this.txtcliente.TabIndex = 1;
+            this.txtcliente.Tag = "";
             // 
             // panelColor2
             // 
@@ -558,7 +558,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(182, 11);
+            this.btnGuardar.Location = new System.Drawing.Point(19, 11);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(140, 34);
@@ -575,7 +575,7 @@
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(487, 11);
+            this.button2.Location = new System.Drawing.Point(267, 11);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 34);
@@ -592,7 +592,7 @@
             this.btnInsertar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
             this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(331, 11);
+            this.btnInsertar.Location = new System.Drawing.Point(267, 11);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(141, 34);
@@ -740,7 +740,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelColor3;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtcliente;
         private System.Windows.Forms.Panel panelColor2;
         private System.Windows.Forms.Panel PanelColor1;
         private System.Windows.Forms.TextBox txtNombre;

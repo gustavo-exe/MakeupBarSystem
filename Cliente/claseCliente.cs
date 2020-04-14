@@ -84,38 +84,6 @@ namespace MakeupBarSystem.Cliente
 
         }
 
-
-        public Boolean LlenarVenta(string idcliente)
-        {
-            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
-            DataTable t1 = conexion.consulta(string.Format("SELECT idVenta FROM makeupbar.Venta where IdCliente='{0}'", idcliente));
-            if (t1.Rows.Count > 0)
-            {
-                idCliente = t1.Rows[0][0].ToString();
-
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public Boolean LlenarFactura(string idcliente)
-        {
-            //IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties
-            DataTable t1 = conexion.consulta(string.Format("SELECT IdFactura FROM makeupbar.factura where IdCliente='{0}'", idcliente));
-            if (t1.Rows.Count > 0)
-            {
-                idCliente = t1.Rows[0][0].ToString();
-
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         public claseCliente BuscarID(string id)
         {
             claseCliente cliente = new claseCliente();
@@ -138,34 +106,58 @@ namespace MakeupBarSystem.Cliente
 
         }
 
+        /* public void Modificar(claseCliente cliente)
+         {
+             string id;
+
+             id = cliente.idCliente;
+             if (conexion.IUD(string.Format("UPDATE cliente SET Nombre = '{0}',Correo = '{1}',Telefono = '{2}', PerfilInstagram = '{3}'," +
+                                             "Cumpleaños = '{4}', Ciudad = '{5}',TonoDeBase = '{6}', TonoDePolvo = '{7}',"+
+                                              "TipoDeCuties = '{8}' (WHERE IdCliente = '{9}')",
+                                             cliente.NombreCliente ,cliente.CorreoCliente,cliente.TelefonoCliente,cliente.PerfilInstagram,
+                                             cliente.CumpleanosCliente,cliente.CiudadCliente,
+                                             cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie, cliente.IdCliente)))
+             {
+                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
+             }
+         }
+         */
         public void Modificar(claseCliente cliente)
         {
             string id;
 
             id = cliente.idCliente;
-            if (conexion.IUD(string.Format("UPDATE cliente SET Nombre = '{0}',Correo = '{1}',Telefono = '{2}', PerfilInstagram = '{3}'," +
-                                            "Cumpleaños = '{4}', Ciudad = '{5}',TonoDeBase = '{6}', TonoDePolvo = '{7}',"+
-                                             "TipoDeCuties = '{8}' WHERE IdCliente = '{9}';",
-                                            cliente.NombreCliente ,cliente.CorreoCliente,cliente.TelefonoCliente,cliente.PerfilInstagram,
-                                            cliente.CumpleanosCliente,cliente.CiudadCliente,
-                                            cliente.TonoDeBaseCliente,cliente.TonodePolvoCliente,cliente.TipodeCutie, cliente.idCliente)))
+            if (conexion.IUD(string.Format("UPDATE cliente " +
+                                            "SET " +
+                                            "Nombre='{0}', " +
+                                            "Correo='{1}', " +
+                                            "Telefono='{2}' " +
+                                            "PerfilInstagram='{3}', " +
+                                            "Cumpleaños='{4}', " +
+                                            "Ciudad='{5}' " +
+                                            "TonoDeBase='{6}', " +
+                                            "TonoDePolvo='{7}', " +
+                                            "TipoDeCuties='{8}' " +
+                                            "WHERE IdCliente='{9}'",
+                                            cliente.NombreCliente, cliente.CorreoCliente, cliente.TelefonoCliente, cliente.PerfilInstagram, cliente.CumpleanosCliente, cliente.CiudadCliente,
+                                            cliente.TonoDeBaseCliente, cliente.TonodePolvoCliente, cliente.TipodeCutie, cliente.IdCliente)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
         }
-      /*  public Boolean Eliminar()
-        {
-            if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}'", idCliente)))
-            {
-                return true;
-            }
-            else
-            {
-                error = conexion.Error;
-                return false;
-            }
-        }
-        */
+        /*  public Boolean Eliminar()
+          {
+              if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}'", idCliente)))
+              {
+                  return true;
+              }
+              else
+              {
+                  error = conexion.Error;
+                  return false;
+              }
+          }
+          */
 
         public void Eliminar(claseCliente cliente)
         {
